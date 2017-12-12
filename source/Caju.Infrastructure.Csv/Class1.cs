@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Caju.UnitTests
+namespace Caju.Infrastructure.Csv
 {
     public class Class1
     {

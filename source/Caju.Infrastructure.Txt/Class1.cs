@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Caju.Domain
+namespace Caju.Infrastructure.Txt
 {
     public class Class1
     {
