@@ -3,5 +3,5 @@ install:
   - curl -L -o nuget.exe https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 script:
   - mono nuget.exe pack ./source/Paulovich.Caju/Paulovich.Caju.nuspec
-  - mono nuget.exe setApiKey $NUGET_API_KEY
-  - mono nuget.exe push Paulovich.Caju.*.nupkg
+  - mono nuget.exe setApiKey $NUGET_API_KEY -Source $NUGET_SOURCE
+  - mono nuget.exe push Paulovich.Caju.*.nupkg -Source $NUGET_SOURCE
