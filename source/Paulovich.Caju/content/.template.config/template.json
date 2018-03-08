@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Ivan Paulovich",
-  "classifications": [ "Common", "Library" ], 
+  "classifications": [ "Common", "Library", "Web API" ], 
   "name": "Caju: Back-end with awesome architectures made easy!",
   "identity": "Paulovich.Caju",         
   "groupIdentity":"Paulovich.Caju",
