@@ -31,23 +31,3 @@ The implementation result of the Clean Architecture is a software that encapsula
 | Docker | Docker is a detail. It was implemented to help us make a faster and reliable deployment. |
 | MongoDB | MongoDB is a detail. You could create new Data Access implementation and setup it with Autofac. |
 | .NET Core 2.0 | .NET Core is a detail. Almost everything in this code base could be ported to other versions. |
-
-## Flow of Control: The Register Use Case
-
-![Flow of Control: Customer Registration](https://raw.githubusercontent.com/ivanpaulovich/manga/master/docs/Flow-Of-Control.png)
-
-## Requirements
-* [Visual Studio 2017 with Update 3](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)
-* [.NET SDK 2.0](https://www.microsoft.com/net/download/core)
-* [Docker](https://docs.docker.com/docker-for-windows/install/)
-
-## Prerequisites Setup
-
-The only one prerequisite to run the Web API is a valid connection string to MongoDB. To help you run it without hard work follow the steps on [prerequisites setup](https://github.com/ivanpaulovich/manga/wiki/Prerequisites-setup) page.
-
-## Live Demo on Azure
-
-[![Manga Live Demo on Azure](https://raw.githubusercontent.com/ivanpaulovich/manga/master/docs/Swagger.png)](http://grape.westus2.cloudapp.azure.com:8800/swagger)
-
-You can play with the latest build of [Manga](http://grape.westus2.cloudapp.azure.com:8800/swagger "Manga").
-> This source code and website should be used only for learning purposes and **all data will be erased weekly**.
