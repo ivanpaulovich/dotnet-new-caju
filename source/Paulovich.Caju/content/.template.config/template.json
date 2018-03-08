@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Ivan Paulovich",
+  "classifications": [ "Common", "Library" ], 
+  "name": "Caju: Back-end with awesome architectures made easy!",
+  "identity": "Paulovich.Caju",         
+  "groupIdentity":"Paulovich.Caju",
+  "shortName": "caju",
+  "tags": {
+    "language": "C#",
+    "type":"project"
+  },
+  "sourceName": "MyProject",
+  "preferNameDirectory": true,
+  "symbols":{
+    "register":{
+      "type": "parameter",
+      "dataType":"bool",
+      "defaultValue": "true"
+    },
+    "deposit":{
+      "type": "parameter",
+      "dataType":"bool",
+      "defaultValue": "true"
+    },
+	"withdraw":{
+      "type": "parameter",
+      "dataType":"bool",
+      "defaultValue": "true"
+    },
+	"getaccount":{
+      "type": "parameter",
+      "dataType":"bool",
+      "defaultValue": "true"
+    },
+	"getcustomer":{
+      "type": "parameter",
+      "dataType":"bool",
+      "defaultValue": "true"
+    },
+	"closeaccount":{
+      "type": "parameter",
+      "dataType":"bool",
+      "defaultValue": "true"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!register)",
+          "exclude": [
+            "MyProject.Application/UseCases/Register/**/*",
+            "MyProject.UI/Presenters/RegisterPresenter.cs",
+            "MyProject.UI/Requests/RegisterRequest.cs"
+          ]
+        },
+        {
+          "condition": "(!deposit)",
+          "exclude": [
+            "MyProject.Application/UseCases/Deposit/**/*",
+            "MyProject.UI/Presenters/DepositPresenter.cs",
+            "MyProject.UI/Requests/DepositRequest.cs"
+          ]
+        },
+        {
+          "condition": "(!withdraw)",
+          "exclude": [
+            "MyProject.Application/UseCases/Withdraw/**/*",
+            "MyProject.UI/Presenters/WithdrawPresenter.cs",
+            "MyProject.UI/Requests/WithdrawRequest.cs"
+          ]
+        },
+        {
+          "condition": "(!getaccount)",
+          "exclude": [
+            "MyProject.Application/UseCases/GetAccountDetails/**/*",
+			      "MyProject.UI/Presenters/AccountDetailsPresenter.cs"
+          ]
+        },
+        {
+          "condition": "(!getcustomer)",
+          "exclude": [
+            "MyProject.Application/UseCases/GetAccountDetails/**/*",
+			      "MyProject.UI/Presenters/CustomerDetailsPresenter.cs"
+          ]
+        },
+        {
+          "condition": "(!closeaccount)",
+          "exclude": [
+            "MyProject.Application/UseCases/CloseAccount/**/*",
+			      "MyProject.UI/Presenters/ClosePresenter.cs"
+          ]
+        }
+      ]
+    }
+  ]
+}
