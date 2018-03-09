@@ -1,0 +1,22 @@
+﻿{
+  "defaultAssembly": "MyReadOnlyProject.UI",
+  "modules": [
+    {
+      "type": "MyReadOnlyProject.UI.Modules.UIModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "MyReadOnlyProject.UI.Modules.ApplicationModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "MyReadOnlyProject.UI.Modules.InfrastructureModule",
+      "properties": {
+        "ConnectionString": "mongodb://10.0.75.1:27017",
+        "DatabaseName": "MyReadOnlyProject-V01"
+      }
+    }
+  ]
+}
