@@ -31,3 +31,36 @@ The implementation result of the Clean Architecture is a software that encapsula
 | Docker | Docker is a detail. It was implemented to help us make a faster and reliable deployment. |
 | MongoDB | MongoDB is a detail. You could create new Data Access implementation and setup it with Autofac. |
 | .NET Core 2.0 | .NET Core is a detail. Almost everything in this code base could be ported to other versions. |
+
+## Sample applications
+
+Solution with all defaults:
+
+```sh
+dotnet new caju \
+	-n "Full-Solution"
+```
+
+Basic application with Register Customer and Get Customer Details use case:
+
+```sh
+dotnet new caju \
+	--deposit false \
+	--withdraw false \
+	--getaccount false \
+	--closeaccount false \
+	-n "Basic"
+```
+
+Empty application with only the base classes:
+
+```sh
+dotnet new caju \
+	--deposit false \
+	--withdraw false \
+	--getaccount false \
+	--closeaccount false \
+	--register false \
+	--getcustomer false \
+	-n "Empty"
+```
