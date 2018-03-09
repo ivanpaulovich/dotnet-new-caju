@@ -72,16 +72,20 @@
 	"ReadOnly": {
       "type": "computed",
       "value": "(use-cases == \"readonly\")"
+    },
+	"Full": {
+      "type": "computed",
+      "value": "(use-cases == \"full\")"
     }
   },
   "sources": [
     {
+	  "condition": "(Empty)",
 	  "rename": {
         "MyProject.UI/autofac.empty.json": "MyProject.UI/autofac.json"
       },
       "modifiers": [
         {
-          "condition": "(Empty)",
           "exclude": [		  
 			"MyProject.UI/UseCases/Register/**/*.cs",
 			"MyProject.UI/UseCases/Deposit/**/*.cs",
@@ -113,68 +117,57 @@
           ]
         }
       ]
-    }
-//	,
-//	{
-//     "modifiers": [
-//       {
-//         "condition": "(ReadOnly)",
-//         "exclude": [		  
-//			"MyProject.UI/UseCases/Register/**/*.cs",
-//			"MyProject.UI/UseCases/Deposit/**/*.cs",
-//			"MyProject.UI/UseCases/Withdraw/**/*.cs",
-//           "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-//			
-//           "MyProject.UI/Model/**/*.cs",
-//           "MyProject.UI/Modules/**/*.cs",
-//			
-//			"MyProject.Application/UseCases/Register/**/*.cs",
-//           "MyProject.Application/UseCases/Deposit/**/*.cs",
-//           "MyProject.Application/UseCases/Withdraw/**/*.cs",
-//           "MyProject.Application/UseCases/CloseAccount/**/*.cs",
-//			
-//           "MyProject.Application/Outputs/**/*.cs",			
-//           "MyProject.Application/Repositories/**/*.cs",
-//			
-//           "MyProject.Domain/Accounts/**/*.cs",
-//           "MyProject.Domain/Customers/**/*.cs",
-//           "MyProject.Domain/ValueObjects/**/*.cs",
-//           
-//			"MyProject.Infrastructure/DataAccess/**/*.cs",
-//           "MyProject.Infrastructure/Mappings/**/*.cs"
-//         ]
-//       }
-//     ]
-//   },
-//	{
-//     "modifiers": [
-//       {
-//         "condition": "(Basic)",
-//         "exclude": [
-//			"MyProject.UI/UseCases/Deposit/**/*.cs",
-//			"MyProject.UI/UseCases/Withdraw/**/*.cs",
-//			"MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
-//           "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-//			
-//           "MyProject.UI/Model/**/*.cs",
-//           "MyProject.UI/Modules/**/*.cs",
-//			"MyProject.UI/autofac.json",
-//			
-//           "MyProject.Application/UseCases/Deposit/**/*.cs",
-//           "MyProject.Application/UseCases/Withdraw/**/*.cs",
-//           "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
-//           "MyProject.Application/UseCases/CloseAccount/**/*.cs",
-//			
-//           "MyProject.Domain/Accounts/**/*.cs",
-//           "MyProject.Domain/Customers/**/*.cs",
-//           "MyProject.Domain/ValueObjects/**/*.cs",
-//           
-//			"MyProject.Infrastructure/DataAccess/**/*.cs",
-//           "MyProject.Infrastructure/Mappings/**/*.cs"
-//         ]
-//       }
-//     ]
-//   }
+    },
+	{
+	  "condition": "(ReadOnly)",
+	  "modifiers": [
+       {
+         "exclude": [		  
+			"MyProject.UI/UseCases/Register/**/*.cs",
+			"MyProject.UI/UseCases/Deposit/**/*.cs",
+			"MyProject.UI/UseCases/Withdraw/**/*.cs",
+            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+	
+			"MyProject.Application/UseCases/Register/**/*.cs",
+           "MyProject.Application/UseCases/Deposit/**/*.cs",
+           "MyProject.Application/UseCases/Withdraw/**/*.cs",
+           "MyProject.Application/UseCases/CloseAccount/**/*.cs"
+			
+			          
+         ]
+       }
+     ]
+   },
+	{
+	"condition": "(Basic)",
+     "modifiers": [
+       {
+         "exclude": [
+			"MyProject.UI/UseCases/Deposit/**/*.cs",
+			"MyProject.UI/UseCases/Withdraw/**/*.cs",
+			"MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
+           "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+			
+		
+           "MyProject.Application/UseCases/Deposit/**/*.cs",
+           "MyProject.Application/UseCases/Withdraw/**/*.cs",
+           "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
+           "MyProject.Application/UseCases/CloseAccount/**/*.cs",
+			
+         ]
+       }
+     ]
+   },
+	{
+	"condition": "(Full)",
+     "modifiers": [
+       {
+         "exclude": [
+			
+         ]
+       }
+     ]
+   }
   ],
   "postActions": [
     {
