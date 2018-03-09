@@ -51,45 +51,42 @@
           "condition": "(!register)",
           "exclude": [
             "MyProject.Application/UseCases/Register/**/*",
-            "MyProject.UI/Presenters/RegisterPresenter.cs",
-            "MyProject.UI/Requests/RegisterRequest.cs"
+            "MyProject.UI/UseCases/Register/**/*"
           ]
         },
         {
           "condition": "(!deposit)",
           "exclude": [
             "MyProject.Application/UseCases/Deposit/**/*",
-            "MyProject.UI/Presenters/DepositPresenter.cs",
-            "MyProject.UI/Requests/DepositRequest.cs"
+            "MyProject.UI/UseCases/Deposit/**/*"
           ]
         },
         {
           "condition": "(!withdraw)",
           "exclude": [
             "MyProject.Application/UseCases/Withdraw/**/*",
-            "MyProject.UI/Presenters/WithdrawPresenter.cs",
-            "MyProject.UI/Requests/WithdrawRequest.cs"
+            "MyProject.UI/UseCases/Withdraw/**/*"
           ]
         },
         {
           "condition": "(!getaccount)",
           "exclude": [
             "MyProject.Application/UseCases/GetAccountDetails/**/*",
-			      "MyProject.UI/Presenters/AccountDetailsPresenter.cs"
+            "MyProject.UI/UseCases/GetAccountDetails/**/*"
           ]
         },
         {
           "condition": "(!getcustomer)",
           "exclude": [
-            "MyProject.Application/UseCases/GetAccountDetails/**/*",
-			      "MyProject.UI/Presenters/CustomerDetailsPresenter.cs"
+            "MyProject.Application/UseCases/GetCustomerDetails/**/*",
+            "MyProject.UI/UseCases/GetCustomerDetails/**/*"
           ]
         },
         {
           "condition": "(!closeaccount)",
           "exclude": [
             "MyProject.Application/UseCases/CloseAccount/**/*",
-			      "MyProject.UI/Presenters/ClosePresenter.cs"
+            "MyProject.UI/UseCases/CloseAccount/**/*"
           ]
         }
       ]

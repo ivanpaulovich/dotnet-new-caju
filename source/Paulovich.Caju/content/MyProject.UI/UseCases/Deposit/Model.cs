@@ -1,15 +1,19 @@
-﻿namespace MyProject.UI.Model
+﻿namespace MyProject.UI.UseCases.Deposit
 {
     using System;
 
-    public class DepositModel
+    public class Model
     {
         public double Amount { get; }
         public string Description { get; }
         public DateTime TransactionDate { get; }
         public double UpdateBalance { get; }
 
-        public DepositModel(double amount, string description, DateTime transactionDate, double updatedBalance)
+        public Model(
+            double amount,
+            string description,
+            DateTime transactionDate,
+            double updatedBalance)
         {
             Amount = amount;
             Description = description;

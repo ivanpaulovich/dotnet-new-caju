@@ -1,7 +1,7 @@
-﻿namespace MyProject.UI.Requests
+﻿namespace MyProject.UI.UseCases.Withdraw
 {
     using System;
-    public class DepositRequest
+    public class WithdrawRequest
     {
         public Guid AccountId { get; set; }
         public Double Amount { get; set; }

@@ -1,4 +1,4 @@
-﻿namespace MyProject.UI.Presenters
+﻿namespace MyProject.UI.UseCases.GetAccountDetails
 {
     using MyProject.Application;
     using MyProject.Application.Outputs;
@@ -6,7 +6,7 @@
     using Microsoft.AspNetCore.Mvc;
     using System.Collections.Generic;
 
-    public class AccountDetailsPresenter : IOutputBoundary<AccountOutput>
+    public class Presenter : IOutputBoundary<AccountOutput>
     {
         public IActionResult ViewModel { get; private set; }
         public AccountOutput Output { get; private set; }

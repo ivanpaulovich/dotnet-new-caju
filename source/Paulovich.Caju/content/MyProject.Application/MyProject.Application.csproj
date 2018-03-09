@@ -8,5 +8,4 @@
     <ProjectReference Include="..\MyProject.Domain\MyProject.Domain.csproj" />
   </ItemGroup>
 
-
 </Project>

@@ -1,16 +1,21 @@
-﻿namespace MyProject.UI.Model
+﻿namespace MyProject.UI.UseCases.Register
 {
     using System;
     using System.Collections.Generic;
+    using MyProject.UI.Model;
 
-    public class RegisterModel
+    public class Model
     {
         public Guid CustomerId { get; }
         public string Personnummer { get; }
         public string Name { get; }
         public List<AccountDetailsModel> Accounts { get; set; }
 
-        public RegisterModel(Guid customerId, string perssonnummer, string name, List<AccountDetailsModel> accounts)
+        public Model(
+            Guid customerId,
+            string perssonnummer,
+            string name,
+            List<AccountDetailsModel> accounts)
         {
             CustomerId = customerId;
             Personnummer = perssonnummer;

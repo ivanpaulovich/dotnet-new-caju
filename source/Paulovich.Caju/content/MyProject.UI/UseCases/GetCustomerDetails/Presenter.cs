@@ -1,4 +1,4 @@
-﻿namespace MyProject.UI.Presenters
+﻿namespace MyProject.UI.UseCases.GetCustomerDetails
 {
     using MyProject.Application;
     using MyProject.Application.Outputs;
@@ -6,7 +6,7 @@
     using Microsoft.AspNetCore.Mvc;
     using System.Collections.Generic;
 
-    public class CustomerDetailsPresenter : IOutputBoundary<CustomerOutput>
+    public class Presenter : IOutputBoundary<CustomerOutput>
     {
         public IActionResult ViewModel { get; private set; }
         public CustomerOutput Output { get; private set; }

@@ -15,7 +15,7 @@
       "type": "MyProject.UI.Modules.InfrastructureModule",
       "properties": {
         "ConnectionString": "mongodb://10.0.75.1:27017",
-        "DatabaseName": "MyProject-V02"
+        "DatabaseName": "MyProject-V01"
       }
     }
   ]

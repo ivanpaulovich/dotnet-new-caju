@@ -2,7 +2,7 @@
 {
     using Autofac;
     using MyProject.Application;
-    using MyProject.UI.Presenters;
+    using MyProject.UI.UseCases.Register;
 
     public class UIModule : Autofac.Module
     {
@@ -14,7 +14,7 @@
             //
             // Register all Types in MyProject.UI
             //
-            builder.RegisterAssemblyTypes(typeof(RegisterPresenter).Assembly)
+            builder.RegisterAssemblyTypes(typeof(Presenter).Assembly)
                 .AsClosedTypesOf(typeof(IOutputBoundary<>))
                 .InstancePerLifetimeScope();
         }

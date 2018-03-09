@@ -1,4 +1,4 @@
-﻿namespace MyProject.UI.Presenters
+﻿namespace MyProject.UI.UseCases.Register
 {
     using MyProject.Application;
     using MyProject.Application.UseCases.Register;
@@ -6,7 +6,7 @@
     using Microsoft.AspNetCore.Mvc;
     using System.Collections.Generic;
 
-    public class RegisterPresenter : IOutputBoundary<RegisterOutput>
+    public class Presenter : IOutputBoundary<RegisterOutput>
     {
         public IActionResult ViewModel { get; private set; }
         public RegisterOutput Output { get; private set; }
@@ -41,7 +41,7 @@
             List<AccountDetailsModel> accounts = new List<AccountDetailsModel>();
             accounts.Add(account);
 
-            RegisterModel model = new RegisterModel(
+            Model model = new Model(
                 response.Customer.CustomerId,
                 response.Customer.Personnummer,
                 response.Customer.Name,

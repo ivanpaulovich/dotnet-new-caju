@@ -1,14 +1,12 @@
-﻿namespace MyProject.UI.Presenters
+﻿namespace MyProject.UI.UseCases.Deposit
 {
     using MyProject.Application;
     using MyProject.Application.UseCases.Deposit;
-    using MyProject.UI.Model;
     using Microsoft.AspNetCore.Mvc;
 
-    public class DepositPresenter : IOutputBoundary<DepositOutput>
+    public class Presenter : IOutputBoundary<DepositOutput>
     {
         public IActionResult ViewModel { get; private set; }
-
         public DepositOutput Output { get; private set; }
 
         public void Populate(DepositOutput response)
@@ -21,7 +19,7 @@
                 return;
             }
 
-            ViewModel = new ObjectResult(new DepositModel(
+            ViewModel = new ObjectResult(new Model(
                 response.Transaction.Amount,
                 response.Transaction.Description,
                 response.Transaction.TransactionDate,

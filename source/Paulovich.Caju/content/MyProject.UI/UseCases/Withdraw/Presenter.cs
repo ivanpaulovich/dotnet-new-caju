@@ -1,10 +1,10 @@
-﻿namespace MyProject.UI.Presenters
+﻿namespace MyProject.UI.UseCases.Withdraw
 {
     using MyProject.Application;
     using MyProject.Application.UseCases.Withdraw;
     using Microsoft.AspNetCore.Mvc;
 
-    public class WithdrawPresenter : IOutputBoundary<WithdrawOutput>
+    public class Presenter : IOutputBoundary<WithdrawOutput>
     {
         public IActionResult ViewModel { get; private set; }
 

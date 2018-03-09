@@ -1,4 +1,4 @@
-﻿namespace MyProject.UI.Requests
+﻿namespace MyProject.UI.UseCases.Register
 {
     public class RegisterRequest
     {

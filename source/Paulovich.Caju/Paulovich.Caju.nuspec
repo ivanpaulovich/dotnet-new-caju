@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Paulovich.Caju</id>
-    <version>0.0.6</version>
+    <version>0.0.7</version>
     <authors>Ivan Paulovich</authors>
     <owners>Ivan Paulovich</owners>
     <projectUrl>https://github.com/ivanpaulovich/caju</projectUrl>
     <licenseUrl>https://github.com/ivanpaulovich/caju/blob/master/LICENSE</licenseUrl>
-	  <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<requireLicenseAcceptance>false</requireLicenseAcceptance>
     <title>Caju dotnet new template: Back-end with awesome architectures made easy!</title>
     <description>Caju dotnet new template: Back-end with awesome architectures made easy!</description>
     <language>en-US</language>
