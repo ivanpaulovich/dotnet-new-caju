@@ -10,7 +10,7 @@ To create a dotnet application based on this template:
 
 ```sh
 dotnet new -i Paulovich.Caju
-dotnet new caju -n "MinhaAPI"
+dotnet new caju -n "MyProject"
 ```
 
 ## The Clean Architecture
@@ -40,7 +40,7 @@ Solution with all defaults:
 
 ```sh
 dotnet new caju \
-	-n "Full-Solution"
+	--name "MyFullProject"
 ```
 
 Basic application with Register Customer and Get Customer Details use case:
@@ -51,7 +51,7 @@ dotnet new caju \
 	--withdraw false \
 	--getaccount false \
 	--closeaccount false \
-	-n "Basic"
+	--name "MyBasicProject"
 ```
 
 Empty application with only the base classes:
@@ -64,5 +64,5 @@ dotnet new caju \
 	--closeaccount false \
 	--register false \
 	--getcustomer false \
-	-n "Empty"
+	--name "MyEmptyProject"
 ```
