@@ -47,37 +47,22 @@ Basic application with Register Customer and Get Customer Details use case:
 
 ```sh
 dotnet new caju \
-	--deposit false \
-	--withdraw false \
-	--getaccount false \
-	--closeaccount false \
+	--usecases basic \
 	--name "MyBasicProject"
 ```
 
-Empty application with only the base classes:
+Empty application with the fundamental structure only:
 
 ```sh
 dotnet new caju \
-	--deposit false \
-	--withdraw false \
-	--getaccount false \
-	--closeaccount false \
-	--register false \
-	--getcustomer false \
+	--usecases empty \
 	--name "MyEmptyProject"
 ```
 
 ## Roadmap
 
 * **Architecture Style**: allow to choose between *Clean Architecture* :white_check_mark:, *Hexagonal Architecture* and *Event-Sourcing*.
-* **Content**: allow to choose between predefined Use Case sets like *Empty*, *Basic* and *Full*.	
-* Allow to exclude specific use cases by name:
-	* Register :white_check_mark:
-	* Deposit :white_check_mark:
-	* Withdraw :white_check_mark:
-	* Get an Account :white_check_mark:
-	* Get an Customer :white_check_mark:
-	* Close and Account :white_check_mark:
+* **Use Cases**: allow to choose between predefined Use Case sets like *Empty*, *Basic* and *Full*.	
 * **Infrastructure**: allow to choose between different implementations like *MongoDB*, *Kafka* or *SQL-Server*.
 * **UI**: allow to exclude UI implementations like *WebAPI* and *Console*.
 * **SkipRestore**: enable or disable restore after code generation. :white_check_mark:
