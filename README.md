@@ -34,6 +34,8 @@ The implementation result of the Clean Architecture is a software that encapsula
 
 ## Sample applications
 
+Run `dotnet new -i Paulovich.Caju` then try the following commands.
+
 Solution with all defaults:
 
 ```sh
