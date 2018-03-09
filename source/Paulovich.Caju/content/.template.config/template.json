@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Ivan Paulovich",
   "classifications": [ "Common", "Library", "Web API" ], 
-  "name": "Caju: Back-end with awesome architectures made easy!",
+  "name": "Caju: Back-end with the awesome architectures made easy!",
   "identity": "Paulovich.Caju",         
   "groupIdentity":"Paulovich.Caju",
   "shortName": "caju",
@@ -42,6 +42,12 @@
       "type": "parameter",
       "dataType":"bool",
       "defaultValue": "true"
+    },
+    "skipRestore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "If specified, skips the automatic restore of the project on create.",
+      "defaultValue": "false"
     }
   },
   "sources": [
@@ -88,8 +94,32 @@
             "MyProject.Application/UseCases/CloseAccount/**/*",
             "MyProject.UI/UseCases/CloseAccount/**/*"
           ]
+        },
+        {
+          "condition": "(!closeaccount && !getcustomer && !getaccount && !withdraw && !deposit && !register)",
+          "exclude": [
+            "MyProject.Application/Outputs/**/*",
+            "MyProject.Application/Repositories/**/*",
+            "MyProject.Domain/Accounts/**/*",
+            "MyProject.Domain/Customers/**/*",
+            "MyProject.Domain/ValueObjects/**/*",
+            "MyProject.Infrastructure/DataAccess/**/*",
+            "MyProject.Infrastructure/Mappings/**/*",
+            "MyProject.UI/Model/**/*",
+            "MyProject.UI/Modules/**/*"
+          ]
         }
       ]
     }
-  ]
+  ],
+  "postActions": [
+    {
+      "condition": "(!skipRestore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        { "text": "Run 'dotnet restore'" }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }]
 }

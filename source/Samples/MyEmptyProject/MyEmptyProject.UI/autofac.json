@@ -1,0 +1,22 @@
+﻿{
+  "defaultAssembly": "MyEmptyProject.UI",
+  "modules": [
+    {
+      "type": "MyEmptyProject.UI.Modules.UIModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "MyEmptyProject.UI.Modules.ApplicationModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "MyEmptyProject.UI.Modules.InfrastructureModule",
+      "properties": {
+        "ConnectionString": "mongodb://10.0.75.1:27017",
+        "DatabaseName": "MyEmptyProject-V01"
+      }
+    }
+  ]
+}

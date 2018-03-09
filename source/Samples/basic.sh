@@ -4,4 +4,4 @@ dotnet new caju \
 	--withdraw false \
 	--getaccount false \
 	--closeaccount false \
-	-n "Basic"
+	--name "MyBasicProject"

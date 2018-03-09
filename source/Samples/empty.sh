@@ -6,4 +6,4 @@ dotnet new caju \
 	--closeaccount false \
 	--register false \
 	--getcustomer false \
-	-n "Empty"
+	--name "MyEmptyProject"
