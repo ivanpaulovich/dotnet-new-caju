@@ -36,7 +36,7 @@ The implementation result of the Clean Architecture is a software that encapsula
 
 Run `dotnet new -i Paulovich.Caju` then try the following commands.
 
-Solution with all defaults:
+Solution with all use cases:
 
 ```sh
 dotnet new caju \
@@ -47,15 +47,15 @@ Basic application with Register Customer and Get Customer Details use case:
 
 ```sh
 dotnet new caju \
-	--usecases basic \
+	--use-cases basic \
 	--name "MyBasicProject"
 ```
 
-Empty application with the fundamental structure only:
+Empty application with the fundamental structure and components only:
 
 ```sh
 dotnet new caju \
-	--usecases empty \
+	--use-cases empty \
 	--name "MyEmptyProject"
 ```
 

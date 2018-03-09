@@ -1,4 +1,4 @@
 #!/bin/bash
 dotnet new caju \
-	--usecases basic \
+	--use-cases basic \
 	--name "MyBasicProject"

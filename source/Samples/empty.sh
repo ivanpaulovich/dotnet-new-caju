@@ -1,4 +1,4 @@
 #!/bin/bash
 dotnet new caju \
-	--usecases empty \
+	--use-cases empty \
 	--name "MyEmptyProject"
