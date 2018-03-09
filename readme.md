@@ -66,3 +66,18 @@ dotnet new caju \
 	--getcustomer false \
 	--name "MyEmptyProject"
 ```
+
+## Roadmap
+
+* **Architecture Style**: allow to choose between *Clean Architecture*, *Hexagonal Architecture* and *Event-Sourcing*.
+* **Content**: allow to choose between predefined Use Case sets like *Empty*, *Basic* and *Full*.	
+* Allow to exclude specific use cases by name:
+	* Register
+	* Deposit
+	* Withdraw
+	* Get an Account
+	* Get an Customer
+	* Close and Account
+* **Infrastructure**: allow to choose between different implementations like *MongoDB*, *Kafka* or *SQL-Server*.
+* **UI**: allow to exclude UI implementations like *WebAPI* and *Console*.
+* **SkipRestore**: enable or disable restore after code generation.
