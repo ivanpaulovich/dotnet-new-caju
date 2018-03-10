@@ -64,6 +64,6 @@ dotnet new caju \
 * **Architecture Style**: allow to choose between *Clean Architecture* :white_check_mark:, *Hexagonal Architecture* and *Event-Sourcing*.
 * **Use Cases**: allow to choose between predefined Use Case sets *Full* :white_check_mark:, *Basic* :white_check_mark:, *Read Only* :white_check_mark: and *Empty* :white_check_mark:.	
 * **Infrastructure**: allow to choose infrastructure implementations like *MongoDB*, *Kafka* or *SQL-Server*.
-* **UI**: allow to choose UI implementations like *WebAPI* or *Console* or *Both*.
+* **UI**: allow to choose UI implementations like *WebAPI* or *Console* or *Both* or *None*.
 * **Skip Restore**: enable or disable the `dotnet restore` after code generation. :white_check_mark:
-* **Documentation**: enable or disable documentation tips.
+* **Documentation**: enable or disable documentation tips. :white_check_mark:
