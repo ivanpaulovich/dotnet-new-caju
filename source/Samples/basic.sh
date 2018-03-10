@@ -1,4 +1,7 @@
 #!/bin/bash
 dotnet new caju \
-	--use-cases basic \
-	--name "MyBasicProject"
+	--deposit false \
+	--withdraw false \
+	--getaccount false \
+	--closeaccount false \
+	-n "Basic"

@@ -1,4 +1,9 @@
 #!/bin/bash
 dotnet new caju \
-	--use-cases empty \
-	--name "MyEmptyProject"
+	--deposit false \
+	--withdraw false \
+	--getaccount false \
+	--closeaccount false \
+	--register false \
+	--getcustomer false \
+	-n "Empty"
