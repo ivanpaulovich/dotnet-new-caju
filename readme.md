@@ -36,34 +36,40 @@ The implementation result of the Clean Architecture is a software that encapsula
 
 Run `dotnet new -i Paulovich.Caju` then try the following commands.
 
-Solution with all use cases:
+Clean Architecture Solution with basic use cases:
 
 ```sh
 dotnet new caju \
-	--name "MyFullProject"
-```
-
-Basic application with Register Customer and Get Customer Details use case:
-
-```sh
-dotnet new caju \
+	--architecture-style clean \
 	--use-cases basic \
-	--name "MyBasicProject"
+	-n "Clean-BasicProject"
 ```
 
-Empty application with the fundamental structure and components only:
+Hexagonal Architecture Solution with all use cases:
 
 ```sh
 dotnet new caju \
-	--use-cases empty \
-	--name "MyEmptyProject"
+	--architecture-style hexagonal \
+	--use-cases full \
+	-n "Hexagonal-FullProject"
 ```
+
+Empty Event-Sourcing Solution:
+
+```sh
+dotnet new caju \
+	--architecture-style event-sourcing \
+	--use-cases empty \
+	-n "EventSourcing-EmptyProject"
+```
+
+For olher solution types check out the [Caju Samples folder](https://github.com/ivanpaulovich/caju/tree/master/source/Samples). 
 
 ## Roadmap
 
-* **Architecture Style**: allow to choose between *Clean Architecture* :white_check_mark:, *Hexagonal Architecture* and *Event-Sourcing*.
+* **Architecture Style**: allow to choose between *Clean Architecture* :white_check_mark:, *Hexagonal Architecture* :white_check_mark: and *Event-Sourcing* :white_check_mark:.
 * **Use Cases**: allow to choose between predefined Use Case sets *Full* :white_check_mark:, *Basic* :white_check_mark:, *Read Only* :white_check_mark: and *Empty* :white_check_mark:.	
 * **Infrastructure**: allow to choose infrastructure implementations like *MongoDB*, *Kafka* or *SQL-Server*.
 * **UI**: allow to choose UI implementations like *WebAPI* or *Console* or *Both* or *None*.
-* **Skip Restore**: enable or disable the `dotnet restore` after code generation. :white_check_mark:
+* **Skip Restore**: enable or disable the `dotnet restore` after code generation.
 * **Documentation**: enable or disable documentation tips. :white_check_mark:
