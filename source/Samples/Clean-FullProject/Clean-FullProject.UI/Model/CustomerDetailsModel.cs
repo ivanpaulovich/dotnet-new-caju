@@ -1,8 +1,8 @@
-﻿namespace Clean_FullProject.UI.Model
-{
-    using System;
-    using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
+namespace Clean_FullProject.UI.Model
+{
     public class CustomerDetailsModel
     {
         public Guid CustomerId { get; }

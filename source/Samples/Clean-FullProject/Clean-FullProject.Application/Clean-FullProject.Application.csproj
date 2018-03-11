@@ -8,5 +8,4 @@
     <ProjectReference Include="..\Clean_FullProject.Domain\Clean_FullProject.Domain.csproj" />
   </ItemGroup>
 
-
 </Project>

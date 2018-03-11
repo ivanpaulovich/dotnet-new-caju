@@ -9,7 +9,11 @@
         public DateTime TransactionDate { get; }
         public double UpdateBalance { get; }
 
-        public Model(double amount, string description, DateTime transactionDate, double updatedBalance)
+        public Model(
+            double amount,
+            string description,
+            DateTime transactionDate,
+            double updatedBalance)
         {
             Amount = amount;
             Description = description;

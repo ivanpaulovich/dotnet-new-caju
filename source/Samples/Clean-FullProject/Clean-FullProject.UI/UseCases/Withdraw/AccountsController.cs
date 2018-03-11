@@ -1,44 +1,34 @@
 ﻿namespace Clean_FullProject.UI.UseCases.Withdraw
 {
+    using Clean_FullProject.Application;
+    using Clean_FullProject.Application.UseCases.Withdraw;
     using Microsoft.AspNetCore.Mvc;
     using System.Threading.Tasks;
-    using Clean_FullProject.Application.Commands.Withdraw;
 
     [Route("api/[controller]")]
-    public class AccountsController : Controller
+    public class AccountsController : Microsoft.AspNetCore.Mvc.Controller
     {
-        private readonly IWithdrawService withdrawService;
-
-        public AccountsController(IWithdrawService withdrawService)
+        private readonly IInputBoundary<WithdrawInput> withdrawInput;
+        private readonly Presenter withdrawPresenter;
+        
+        public AccountsController(
+            IInputBoundary<WithdrawInput> withdrawInput,
+            Presenter withdrawPresenter)
         {
-            this.withdrawService = withdrawService;
+            this.withdrawInput = withdrawInput;
+            this.withdrawPresenter = withdrawPresenter;
         }
 
         /// <summary>
         /// Withdraw from an account
         /// </summary>
         [HttpPatch("Withdraw")]
-        public async Task<IActionResult> Withdraw([FromBody]WithdrawRequest request)
+        public async Task<IActionResult> Withdraw([FromBody]WithdrawRequest message)
         {
-            var command = new WithdrawCommand(
-                request.AccountId,
-                request.Amount);
+            var request = new WithdrawInput(message.AccountId, message.Amount);
 
-            WithdrawResult depositResult = await withdrawService.Process(command);
-
-            if (depositResult == null)
-            {
-                return new NoContentResult();
-            }
-
-            Model model = new Model(
-                depositResult.Transaction.Amount,
-                depositResult.Transaction.Description,
-                depositResult.Transaction.TransactionDate,
-                depositResult.UpdatedBalance
-            );
-
-            return new ObjectResult(model);
+            await withdrawInput.Process(request);
+            return withdrawPresenter.ViewModel;
         }
     }
 }

@@ -1,16 +1,18 @@
 ﻿namespace Clean_FullProject.UI.Modules
 {
-    using Clean_FullProject.Application.Commands.Register;
     using Autofac;
 
     public class ApplicationModule : Autofac.Module
     {
+        public string ConnectionString { get; set; }
+        public string DatabaseName { get; set; }
+
         protected override void Load(ContainerBuilder builder)
         {
             //
             // Register all Types in Clean_FullProject.Application
             //
-            builder.RegisterAssemblyTypes(typeof(RegisterService).Assembly)
+            builder.RegisterAssemblyTypes(typeof(Application.UseCases.Register.RegisterInteractor).Assembly)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
         }

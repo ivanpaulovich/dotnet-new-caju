@@ -1,24 +1,23 @@
 ﻿namespace Clean_FullProject.UI.UseCases.GetAccountDetails
 {
+    using Clean_FullProject.Application;
+    using Clean_FullProject.Application.UseCases.GetAccountDetails;
     using Microsoft.AspNetCore.Mvc;
     using System;
     using System.Threading.Tasks;
-    using Clean_FullProject.Application.Queries;
-    using Clean_FullProject.Application.Commands.Close;
-    using Clean_FullProject.Application.Commands.Withdraw;
-    using Clean_FullProject.Application.Commands.Deposit;
-    using Clean_FullProject.UI.Model;
-    using System.Collections.Generic;
 
     [Route("api/[controller]")]
-    public class AccountsController : Controller
+    public class AccountsController : Microsoft.AspNetCore.Mvc.Controller
     {
-        private readonly IAccountsQueries accountsQueries;
+        private readonly IInputBoundary<GetAccountDetailsInput> getAccountDetailsInput;
+        private readonly Presenter getAccountDetailsPresenter;
 
         public AccountsController(
-            IAccountsQueries accountsQueries)
+            IInputBoundary<GetAccountDetailsInput> getAccountDetailsInput,
+            Presenter getAccountDetailsPresenter)
         {
-            this.accountsQueries = accountsQueries;
+            this.getAccountDetailsInput = getAccountDetailsInput;
+            this.getAccountDetailsPresenter = getAccountDetailsPresenter;
         }
 
         /// <summary>
@@ -27,24 +26,10 @@
         [HttpGet("{accountId}", Name = "GetAccount")]
         public async Task<IActionResult> Get(Guid accountId)
         {
-            var account = await accountsQueries.GetAccount(accountId);
+            var request = new GetAccountDetailsInput(accountId);
 
-            List<TransactionModel> transactions = new List<TransactionModel>();
-
-            foreach (var item in account.Transactions)
-            {
-                var transaction = new TransactionModel(
-                    item.Amount,
-                    item.Description,
-                    item.TransactionDate);
-
-                transactions.Add(transaction);
-            }
-
-            return new ObjectResult(new AccountDetailsModel(
-                account.AccountId,
-                account.CurrentBalance,
-                transactions));
+            await getAccountDetailsInput.Process(request);
+            return getAccountDetailsPresenter.ViewModel;
         }
     }
 }

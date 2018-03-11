@@ -1,45 +1,34 @@
 ﻿namespace Clean_FullProject.UI.UseCases.Deposit
 {
+    using Clean_FullProject.Application;
+    using Clean_FullProject.Application.UseCases.Deposit;
     using Microsoft.AspNetCore.Mvc;
     using System.Threading.Tasks;
-    using Clean_FullProject.Application.Commands.Deposit;
 
     [Route("api/[controller]")]
-    public class AccountsController : Controller
+    public class AccountsController : Microsoft.AspNetCore.Mvc.Controller
     {
-        private readonly IDepositService depositService;
+        private readonly IInputBoundary<DepositInput> depositInput;
+        private readonly Presenter depositPresenter;
 
         public AccountsController(
-            IDepositService depositService)
+            IInputBoundary<DepositInput> depositnput,
+            Presenter depositPresenter)
         {
-            this.depositService = depositService;
+            this.depositInput = depositnput;
+            this.depositPresenter = depositPresenter;
         }
 
         /// <summary>
-        /// Deposit from an account
+        /// Deposit to an account
         /// </summary>
         [HttpPatch("Deposit")]
-        public async Task<IActionResult> Deposit([FromBody]DepositRequest request)
+        public async Task<IActionResult> Deposit([FromBody]DepositRequest message)
         {
-            var command = new DepositCommand(
-                request.AccountId,
-                request.Amount);
+            var request = new DepositInput(message.AccountId, message.Amount);
 
-            DepositResult depositResult = await depositService.Process(command);
-
-            if (depositResult == null)
-            {
-                return new NoContentResult();
-            }
-
-            Model model = new Model(
-                depositResult.Transaction.Amount,
-                depositResult.Transaction.Description,
-                depositResult.Transaction.TransactionDate,
-                depositResult.UpdatedBalance
-            );
-
-            return new ObjectResult(model);
+            await depositInput.Process(request);
+            return depositPresenter.ViewModel;
         }
     }
 }

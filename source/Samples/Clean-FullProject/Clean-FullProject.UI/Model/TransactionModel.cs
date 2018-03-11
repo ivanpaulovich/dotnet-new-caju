@@ -1,6 +1,7 @@
 ﻿namespace Clean_FullProject.UI.Model
 {
     using System;
+
     public class TransactionModel
     {
         public double Amount { get; }

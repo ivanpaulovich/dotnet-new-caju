@@ -4,14 +4,14 @@
 
     public class Clean_FullProjectException : Exception
     {
-        public Clean_FullProjectException()
+        internal Clean_FullProjectException()
         { }
 
-        public Clean_FullProjectException(string message)
+        internal Clean_FullProjectException(string message)
             : base(message)
         { }
 
-        public Clean_FullProjectException(string message, Exception innerException)
+        internal Clean_FullProjectException(string message, Exception innerException)
             : base(message, innerException)
         { }
     }

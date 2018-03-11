@@ -1,37 +1,34 @@
 ﻿namespace Clean_FullProject.UI.UseCases.CloseAccount
 {
+    using Clean_FullProject.Application;
+    using Clean_FullProject.Application.UseCases.CloseAccount;
     using Microsoft.AspNetCore.Mvc;
     using System;
     using System.Threading.Tasks;
-    using Clean_FullProject.Application.Commands.Close;
 
     [Route("api/[controller]")]
-    public class AccountsController : Controller
+    public class AccountsController : Microsoft.AspNetCore.Mvc.Controller
     {
-        private readonly ICloseService closeService;
-
+        private readonly IInputBoundary<CloseInput> closeAccountInput;
+        private readonly Presenter closePresenter;
         public AccountsController(
-            ICloseService closeService)
+            IInputBoundary<CloseInput> closeAccountnput,
+            Presenter closePresenter)
         {
-            this.closeService = closeService;
+            this.closeAccountInput = closeAccountnput;
+            this.closePresenter = closePresenter;
         }
 
         /// <summary>
-        /// Close an account
+        /// Close the account
         /// </summary>
         [HttpDelete("{accountId}")]
         public async Task<IActionResult> Close(Guid accountId)
         {
-            var command = new CloseCommand(accountId);
+            var request = new CloseInput(accountId);
 
-            CloseResult closeResult = await closeService.Process(command);
-
-            if (closeResult == null)
-            {
-                return new NoContentResult();
-            }
-
-            return Ok();
+            await closeAccountInput.Process(request);
+            return closePresenter.ViewModel;
         }
     }
 }

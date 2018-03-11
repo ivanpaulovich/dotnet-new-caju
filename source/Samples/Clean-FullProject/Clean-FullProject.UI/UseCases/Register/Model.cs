@@ -1,8 +1,8 @@
 ﻿namespace Clean_FullProject.UI.UseCases.Register
 {
-    using Clean_FullProject.UI.Model;
     using System;
     using System.Collections.Generic;
+    using Clean_FullProject.UI.Model;
 
     public class Model
     {
@@ -11,7 +11,11 @@
         public string Name { get; }
         public List<AccountDetailsModel> Accounts { get; set; }
 
-        public Model(Guid customerId, string perssonnummer, string name, List<AccountDetailsModel> accounts)
+        public Model(
+            Guid customerId,
+            string perssonnummer,
+            string name,
+            List<AccountDetailsModel> accounts)
         {
             CustomerId = customerId;
             Personnummer = perssonnummer;
