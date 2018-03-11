@@ -174,10 +174,10 @@
             "MyProject.UI/UseCases/Deposit/**/*.cs",
             "MyProject.UI/UseCases/Withdraw/**/*.cs",
             "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-            "MyProject.Application/UseCases/Register/**/*.cs",
-            "MyProject.Application/UseCases/Deposit/**/*.cs",
-            "MyProject.Application/UseCases/Withdraw/**/*.cs",
-            "MyProject.Application/UseCases/CloseAccount/**/*.cs"
+            "MyProject.Application/Commands/Register/**/*.cs",
+            "MyProject.Application/Commands/Deposit/**/*.cs",
+            "MyProject.Application/Commands/Withdraw/**/*.cs",
+            "MyProject.Application/Commands/CloseAccount/**/*.cs"
           ]
         },
         {
@@ -187,10 +187,10 @@
             "MyProject.UI/UseCases/Withdraw/**/*.cs",
             "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
             "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-            "MyProject.Application/UseCases/Deposit/**/*.cs",
-            "MyProject.Application/UseCases/Withdraw/**/*.cs",
-            "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
-            "MyProject.Application/UseCases/CloseAccount/**/*.cs"
+            "MyProject.Application/Commands/Deposit/**/*.cs",
+            "MyProject.Application/Commands/Withdraw/**/*.cs",
+            "MyProject.Application/Commands/GetAccountDetails/**/*.cs",
+            "MyProject.Application/Commands/CloseAccount/**/*.cs"
           ]
         },
         {
