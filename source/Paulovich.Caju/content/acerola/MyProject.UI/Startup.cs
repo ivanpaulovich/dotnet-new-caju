@@ -8,10 +8,7 @@
     using Microsoft.Extensions.DependencyInjection;
     using System.IO;
     using System.Reflection;
-    using System;
-    using System.Linq;
     using Autofac.Configuration;
-    using System.Runtime.Loader;
 
     public class Startup
     {
@@ -45,7 +42,7 @@
 
                 options.IncludeXmlComments(
                     Path.ChangeExtension(
-                        Assembly.GetAssembly(typeof(MyProject.UI.Controllers.CustomersController)).Location,
+                        Assembly.GetAssembly(typeof(Startup)).Location,
                         "xml"));
 
                 options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
