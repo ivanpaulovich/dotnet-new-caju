@@ -2,392 +2,348 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Ivan Paulovich",
   "classifications": [
-      "Common",
-      "Library",
-      "Web API"
+    "Common",
+    "Library",
+    "Web API"
   ],
   "name": "Caju: Back-end with the awesome architectures made easy!",
   "identity": "Paulovich.Caju",
   "groupIdentity": "Paulovich.Caju",
   "shortName": "caju",
   "tags": {
-      "language": "C#",
-      "type": "project"
+    "language": "C#",
+    "type": "project"
   },
   "sourceName": "MyProject",
   "preferNameDirectory": true,
   "symbols": {
-      "architecture-style": {
-          "type": "parameter",
-          "datatype": "choice",
-          "defaultValue": "clean",
-          "choices": [
-              {
-                  "choice": "clean",
-                  "description": "Clean Architecture"
-              },
-              {
-                  "choice": "hexagonal",
-                  "description": "Hexagonal Architecture (Not implemented)"
-              },
-              {
-                  "choice": "es",
-                  "description": "Event Sourcing (Not implemented)"
-              }
-          ]
-      },
-      "use-cases": {
-          "type": "parameter",
-          "datatype": "choice",
-          "defaultValue": "full",
-          "choices": [
-              {
-                  "choice": "full",
-                  "description": "Full Solution with Two Aggregates and reading and writing operations"
-              },
-              {
-                  "choice": "basic",
-                  "description": "Basic Read and Write Use Cases"
-              },
-              {
-                  "choice": "readonly",
-                  "description": "Read only Use Cases"
-              },
-              {
-                  "choice": "empty",
-                  "description": "Without Use Cases"
-              }
-          ]
-      },
-      "ui": {
-          "type": "parameter",
-          "datatype": "choice",
-          "defaultValue": "webapi",
-          "choices": [
-              {
-                "choice": "none",
-                "description": "None"
-              },
-              {
-                  "choice": "webapi",
-                  "description": "Web API"
-              },
-              {
-                  "choice": "console",
-                  "description": "Console"
-              },
-              {
-                  "choice": "both",
-                  "description": "Web API and Console"
-              }
-          ]
-      },
-      "infrastructure": {
-        "type": "parameter",
-        "datatype": "choice",
-        "defaultValue": "mongodb",
-        "choices": [
-            {
-                "choice": "mongodb",
-                "description": "MongoDB"
-            },
-            {
-                "choice": "sqlserver",
-                "description": "Entity Framework and Dapper"
-            }
-        ]
-      },
-      "skipRestore": {
-          "type": "parameter",
-          "datatype": "bool",
-          "description": "If specified, skips the automatic restore of the Solution after create.",
-          "defaultValue": "false"
-      },
-      "docs": {
-          "type": "parameter",
-          "datatype": "bool",
-          "description": "If false, disables the automatic documentations tips.",
-          "defaultValue": "true"
-      },
-      "Empty": {
-          "type": "computed",
-          "value": "(use-cases == \"empty\")"
-      },
-      "Basic": {
-          "type": "computed",
-          "value": "(use-cases == \"basic\")"
-      },
-      "ReadOnly": {
-          "type": "computed",
-          "value": "(use-cases == \"readonly\")"
-      },
-      "Full": {
-          "type": "computed",
-          "value": "(use-cases == \"full\")"
-      },
-      "Clean-Architecture": {
-        "type": "computed",
-        "value": "(architecture-style == \"clean\")"
-      },
-      "Hexagonal-Architecture": {
-        "type": "computed",
-        "value": "(architecture-style == \"hexagonal\")"
-      },
-      "Event-Sourcing-Architecture": {
-        "type": "computed",
-        "value": "(architecture-style == \"es\")"
-      }
+    "architecture-style": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "clean",
+      "choices": [
+        {
+          "choice": "clean",
+          "description": "Clean Architecture"
+        },
+        {
+          "choice": "hexagonal",
+          "description": "Hexagonal Architecture"
+        },
+        {
+          "choice": "event-sourcing",
+          "description": "Event Sourcing"
+        }
+      ]
+    },
+    "use-cases": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "full",
+      "choices": [
+        {
+          "choice": "full",
+          "description": "Full Solution with Two Aggregates and reading and writing operations"
+        },
+        {
+          "choice": "basic",
+          "description": "Basic Read and Write Use Cases"
+        },
+        {
+          "choice": "readonly",
+          "description": "Read only Use Cases"
+        },
+        {
+          "choice": "empty",
+          "description": "Without Use Cases"
+        }
+      ]
+    },
+    "ui": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "webapi",
+      "choices": [
+        {
+          "choice": "none",
+          "description": "None"
+        },
+        {
+          "choice": "webapi",
+          "description": "Web API"
+        },
+        {
+          "choice": "console",
+          "description": "Console"
+        },
+        {
+          "choice": "both",
+          "description": "Web API and Console"
+        }
+      ]
+    },
+    "infrastructure": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "mongodb",
+      "choices": [
+        {
+          "choice": "mongodb",
+          "description": "MongoDB"
+        },
+        {
+          "choice": "sqlserver",
+          "description": "Entity Framework and Dapper"
+        }
+      ]
+    },
+    "tips": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Includes architecture tips or not.",
+      "defaultValue": "true"
+    },
+    "Empty": {
+      "type": "computed",
+      "value": "(use-cases == \"empty\")"
+    },
+    "Basic": {
+      "type": "computed",
+      "value": "(use-cases == \"basic\")"
+    },
+    "ReadOnly": {
+      "type": "computed",
+      "value": "(use-cases == \"readonly\")"
+    },
+    "Full": {
+      "type": "computed",
+      "value": "(use-cases == \"full\")"
+    },
+    "Clean-Architecture": {
+      "type": "computed",
+      "value": "(architecture-style == \"clean\")"
+    },
+    "Hexagonal-Architecture": {
+      "type": "computed",
+      "value": "(architecture-style == \"hexagonal\")"
+    },
+    "Event-Sourcing-Architecture": {
+      "type": "computed",
+      "value": "(architecture-style == \"es\")"
+    }
   },
   "sources": [
-
-
-
-            {
-              "condition": "(Hexagonal-Architecture)",
-              "source": "./acerola/",
-              "modifiers": [
-                  {
-                      "condition": "(Empty)",
-                      "exclude": [
-                          "MyProject.UI/UseCases/Register/**/*.cs",
-                          "MyProject.UI/UseCases/Deposit/**/*.cs",
-                          "MyProject.UI/UseCases/Withdraw/**/*.cs",
-                          "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
-                          "MyProject.UI/UseCases/GetCustomerDetails/**/*.cs",
-                          "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-                          "MyProject.UI/Model/**/*.cs",
-                          "MyProject.UI/Modules/**/*.cs",
-                          "MyProject.UI/autofac.json",
-                          "MyProject.Application/UseCases/Register/**/*.cs",
-                          "MyProject.Application/UseCases/Deposit/**/*.cs",
-                          "MyProject.Application/UseCases/Withdraw/**/*.cs",
-                          "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
-                          "MyProject.Application/UseCases/GetCustomerDetails/**/*.cs",
-                          "MyProject.Application/UseCases/CloseAccount/**/*.cs",
-                          "MyProject.Application/Outputs/**/*.cs",
-                          "MyProject.Application/Repositories/**/*.cs",
-                          "MyProject.Domain/Accounts/**/*.cs",
-                          "MyProject.Domain/Customers/**/*.cs",
-                          "MyProject.Domain/ValueObjects/**/*.cs",
-                          "MyProject.Infrastructure/DataAccess/**/*.cs",
-                          "MyProject.Infrastructure/Mappings/**/*.cs"
-                      ]
-                  },
-				  {
-                      "condition": "(ReadOnly)",
-                      "exclude": [
-                          "MyProject.UI/UseCases/Register/**/*.cs",
-						  "MyProject.UI/UseCases/Deposit/**/*.cs",
-						  "MyProject.UI/UseCases/Withdraw/**/*.cs",
-						  "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-						  "MyProject.Application/UseCases/Register/**/*.cs",
-						  "MyProject.Application/UseCases/Deposit/**/*.cs",
-						  "MyProject.Application/UseCases/Withdraw/**/*.cs",
-						  "MyProject.Application/UseCases/CloseAccount/**/*.cs"
-                      ]
-                  },
-				  {
-                      "condition": "(Basic)",
-                      "exclude": [
-                          "MyProject.UI/UseCases/Deposit/**/*.cs",
-						  "MyProject.UI/UseCases/Withdraw/**/*.cs",
-						  "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
-						  "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-						  "MyProject.Application/UseCases/Deposit/**/*.cs",
-						  "MyProject.Application/UseCases/Withdraw/**/*.cs",
-						  "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
-						  "MyProject.Application/UseCases/CloseAccount/**/*.cs"
-                      ]
-                  },
-				  {
-                      "condition": "(Full)",
-                      "exclude": [
-                          
-                      ]
-                  },
-                  {
-                    "condition": "(!docs)",
-                    "exclude": [
-                        "**/*.md"
-                    ]
-                }
-              ]
-          },
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  {
-              "condition": "(Event-Sourcing-Architecture)",
-              "source": "./castanha/",
-              "modifiers": [
-                  {
-                      "condition": "(Empty)",
-                      "exclude": [
-                          "MyProject.UI/UseCases/Register/**/*.cs",
-                          "MyProject.UI/UseCases/Deposit/**/*.cs",
-                          "MyProject.UI/UseCases/Withdraw/**/*.cs",
-                          "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
-                          "MyProject.UI/UseCases/GetCustomerDetails/**/*.cs",
-                          "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-                          "MyProject.UI/Model/**/*.cs",
-                          "MyProject.UI/Modules/**/*.cs",
-                          "MyProject.UI/autofac.json",
-                          "MyProject.Application/UseCases/Register/**/*.cs",
-                          "MyProject.Application/UseCases/Deposit/**/*.cs",
-                          "MyProject.Application/UseCases/Withdraw/**/*.cs",
-                          "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
-                          "MyProject.Application/UseCases/GetCustomerDetails/**/*.cs",
-                          "MyProject.Application/UseCases/CloseAccount/**/*.cs",
-                          "MyProject.Application/Outputs/**/*.cs",
-                          "MyProject.Application/Repositories/**/*.cs",
-                          "MyProject.Domain/Accounts/**/*.cs",
-                          "MyProject.Domain/Customers/**/*.cs",
-                          "MyProject.Domain/ValueObjects/**/*.cs",
-                          "MyProject.Infrastructure/DataAccess/**/*.cs",
-                          "MyProject.Infrastructure/Mappings/**/*.cs"
-                      ]
-                  },
-				  {
-                      "condition": "(ReadOnly)",
-                      "exclude": [
-                          "MyProject.UI/UseCases/Register/**/*.cs",
-						  "MyProject.UI/UseCases/Deposit/**/*.cs",
-						  "MyProject.UI/UseCases/Withdraw/**/*.cs",
-						  "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-						  "MyProject.Application/UseCases/Register/**/*.cs",
-						  "MyProject.Application/UseCases/Deposit/**/*.cs",
-						  "MyProject.Application/UseCases/Withdraw/**/*.cs",
-						  "MyProject.Application/UseCases/CloseAccount/**/*.cs"
-                      ]
-                  },
-				  {
-                      "condition": "(Basic)",
-                      "exclude": [
-                          "MyProject.UI/UseCases/Deposit/**/*.cs",
-						  "MyProject.UI/UseCases/Withdraw/**/*.cs",
-						  "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
-						  "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-						  "MyProject.Application/UseCases/Deposit/**/*.cs",
-						  "MyProject.Application/UseCases/Withdraw/**/*.cs",
-						  "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
-						  "MyProject.Application/UseCases/CloseAccount/**/*.cs"
-                      ]
-                  },
-				  {
-                      "condition": "(Full)",
-                      "exclude": [
-                          
-                      ]
-                  },
-                  {
-                    "condition": "(!docs)",
-                    "exclude": [
-                        "**/*.md"
-                    ]
-                }
-              ]
-          },
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  {
-              "condition": "(Clean-Architecture)",
-              "source": "./manga/",
-              "modifiers": [
-                  {
-                      "condition": "(Empty)",
-                      "exclude": [
-                          "MyProject.UI/UseCases/Register/**/*.cs",
-                          "MyProject.UI/UseCases/Deposit/**/*.cs",
-                          "MyProject.UI/UseCases/Withdraw/**/*.cs",
-                          "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
-                          "MyProject.UI/UseCases/GetCustomerDetails/**/*.cs",
-                          "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-                          "MyProject.UI/Model/**/*.cs",
-                          "MyProject.UI/Modules/**/*.cs",
-                          "MyProject.UI/autofac.json",
-                          "MyProject.Application/UseCases/Register/**/*.cs",
-                          "MyProject.Application/UseCases/Deposit/**/*.cs",
-                          "MyProject.Application/UseCases/Withdraw/**/*.cs",
-                          "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
-                          "MyProject.Application/UseCases/GetCustomerDetails/**/*.cs",
-                          "MyProject.Application/UseCases/CloseAccount/**/*.cs",
-                          "MyProject.Application/Outputs/**/*.cs",
-                          "MyProject.Application/Repositories/**/*.cs",
-                          "MyProject.Domain/Accounts/**/*.cs",
-                          "MyProject.Domain/Customers/**/*.cs",
-                          "MyProject.Domain/ValueObjects/**/*.cs",
-                          "MyProject.Infrastructure/DataAccess/**/*.cs",
-                          "MyProject.Infrastructure/Mappings/**/*.cs"
-                      ]
-                  },
-				  {
-                      "condition": "(ReadOnly)",
-                      "exclude": [
-                          "MyProject.UI/UseCases/Register/**/*.cs",
-						  "MyProject.UI/UseCases/Deposit/**/*.cs",
-						  "MyProject.UI/UseCases/Withdraw/**/*.cs",
-						  "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-						  "MyProject.Application/UseCases/Register/**/*.cs",
-						  "MyProject.Application/UseCases/Deposit/**/*.cs",
-						  "MyProject.Application/UseCases/Withdraw/**/*.cs",
-						  "MyProject.Application/UseCases/CloseAccount/**/*.cs"
-                      ]
-                  },
-				  {
-                      "condition": "(Basic)",
-                      "exclude": [
-                          "MyProject.UI/UseCases/Deposit/**/*.cs",
-						  "MyProject.UI/UseCases/Withdraw/**/*.cs",
-						  "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
-						  "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-						  "MyProject.Application/UseCases/Deposit/**/*.cs",
-						  "MyProject.Application/UseCases/Withdraw/**/*.cs",
-						  "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
-						  "MyProject.Application/UseCases/CloseAccount/**/*.cs"
-                      ]
-                  },
-				  {
-                      "condition": "(Full)",
-                      "exclude": [
-                          
-                      ]
-                  },
-                  {
-                    "condition": "(!docs)",
-                    "exclude": [
-                        "**/*.md"
-                    ]
-                }
-              ]
-          }
-		  
-		  
-		  
-		  
-		  
-  ],
-  "postActions": [
-      {
-          "condition": "(!skipRestore)",
-          "description": "Restore NuGet packages required by this project.",
-          "manualInstructions": [
-              {
-                  "text": "Run 'dotnet restore'"
-              }
-          ],
-          "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
-          "continueOnError": true
-      }
+    {
+      "condition": "(Hexagonal-Architecture)",
+      "source": "./acerola/",
+      "modifiers": [
+        {
+          "condition": "(Empty)",
+          "exclude": [
+            "MyProject.UI/UseCases/Register/**/*.cs",
+            "MyProject.UI/UseCases/Deposit/**/*.cs",
+            "MyProject.UI/UseCases/Withdraw/**/*.cs",
+            "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.UI/UseCases/GetCustomerDetails/**/*.cs",
+            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.UI/Model/**/*.cs",
+            "MyProject.UI/Modules/**/*.cs",
+            "MyProject.UI/autofac.json",
+            "MyProject.UI/Program.cs",
+            "MyProject.Application/Commands/Register/**/*.cs",
+            "MyProject.Application/Commands/Deposit/**/*.cs",
+            "MyProject.Application/Commands/Withdraw/**/*.cs",
+            "MyProject.Application/Commands/GetAccountDetails/**/*.cs",
+            "MyProject.Application/Commands/GetCustomerDetails/**/*.cs",
+            "MyProject.Application/Commands/Close/**/*.cs",
+            "MyProject.Application/Queries/**/*.cs",
+            "MyProject.Application/Results/**/*.cs",
+            "MyProject.Application/Repositories/**/*.cs",
+            "MyProject.Domain/Accounts/**/*.cs",
+            "MyProject.Domain/Customers/**/*.cs",
+            "MyProject.Domain/ValueObjects/**/*.cs",
+            "MyProject.Infrastructure/DataAccess/**/*.cs",
+            "MyProject.Infrastructure/Mappings/**/*.cs",
+            "MyProject.Infrastructure/Queries/**/*.cs"
+          ]
+        },
+        {
+          "condition": "(ReadOnly)",
+          "exclude": [
+            "MyProject.UI/UseCases/Register/**/*.cs",
+            "MyProject.UI/UseCases/Deposit/**/*.cs",
+            "MyProject.UI/UseCases/Withdraw/**/*.cs",
+            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.Application/UseCases/Register/**/*.cs",
+            "MyProject.Application/UseCases/Deposit/**/*.cs",
+            "MyProject.Application/UseCases/Withdraw/**/*.cs",
+            "MyProject.Application/UseCases/CloseAccount/**/*.cs"
+          ]
+        },
+        {
+          "condition": "(Basic)",
+          "exclude": [
+            "MyProject.UI/UseCases/Deposit/**/*.cs",
+            "MyProject.UI/UseCases/Withdraw/**/*.cs",
+            "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.Application/UseCases/Deposit/**/*.cs",
+            "MyProject.Application/UseCases/Withdraw/**/*.cs",
+            "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.Application/UseCases/CloseAccount/**/*.cs"
+          ]
+        },
+        {
+          "condition": "(Full)",
+          "exclude": []
+        },
+        {
+          "condition": "(!docs)",
+          "exclude": [
+            "**/*.md"
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "(Event-Sourcing-Architecture)",
+      "source": "./castanha/",
+      "modifiers": [
+        {
+          "condition": "(Empty)",
+          "exclude": [
+            "MyProject.UI/UseCases/Register/**/*.cs",
+            "MyProject.UI/UseCases/Deposit/**/*.cs",
+            "MyProject.UI/UseCases/Withdraw/**/*.cs",
+            "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.UI/UseCases/GetCustomerDetails/**/*.cs",
+            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.UI/Model/**/*.cs",
+            "MyProject.UI/Modules/**/*.cs",
+            "MyProject.UI/autofac.json",
+            "MyProject.UI/Program.cs",
+            "MyProject.Application/UseCases/Register/**/*.cs",
+            "MyProject.Application/UseCases/Deposit/**/*.cs",
+            "MyProject.Application/UseCases/Withdraw/**/*.cs",
+            "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.Application/UseCases/GetCustomerDetails/**/*.cs",
+            "MyProject.Application/UseCases/CloseAccount/**/*.cs",
+            "MyProject.Application/Outputs/**/*.cs",
+            "MyProject.Application/Repositories/**/*.cs",
+            "MyProject.Domain/Accounts/**/*.cs",
+            "MyProject.Domain/Customers/**/*.cs",
+            "MyProject.Domain/ValueObjects/**/*.cs",
+            "MyProject.Infrastructure/DataAccess/**/*.cs",
+            "MyProject.Infrastructure/Mappings/**/*.cs"
+          ]
+        },
+        {
+          "condition": "(ReadOnly)",
+          "exclude": [
+            "MyProject.UI/UseCases/Register/**/*.cs",
+            "MyProject.UI/UseCases/Deposit/**/*.cs",
+            "MyProject.UI/UseCases/Withdraw/**/*.cs",
+            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.Application/UseCases/Register/**/*.cs",
+            "MyProject.Application/UseCases/Deposit/**/*.cs",
+            "MyProject.Application/UseCases/Withdraw/**/*.cs",
+            "MyProject.Application/UseCases/CloseAccount/**/*.cs"
+          ]
+        },
+        {
+          "condition": "(Basic)",
+          "exclude": [
+            "MyProject.UI/UseCases/Deposit/**/*.cs",
+            "MyProject.UI/UseCases/Withdraw/**/*.cs",
+            "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.Application/UseCases/Deposit/**/*.cs",
+            "MyProject.Application/UseCases/Withdraw/**/*.cs",
+            "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.Application/UseCases/CloseAccount/**/*.cs"
+          ]
+        },
+        {
+          "condition": "(Full)",
+          "exclude": []
+        },
+        {
+          "condition": "(!docs)",
+          "exclude": [
+            "**/*.md"
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "(Clean-Architecture)",
+      "source": "./manga/",
+      "modifiers": [
+        {
+          "condition": "(Empty)",
+          "exclude": [
+            "MyProject.UI/UseCases/Register/**/*.cs",
+            "MyProject.UI/UseCases/Deposit/**/*.cs",
+            "MyProject.UI/UseCases/Withdraw/**/*.cs",
+            "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.UI/UseCases/GetCustomerDetails/**/*.cs",
+            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.UI/Model/**/*.cs",
+            "MyProject.UI/Modules/**/*.cs",
+            "MyProject.UI/autofac.json",
+            "MyProject.UI/Program.cs",
+            "MyProject.Application/UseCases/Register/**/*.cs",
+            "MyProject.Application/UseCases/Deposit/**/*.cs",
+            "MyProject.Application/UseCases/Withdraw/**/*.cs",
+            "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.Application/UseCases/GetCustomerDetails/**/*.cs",
+            "MyProject.Application/UseCases/CloseAccount/**/*.cs",
+            "MyProject.Application/Outputs/**/*.cs",
+            "MyProject.Application/Repositories/**/*.cs",
+            "MyProject.Domain/Accounts/**/*.cs",
+            "MyProject.Domain/Customers/**/*.cs",
+            "MyProject.Domain/ValueObjects/**/*.cs",
+            "MyProject.Infrastructure/DataAccess/**/*.cs",
+            "MyProject.Infrastructure/Mappings/**/*.cs"
+          ]
+        },
+        {
+          "condition": "(ReadOnly)",
+          "exclude": [
+            "MyProject.UI/UseCases/Register/**/*.cs",
+            "MyProject.UI/UseCases/Deposit/**/*.cs",
+            "MyProject.UI/UseCases/Withdraw/**/*.cs",
+            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.Application/UseCases/Register/**/*.cs",
+            "MyProject.Application/UseCases/Deposit/**/*.cs",
+            "MyProject.Application/UseCases/Withdraw/**/*.cs",
+            "MyProject.Application/UseCases/CloseAccount/**/*.cs"
+          ]
+        },
+        {
+          "condition": "(Basic)",
+          "exclude": [
+            "MyProject.UI/UseCases/Deposit/**/*.cs",
+            "MyProject.UI/UseCases/Withdraw/**/*.cs",
+            "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.Application/UseCases/Deposit/**/*.cs",
+            "MyProject.Application/UseCases/Withdraw/**/*.cs",
+            "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.Application/UseCases/CloseAccount/**/*.cs"
+          ]
+        },
+        {
+          "condition": "(Full)",
+          "exclude": []
+        },
+        {
+          "condition": "(!docs)",
+          "exclude": [
+            "**/*.md"
+          ]
+        }
+      ]
+    }
   ]
 }
