@@ -177,7 +177,7 @@
             "MyProject.Application/Commands/Register/**/*.cs",
             "MyProject.Application/Commands/Deposit/**/*.cs",
             "MyProject.Application/Commands/Withdraw/**/*.cs",
-            "MyProject.Application/Commands/CloseAccount/**/*.cs"
+            "MyProject.Application/Commands/Close/**/*.cs"
           ]
         },
         {
@@ -190,7 +190,7 @@
             "MyProject.Application/Commands/Deposit/**/*.cs",
             "MyProject.Application/Commands/Withdraw/**/*.cs",
             "MyProject.Application/Commands/GetAccountDetails/**/*.cs",
-            "MyProject.Application/Commands/CloseAccount/**/*.cs"
+            "MyProject.Application/Commands/Close/**/*.cs"
           ]
         },
         {
