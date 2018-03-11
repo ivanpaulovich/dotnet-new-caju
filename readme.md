@@ -17,18 +17,15 @@ dotnet new caju -n "MyProject"
 
 The implementation result of the Clean Architecture is a software that encapsulate Business Rules in Use Cases and the Enterprise Rules in Entities. Also the Use Cases are independent from details like User Interface, Data Access, Web Server or any external agency. 
 
-![Clean Architecture by Uncle Bob](https://raw.githubusercontent.com/ivanpaulovich/manga/master/docs/CleanArchitecture-Uncle-Bob.jpg)
-> The Clean Architecture Diagram by [Uncle Bob](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html).
-
 | Concept | Description |
 | --- | --- |
-| DDD | The Use Cases of the Account Balance are the Ubiquitious Language designed in the Domain and Application layers, we use the Eric Evans terms like Entities, Value Object, Aggregates Root and Bounded Context. |
-| SOLID | The SOLID principles are all over the the solution. The knowledge of SOLID is not a prerequisite but it is highly recommended. |
-| Entity-Boundary-Interactor (EBI) | The goal of EBI architecture is to produce a software implementation agnostic to technology, framework, or database. The result is focus on  use cases and input/output. |
-| Microservice | We designed the software around the Business Domain, having Continous Delivery and Independent Deployment. |
+| DDD | This Bounded Context of this project contains the Ubiquitious Language around Account Balance and designed inside Domain Layer and Application layer. We use the Eric Evans terms like Entities, Value Object, Aggregates Root and Domain Events. |
+| SOLID | The SOLID principles are all over the the solution. 
+| Entity-Boundary-Interactor (EBI) | The software implementation is agnostic from technology, framework, or database. The result is focus on the  use cases with input/output ports. |
+| Microservice | Designed around the Business Domain, having Continous Delivery and Independent Deployment. |
 | Logging | Logging is a detail. We plugged Serilog and configured it to redirect every log message to the file system. |
 | Docker | Docker is a detail. It was implemented to help us make a faster and reliable deployment. |
-| MongoDB | MongoDB is a detail. You could create new Data Access implementation and setup it with Autofac. |
+| MongoDB | MongoDB is a detail. You can create a new Data Access implementation and setup it at startup. |
 | .NET Core 2.0 | .NET Core is a detail. Almost everything in this code base could be ported to other versions. |
 
 ## Sample applications
