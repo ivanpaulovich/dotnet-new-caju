@@ -1,0 +1,22 @@
+﻿{
+  "defaultAssembly": "HexagonalReadOnlyProject.UI",
+  "modules": [
+    {
+      "type": "HexagonalReadOnlyProject.UI.Modules.UIModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "HexagonalReadOnlyProject.UI.Modules.ApplicationModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "HexagonalReadOnlyProject.UI.Modules.InfrastructureModule",
+      "properties": {
+        "ConnectionString": "mongodb://10.0.75.1:27017",
+        "DatabaseName": "HexagonalReadOnlyProject-V01"
+      }
+    }
+  ]
+}
