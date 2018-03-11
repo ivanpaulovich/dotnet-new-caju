@@ -1,7 +1,5 @@
 ![Caju](https://raw.githubusercontent.com/ivanpaulovich/manga/master/docs/manga-icon.png) Caju: Back-end with awesome architectures made easy!
 =========
-<a href="https://www.nuget.org/packages/Paulovich.Caju/" rel="Paulovich.Caju">![NuGet](https://img.shields.io/nuget/v/Paulovich.Caju.svg)</a> [![Build Status](https://travis-ci.org/ivanpaulovich/caju.svg?branch=master)](https://travis-ci.org/ivanpaulovich/caju)
-
 Service Template to help you build evolvable and maintainable applications. It follows the principles from the [Clean Architecture book](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164) and built on Domain-Driven Design. This make easy for you to start your new microservice.
 
 ![dotnet new caju](https://raw.githubusercontent.com/ivanpaulovich/caju/master/images/dotnet-new-caju.gif)
@@ -68,6 +66,7 @@ dotnet new caju \
 For olher solution types check out the [Caju Samples folder](https://github.com/ivanpaulovich/caju/tree/master/source/Samples). 
 
 ## Roadmap
+<a href="https://www.nuget.org/packages/Paulovich.Caju/" rel="Paulovich.Caju">![NuGet](https://img.shields.io/nuget/v/Paulovich.Caju.svg)</a> [![Build Status](https://travis-ci.org/ivanpaulovich/caju.svg?branch=master)](https://travis-ci.org/ivanpaulovich/caju)
 
 * **Architecture Style**: allow to choose between *Clean Architecture* :white_check_mark:, *Hexagonal Architecture* :white_check_mark: and *Event-Sourcing* :white_check_mark:.
 * **Use Cases**: allow to choose between predefined Use Case sets *Full* :white_check_mark:, *Basic* :white_check_mark:, *Read Only* :white_check_mark: and *Empty* :white_check_mark:.	
