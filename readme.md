@@ -71,7 +71,7 @@ There are switches to generate your awesome application with your needs. Try aft
 | --help |  | |
 
 ## Roadmap
-<a href="https://www.nuget.org/packages/Paulovich.Caju/" rel="Paulovich.Caju">![NuGet](https://img.shields.io/nuget/v/Paulovich.Caju.svg)</a> [![Build Status](https://travis-ci.org/ivanpaulovich/caju.svg?branch=master)](https://travis-ci.org/ivanpaulovich/caju)
+<a href="https://www.nuget.org/packages/Paulovich.Caju/" rel="Paulovich.Caju">![NuGet](https://buildstats.info/nuget/paulovich.caju)</a> [![Build Status](https://travis-ci.org/ivanpaulovich/caju.svg?branch=master)](https://travis-ci.org/ivanpaulovich/caju)
 
 * Allow to choose the **Architecture Style**
   * [Clean Architecture](https://github.com/ivanpaulovich/manga) :white_check_mark:
