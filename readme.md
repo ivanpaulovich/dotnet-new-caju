@@ -13,9 +13,9 @@ dotnet new -i Paulovich.Caju
 dotnet new caju -n "MyProject"
 ```
 
-## The Clean Architecture
+## The Architecture Styles
 
-The implementation result of the Clean Architecture is a software that encapsulate Business Rules in Use Cases and the Enterprise Rules in Entities. Also the Use Cases are independent from details like User Interface, Data Access, Web Server or any external agency. 
+This architecture implementations is a software that encapsulate Business Rules in Use Cases and the Enteprise Rules in Entities. We prevent our software to be coupled from technology details like User Interface, Data Access frameworks or Web Servers. And there is some concepts which guided us:
 
 | Concept | Description |
 | --- | --- |
