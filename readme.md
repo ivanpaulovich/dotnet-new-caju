@@ -76,9 +76,23 @@ There are switches to generate your awesome application with your needs. Try-out
 ## Roadmap
 <a href="https://www.nuget.org/packages/Paulovich.Caju/" rel="Paulovich.Caju">![NuGet](https://img.shields.io/nuget/v/Paulovich.Caju.svg)</a> [![Build Status](https://travis-ci.org/ivanpaulovich/caju.svg?branch=master)](https://travis-ci.org/ivanpaulovich/caju)
 
-* **Architecture Style**: allow to choose between *Clean Architecture* :white_check_mark:, *Hexagonal Architecture* :white_check_mark: and *Event-Sourcing* :white_check_mark:.
-* **Use Cases**: allow to choose between predefined Use Case sets *Full* :white_check_mark:, *Basic* :white_check_mark:, *Read Only* :white_check_mark: and *Empty* :white_check_mark:.	
-* **Infrastructure**: allow to choose infrastructure implementations like *MongoDB*, *Kafka* or *SQL-Server*.
-* **UI**: allow to choose UI implementations like *WebAPI* or *Console* or *Both* or *None*.
-* **Skip Restore**: enable or disable the `dotnet restore` after code generation.
-* **Documentation**: enable or disable documentation tips. :white_check_mark:
+* Allow to choose the **Architecture Style**
+	* *Clean Architecture* :white_check_mark:
+	* *Hexagonal Architecture* :white_check_mark:
+	* *Event-Sourcing* :white_check_mark:
+* Allow to choose built-in **Use Cases** sets
+	* *Full* set of use cases :white_check_mark:
+	* *Basic* set of use cases :white_check_mark:
+	* *Read Only* :white_check_mark: 
+	* *Empty* :white_check_mark:	
+* Allow to choose **Infrastructure** details. 
+	* *MongoDB*
+	* *Kafka*
+	* *SQL-Server*
+* Allow to choose the **UI** implementations
+	* *WebAPI*
+	* *Console* 
+	* *Both* 
+	* *None*.
+* Allow to **Skip dotnet restore** after code generation.
+* Allow to include or remove the **Architecture Tips** :white_check_mark:
