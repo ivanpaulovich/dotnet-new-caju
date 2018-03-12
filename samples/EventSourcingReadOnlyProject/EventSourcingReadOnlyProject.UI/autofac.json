@@ -15,14 +15,14 @@
       "type": "EventSourcingReadOnlyProject.UI.Modules.InfrastructureModule",
       "properties": {
         "ConnectionString": "mongodb://10.0.75.1:27017",
-        "DatabaseName": "EventSourcingReadOnlyProject-V13"
+        "DatabaseName": "EventSourcingReadOnlyProject-V01"
       }
     },
     {
       "type": "EventSourcingReadOnlyProject.UI.Modules.BusModule",
       "properties": {
         "BrokerList": "10.0.75.1:9092",
-        "Topic": "EventSourcingReadOnlyProject-V13"
+        "Topic": "EventSourcingReadOnlyProject-V01"
       }
     }
   ]

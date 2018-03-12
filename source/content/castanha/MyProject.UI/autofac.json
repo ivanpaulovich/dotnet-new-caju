@@ -1,6 +1,7 @@
 ﻿{
   "defaultAssembly": "MyProject.UI",
   "modules": [
+    //#if (!Empty)
     {
       "type": "MyProject.UI.Modules.UIModule",
       "properties": {
@@ -15,15 +16,16 @@
       "type": "MyProject.UI.Modules.InfrastructureModule",
       "properties": {
         "ConnectionString": "mongodb://10.0.75.1:27017",
-        "DatabaseName": "MyProject-V13"
+        "DatabaseName": "MyProject-V01"
       }
     },
     {
       "type": "MyProject.UI.Modules.BusModule",
       "properties": {
         "BrokerList": "10.0.75.1:9092",
-        "Topic": "MyProject-V13"
+        "Topic": "MyProject-V01"
       }
     }
+    //#endif
   ]
 }

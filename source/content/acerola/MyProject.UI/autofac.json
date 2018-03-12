@@ -1,6 +1,7 @@
 ﻿{
   "defaultAssembly": "MyProject.UI",
   "modules": [
+    //#if (!Empty)
     {
       "type": "MyProject.UI.Modules.UIModule",
       "properties": {
@@ -18,5 +19,6 @@
         "DatabaseName": "MyProject-V01"
       }
     }
+    //#endif
   ]
 }

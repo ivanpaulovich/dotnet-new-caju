@@ -8,10 +8,7 @@
     using Microsoft.Extensions.DependencyInjection;
     using System.IO;
     using System.Reflection;
-    using System;
-    using System.Linq;
     using Autofac.Configuration;
-    using System.Runtime.Loader;
 
     public class Startup
     {

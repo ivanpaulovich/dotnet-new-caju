@@ -1,22 +1,5 @@
 ﻿{
   "defaultAssembly": "HexagonalEmptyProject.UI",
   "modules": [
-    {
-      "type": "HexagonalEmptyProject.UI.Modules.UIModule",
-      "properties": {
-      }
-    },
-    {
-      "type": "HexagonalEmptyProject.UI.Modules.ApplicationModule",
-      "properties": {
-      }
-    },
-    {
-      "type": "HexagonalEmptyProject.UI.Modules.InfrastructureModule",
-      "properties": {
-        "ConnectionString": "mongodb://10.0.75.1:27017",
-        "DatabaseName": "HexagonalEmptyProject-V01"
-      }
-    }
   ]
 }

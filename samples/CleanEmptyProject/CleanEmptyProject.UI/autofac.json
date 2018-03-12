@@ -1,22 +1,5 @@
 ﻿{
   "defaultAssembly": "CleanEmptyProject.UI",
   "modules": [
-    {
-      "type": "CleanEmptyProject.UI.Modules.UIModule",
-      "properties": {
-      }
-    },
-    {
-      "type": "CleanEmptyProject.UI.Modules.ApplicationModule",
-      "properties": {
-      }
-    },
-    {
-      "type": "CleanEmptyProject.UI.Modules.InfrastructureModule",
-      "properties": {
-        "ConnectionString": "mongodb://10.0.75.1:27017",
-        "DatabaseName": "CleanEmptyProject-V01"
-      }
-    }
   ]
 }

@@ -15,14 +15,14 @@
       "type": "EventSourcingBasicProject.UI.Modules.InfrastructureModule",
       "properties": {
         "ConnectionString": "mongodb://10.0.75.1:27017",
-        "DatabaseName": "EventSourcingBasicProject-V13"
+        "DatabaseName": "EventSourcingBasicProject-V01"
       }
     },
     {
       "type": "EventSourcingBasicProject.UI.Modules.BusModule",
       "properties": {
         "BrokerList": "10.0.75.1:9092",
-        "Topic": "EventSourcingBasicProject-V13"
+        "Topic": "EventSourcingBasicProject-V01"
       }
     }
   ]
