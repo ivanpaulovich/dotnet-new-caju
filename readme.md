@@ -93,3 +93,12 @@ There are switches to generate your awesome application with your needs. Try aft
 	* None
 * Allow to **Skip dotnet restore** after code generation.
 * Allow to include or remove the **Architecture Tips** :white_check_mark:
+
+## Common Issues
+
+If you have any problems check your .NET Core SDK. Today our features are only supported in `2.1.4`+
+
+```sh
+$ dotnet --version
+2.1.4
+```
