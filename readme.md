@@ -96,7 +96,7 @@ There are switches to generate your awesome application with your needs. Try aft
 
 ## Common Issues
 
-Check your .NET Core SDK. Our features are only supported in `2.1.4+` SDK.
+Check your [.NET Core SDK](https://www.microsoft.com/net/download/windows). Our features are only supported in `2.1.4` SDK or plus.
 
 ```sh
 $ dotnet --version
