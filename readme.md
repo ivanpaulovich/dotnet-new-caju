@@ -23,10 +23,6 @@ This architecture implementations is a software that encapsulate Business Rules 
 | SOLID | The SOLID principles are all over the the solution. 
 | Entity-Boundary-Interactor (EBI) | The software implementation is agnostic from technology, framework, or database. The result is focus on the  use cases with input/output ports. |
 | Microservice | Designed around the Business Domain, having Continous Delivery and Independent Deployment. |
-| Logging | Logging is a detail. We plugged Serilog and configured it to redirect every log message to the file system. |
-| Docker | Docker is a detail. It was implemented to help us make a faster and reliable deployment. |
-| MongoDB | MongoDB is a detail. You can create a new Data Access implementation and setup it at startup. |
-| .NET Core 2.0 | .NET Core is a detail. Almost everything in this code base could be ported to other versions. |
 
 ## Sample applications
 
