@@ -1,5 +1,5 @@
 #!/bin/bash
 dotnet new caju \
 	--architecture-style clean \
-	--use-cases empty \
+	--use-cases none \
 	-n "CleanEmptyProject"

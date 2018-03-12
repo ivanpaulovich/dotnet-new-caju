@@ -54,7 +54,7 @@
           "description": "Read only Use Cases"
         },
         {
-          "choice": "empty",
+          "choice": "none",
           "description": "Without Use Cases"
         }
       ]
@@ -94,7 +94,11 @@
         {
           "choice": "sqlserver",
           "description": "Entity Framework and Dapper"
-        }
+        },
+        {
+          "choice": "none",
+          "description": "No frameworks"
+        },
       ]
     },
     "tips": {
@@ -105,7 +109,7 @@
     },
     "Empty": {
       "type": "computed",
-      "value": "(use-cases == \"empty\")"
+      "value": "(use-cases == \"none\")"
     },
     "Basic": {
       "type": "computed",
