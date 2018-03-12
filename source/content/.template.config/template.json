@@ -151,7 +151,7 @@
       "type": "computed",
       "value": "(ui == \"both\")"
     },
-	"I-MongoDB": {
+	"MongoDB": {
       "type": "computed",
       "value": "(infrastructure == \"mongodb\")"
     },
@@ -365,7 +365,15 @@
           "exclude": [
             "**/*.md"
           ]
-        }
+        },
+		{
+          "condition": "(!MongoDB)",
+          "exclude": [
+            "MyProject.Infrastructure/DataAccess/AccountBalanceContext.cs",
+			"MyProject.Infrastructure/DataAccess/AccountRepository.cs",
+			"MyProject.Infrastructure/DataAccess/CustomerRepository.cs",
+          ]
+        }		
       ]
     }
   ]
