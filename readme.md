@@ -59,7 +59,7 @@ For olher solution types check out the [Caju Samples folder](https://github.com/
 
 ## Switches
 
-There are switches to generate your awesome application with your needs. Try-out:
+There are switches to generate your awesome application with your needs. Try after `dotnet new caju`:
 
 | Switch | Options | Default Value |
 | --- | --- | --- |
@@ -68,6 +68,7 @@ There are switches to generate your awesome application with your needs. Try-out
 | --ui | `none` `webapi` `console` `both` | `webapi` |
 | --infrastructure | `mongodb` `sqlserver` | `mongodb` |
 | --tips | `true` `false` | `true` |
+| --help |  | |
 
 ## Roadmap
 <a href="https://www.nuget.org/packages/Paulovich.Caju/" rel="Paulovich.Caju">![NuGet](https://img.shields.io/nuget/v/Paulovich.Caju.svg)</a> [![Build Status](https://travis-ci.org/ivanpaulovich/caju.svg?branch=master)](https://travis-ci.org/ivanpaulovich/caju)
