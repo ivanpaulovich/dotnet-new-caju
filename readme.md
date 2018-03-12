@@ -64,9 +64,9 @@ There are switches to generate your awesome application with your needs. Try aft
 | Switch | Options | Default Value |
 | --- | --- | --- |
 | --architecture-style | `clean` `hexagonal` `eventsourcing` | `clean` |
-| --use-cases | `full` `basic` `readonly` `empty` | `full` |
+| --use-cases | `full` `basic` `readonly` `none` | `full` |
 | --ui | `none` `webapi` `console` `both` | `webapi` |
-| --infrastructure | `mongodb` `sqlserver` | `mongodb` |
+| --infrastructure | `mongodb` `sqlserver` `none` | `mongodb` |
 | --tips | `true` `false` | `true` |
 | --help |  | |
 
@@ -74,23 +74,24 @@ There are switches to generate your awesome application with your needs. Try aft
 <a href="https://www.nuget.org/packages/Paulovich.Caju/" rel="Paulovich.Caju">![NuGet](https://img.shields.io/nuget/v/Paulovich.Caju.svg)</a> [![Build Status](https://travis-ci.org/ivanpaulovich/caju.svg?branch=master)](https://travis-ci.org/ivanpaulovich/caju)
 
 * Allow to choose the **Architecture Style**
-	* [Clean Architecture](https://github.com/ivanpaulovich/manga) :white_check_mark:
-	* [Hexagonal Architecture](https://github.com/ivanpaulovich/acerola) :white_check_mark:
-	* [Event-Sourcing](https://github.com/ivanpaulovich/castanha) :white_check_mark:
+  * [Clean Architecture](https://github.com/ivanpaulovich/manga) :white_check_mark:
+  * [Hexagonal Architecture](https://github.com/ivanpaulovich/acerola) :white_check_mark:
+  * [Event-Sourcing](https://github.com/ivanpaulovich/castanha) :white_check_mark:
 * Allow to choose built-in **Use Cases** sets
-	* Full set of use cases :white_check_mark:
-	* Basic set of use cases :white_check_mark:
-	* Read Only :white_check_mark: 
-	* Empty :white_check_mark:	
+  * Full set of use cases :white_check_mark:
+  * Basic set of use cases :white_check_mark:
+  * Read Only :white_check_mark: 
+  * None :white_check_mark:	
 * Allow to choose **Infrastructure** details. 
-	* MongoDB
-	* Kafka
-	* SQL-Server
+  * MongoDB
+  * Kafka
+  * SQL-Server
+  * None
 * Allow to choose the **UI** implementations
-	* WebAPI
-	* Console 
-	* Both
-	* None
+  * WebAPI
+  * Console 
+  * Both
+  * None
 * Allow to skip the **dotnet restore** after code generation.
 * Allow to include or remove the **Architecture Tips** :white_check_mark:
 
