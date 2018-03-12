@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Paulovich.Caju</id>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
     <authors>Ivan Paulovich</authors>
     <owners>Ivan Paulovich</owners>
     <projectUrl>https://github.com/ivanpaulovich/caju</projectUrl>
@@ -23,6 +23,50 @@
       $ dotnet new caju --use-cases basic --name "MyBasicProject"
       $ dotnet new caju --architecture-style hexagonal --name "MyHexagonalProject"
     </summary>
+    <releaseNotes>
+      
+    </releaseNotes>
+    <tags>
+      boilerplate
+      solid
+      ddd
+      clean-architecture
+      clean-code
+      evolutionary-architecture
+      microservices
+      hexagonal-architecture
+      design-patterns
+      docker
+      webapi
+      domain-driven-design
+      mongodb
+      kafka
+      cqrs
+      event-sourcing
+      dotnet-new
+      generator
+      tdd
+      event-driven
+      templating
+      microservice
+      dotnet-core
+      ddd-architecture
+      solid-principles
+      aggregate
+      bearer-authentication
+      cqrs-es
+      service-bus
+      optimistic-updates
+      angular
+      typescript
+      rest-client
+      material-design
+      bootstrap
+      dotnetcore
+      dotnet
+      layered
+      architecture
+    </tags>
     <language>en-US</language>
     <packageTypes>
       <packageType name="Template" />
