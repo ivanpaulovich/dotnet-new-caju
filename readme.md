@@ -54,7 +54,7 @@ Empty Event-Sourcing Solution:
 
 ```sh
 dotnet new caju \
-	--architecture-style event-sourcing \
+	--architecture-style eventsourcing \
 	--use-cases empty \
 	-n "EventSourcing-EmptyProject"
 ```
