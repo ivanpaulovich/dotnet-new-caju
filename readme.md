@@ -65,7 +65,7 @@ There are switches to generate your awesome application with your needs. Try aft
 | --- | --- | --- |
 | --architecture-style | `clean` `hexagonal` `eventsourcing` | `clean` |
 | --use-cases | `full` `basic` `readonly` `none` | `full` |
-| --ui | `none` `webapi` `console` `both` | `webapi` |
+| --ui | `both` `webapi` `console` `none` | `webapi` |
 | --infrastructure | `mongodb` `sqlserver` `none` | `mongodb` |
 | --tips | `true` `false` | `true` |
 | --help |  | |
@@ -88,9 +88,9 @@ There are switches to generate your awesome application with your needs. Try aft
   * SQL-Server
   * None
 * Allow to choose the **UI** implementations
+  * Both
   * WebAPI
   * Console 
-  * Both
   * None
 * Allow to skip the **dotnet restore** after code generation.
 * Allow to include or remove the **Architecture Tips** :white_check_mark:
