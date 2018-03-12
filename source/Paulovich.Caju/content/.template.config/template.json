@@ -31,7 +31,7 @@
           "description": "Hexagonal Architecture"
         },
         {
-          "choice": "event-sourcing",
+          "choice": "eventsourcing",
           "description": "Event Sourcing"
         }
       ]
@@ -129,7 +129,7 @@
     },
     "Event-Sourcing-Architecture": {
       "type": "computed",
-      "value": "(architecture-style == \"es\")"
+      "value": "(architecture-style == \"eventsourcing\")"
     }
   },
   "sources": [
@@ -230,6 +230,7 @@
             "MyProject.Application/UseCases/CloseAccount/**/*.cs",
             "MyProject.Application/Outputs/**/*.cs",
             "MyProject.Application/Repositories/**/*.cs",
+            "MyProject.Application/EventHandlers/**/*.cs",
             "MyProject.Domain/Accounts/**/*.cs",
             "MyProject.Domain/Customers/**/*.cs",
             "MyProject.Domain/ValueObjects/**/*.cs",

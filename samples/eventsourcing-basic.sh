@@ -1,5 +1,5 @@
 #!/bin/bash
 dotnet new caju \
-	--architecture-style event-sourcing \
+	--architecture-style eventsourcing \
 	--use-cases basic \
 	-n "EventSourcingBasicProject"

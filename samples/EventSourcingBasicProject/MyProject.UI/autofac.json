@@ -1,0 +1,29 @@
+﻿{
+  "defaultAssembly": "EventSourcingBasicProject.UI",
+  "modules": [
+    {
+      "type": "EventSourcingBasicProject.UI.Modules.UIModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "EventSourcingBasicProject.UI.Modules.ApplicationModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "EventSourcingBasicProject.UI.Modules.InfrastructureModule",
+      "properties": {
+        "ConnectionString": "mongodb://10.0.75.1:27017",
+        "DatabaseName": "EventSourcingBasicProject-V13"
+      }
+    },
+    {
+      "type": "EventSourcingBasicProject.UI.Modules.BusModule",
+      "properties": {
+        "BrokerList": "10.0.75.1:9092",
+        "Topic": "EventSourcingBasicProject-V13"
+      }
+    }
+  ]
+}
