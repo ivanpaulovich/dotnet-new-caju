@@ -67,7 +67,7 @@ There are switches to generate your awesome application with your needs. Try-out
 
 | Switch | Options | Default Value |
 | --- | --- | --- |
-| --architecture-style | `clean` `hexagonal` `event-sourcing` | `clean` |
+| --architecture-style | `clean` `hexagonal` `eventsourcing` | `clean` |
 | --use-cases | `full` `basic` `readonly` `empty` | `full` |
 | --ui | `none` `webapi` `console` `both` | `webapi` |
 | --infrastructure | `mongodb` `sqlserver` | `mongodb` |
