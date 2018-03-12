@@ -1,4 +1,4 @@
-﻿namespace EventSourcingEmptyProject.UI
+﻿namespace HexagonalEmptyProject.UI
 {
     using Microsoft.AspNetCore;
     using Microsoft.AspNetCore.Hosting;
@@ -22,8 +22,8 @@
                     .ConfigureAppConfiguration((builderContext, config) =>
                     {
                         IHostingEnvironment env = builderContext.HostingEnvironment;
-                        config.AddJsonFile("autofac.empty.json")
-                        .AddEnvironmentVariables();
+                        config.AddJsonFile("autofac.empty.json");
+                        config.AddEnvironmentVariables();
                     })
                     .UseSerilog((hostingContext, loggerConfiguration) =>
                     {

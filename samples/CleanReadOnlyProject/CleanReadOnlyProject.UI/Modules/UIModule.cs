@@ -2,7 +2,6 @@
 {
     using Autofac;
     using CleanReadOnlyProject.Application;
-    using CleanReadOnlyProject.UI.UseCases.Register;
 
     public class UIModule : Autofac.Module
     {
@@ -14,7 +13,7 @@
             //
             // Register all Types in CleanReadOnlyProject.UI
             //
-            builder.RegisterAssemblyTypes(typeof(Presenter).Assembly)
+            builder.RegisterAssemblyTypes(typeof(Startup).Assembly)
                 .AsClosedTypesOf(typeof(IOutputBoundary<>))
                 .InstancePerLifetimeScope();
         }

@@ -22,8 +22,8 @@
                     .ConfigureAppConfiguration((builderContext, config) =>
                     {
                         IHostingEnvironment env = builderContext.HostingEnvironment;
-                        config.AddJsonFile("autofac.json")
-                        .AddEnvironmentVariables();
+                        config.AddJsonFile("autofac.json");
+                        config.AddEnvironmentVariables();
                     })
                     .UseSerilog((hostingContext, loggerConfiguration) =>
                     {

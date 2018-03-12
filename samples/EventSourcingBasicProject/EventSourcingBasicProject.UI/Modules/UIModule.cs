@@ -2,7 +2,6 @@
 {
     using Autofac;
     using EventSourcingBasicProject.Application;
-    using EventSourcingBasicProject.UI.Presenters;
 
     public class UIModule : Autofac.Module
     {
@@ -11,7 +10,7 @@
             //
             // Register all Presenters in EventSourcingBasicProject.UI
             //
-            builder.RegisterAssemblyTypes(typeof(RegisterPresenter).Assembly)
+            builder.RegisterAssemblyTypes(typeof(Startup).Assembly)
                 .AsClosedTypesOf(typeof(IOutputBoundary<>))
                 .InstancePerLifetimeScope();
         }
