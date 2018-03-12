@@ -1,0 +1,24 @@
+{
+	"origin" : "https://github.com/ivanpaulovich/manga/",
+	"architecture-style" : "clean",
+	
+	// USE-CASES
+	
+	"use-cases" : 	
+	"basic",
+
+	// UI
+
+	"ui" : 	
+	"webapi",
+
+	// INFRASTRUCTURE
+
+	"infrastructure" : 	
+	"mongodb",
+
+	// TIPS
+
+	"tips" : 	
+	"true"
+}

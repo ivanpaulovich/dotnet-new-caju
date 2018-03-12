@@ -130,6 +130,30 @@
     "Event-Sourcing-Architecture": {
       "type": "computed",
       "value": "(architecture-style == \"eventsourcing\")"
+    },
+	"UI-None": {
+      "type": "computed",
+      "value": "(ui == \"none\")"
+    },
+	"UI-Webapi": {
+      "type": "computed",
+      "value": "(ui == \"webapi\")"
+    },
+	"UI-Console": {
+      "type": "computed",
+      "value": "(ui == \"console\")"
+    },
+	"UI-Both": {
+      "type": "computed",
+      "value": "(ui == \"both\")"
+    },
+	"I-MongoDB": {
+      "type": "computed",
+      "value": "(infrastructure == \"mongodb\")"
+    },
+	"I-SQLServer": {
+      "type": "computed",
+      "value": "(infrastructure == \"sqlserver\")"
     }
   },
   "sources": [

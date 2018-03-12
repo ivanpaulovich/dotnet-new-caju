@@ -1,0 +1,48 @@
+{
+	"origin" : "https://github.com/ivanpaulovich/acerola/",
+	"architecture-style" : "hexagonal",
+	
+	// USE-CASES
+	
+	"use-cases" : 	
+//#if (Basic)
+	"basic",
+//#elseif (ReadOnly)
+	"readonly",
+//#elseif (Empty)
+	"empty",
+//#elseif (Full)
+	"full",
+//#endif
+
+	// UI
+
+	"ui" : 	
+//#if (UI-None)
+	"none",
+//#elseif (UI-Webapi)
+	"webapi",
+//#elseif (UI-Console)
+	"console",
+//#elseif (UI-Both)
+	"both",	
+//#endif
+
+	// INFRASTRUCTURE
+
+	"infrastructure" : 	
+//#if (I-MongoDB)
+	"mongodb",
+//#elseif (I-SQLServer)
+	"sqlserver",
+//#endif
+
+	// TIPS
+
+	"tips" : 	
+//#if (tips)
+	"true"
+//#else
+	"false"
+//#endif	
+}

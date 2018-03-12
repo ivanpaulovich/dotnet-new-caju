@@ -1,0 +1,24 @@
+{
+	"origin" : "https://github.com/ivanpaulovich/castanha/",
+	"architecture-style" : "eventsourcing",
+	
+	// USE-CASES
+	
+	"use-cases" : 	
+	"basic",
+
+	// UI
+
+	"ui" : 	
+	"webapi",
+
+	// INFRASTRUCTURE
+
+	"infrastructure" : 	
+	"mongodb",
+
+	// TIPS
+
+	"tips" : 	
+	"true"
+}
