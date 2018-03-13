@@ -68,7 +68,7 @@ There are switches to generate your awesome application with your needs. Try aft
 | --ui | `both` `webapi` `console` `none` | `webapi` |
 | --data-access | `mongo` `entityframework` `dapper` `none` | `mongodb` |
 | --tips | `true` `false` | `true` |
-| --help |  | |
+> type `dotnet new caju --help` for the complete list of switches.
 
 ## Roadmap
 <a href="https://www.nuget.org/packages/Paulovich.Caju/" rel="Paulovich.Caju">![NuGet](https://buildstats.info/nuget/paulovich.caju)</a> [![Build Status](https://travis-ci.org/ivanpaulovich/caju.svg?branch=master)](https://travis-ci.org/ivanpaulovich/caju)
