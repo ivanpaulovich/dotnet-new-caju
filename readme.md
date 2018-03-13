@@ -66,7 +66,7 @@ There are switches to generate your awesome application with your needs. Try aft
 | --architecture-style | `clean` `hexagonal` `eventsourcing` | `clean` |
 | --use-cases | `full` `basic` `readonly` `none` | `full` |
 | --ui | `both` `webapi` `console` `none` | `webapi` |
-| --data-access | `mongo` `entityframework` `dapper` `none` | `mongodb` |
+| --data-access | `mongo` `entityframework` `dapper` `none` | `mongo` |
 | --tips | `true` `false` | `true` |
 > type `dotnet new caju --help` for the complete list of switches.
 
