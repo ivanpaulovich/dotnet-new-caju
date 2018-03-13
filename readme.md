@@ -73,16 +73,16 @@ There are switches to generate your awesome application with your needs. Try aft
 ## Roadmap
 <a href="https://www.nuget.org/packages/Paulovich.Caju/" rel="Paulovich.Caju">![NuGet](https://buildstats.info/nuget/paulovich.caju)</a> [![Build Status](https://travis-ci.org/ivanpaulovich/caju.svg?branch=master)](https://travis-ci.org/ivanpaulovich/caju)
 
-* Allow to choose the **Architecture Style**
+* Allow to choose the **architecture style**
   * [Clean Architecture](https://github.com/ivanpaulovich/manga) :white_check_mark:
   * [Hexagonal Architecture](https://github.com/ivanpaulovich/acerola) :white_check_mark:
   * [Event-Sourcing](https://github.com/ivanpaulovich/castanha) :white_check_mark:
-* Allow to choose built-in **Use Cases** sets
+* Allow to choose built-in **use cases sets**
   * Full set of use cases :white_check_mark:
   * Basic set of use cases :white_check_mark:
   * Read Only :white_check_mark: 
   * None :white_check_mark:	
-* Allow to choose **Data Access** frameworks 
+* Allow to choose **data access** frameworks 
   * MongoDB :white_check_mark:
   * Dapper
   * Entity Framework
@@ -93,8 +93,8 @@ There are switches to generate your awesome application with your needs. Try aft
   * WebAPI
   * Console 
   * None
-* Allow to skip the **dotnet restore** after code generation.
-* Allow to include or remove the **architecture tips** :white_check_mark:
+* Allow to skip the **dotnet restore** after code generation
+* Allow to include or to remove the **architecture tips** :white_check_mark:
 
 ## Common Issues
 
