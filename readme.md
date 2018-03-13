@@ -82,18 +82,19 @@ There are switches to generate your awesome application with your needs. Try aft
   * Basic set of use cases :white_check_mark:
   * Read Only :white_check_mark: 
   * None :white_check_mark:	
-* Allow to choose **Infrastructure** details. 
-  * MongoDB
+* Allow to choose **Data Access** frameworks 
+  * MongoDB :white_check_mark:
+  * Dapper
+  * Entity Framework
   * Kafka
-  * SQL-Server
   * None
-* Allow to choose the **UI** implementations
+* Allow to choose **UI** implementations
   * Both
   * WebAPI
   * Console 
   * None
 * Allow to skip the **dotnet restore** after code generation.
-* Allow to include or remove the **Architecture Tips** :white_check_mark:
+* Allow to include or remove the **architecture tips** :white_check_mark:
 
 ## Common Issues
 
