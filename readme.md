@@ -66,7 +66,7 @@ There are switches to generate your awesome application with your needs. Try aft
 | --architecture-style | `clean` `hexagonal` `eventsourcing` | `clean` |
 | --use-cases | `full` `basic` `readonly` `none` | `full` |
 | --ui | `both` `webapi` `console` `none` | `webapi` |
-| --infrastructure | `mongodb` `sqlserver` `none` | `mongodb` |
+| --data-access | `mongo` `entityframeworks` `dapper` `none` | `mongodb` |
 | --tips | `true` `false` | `true` |
 | --help |  | |
 
