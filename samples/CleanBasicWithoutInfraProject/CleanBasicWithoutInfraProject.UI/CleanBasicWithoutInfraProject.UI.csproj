@@ -9,6 +9,13 @@
     <NoWarn>1701;1702;1705;NU1701;CS1591</NoWarn>
     <DocumentationFile>bin\Debug\netcoreapp2.0\CleanBasicWithoutInfraProject.UI.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="logs\**" />
+    <Content Remove="logs\**" />
+    <EmbeddedResource Remove="logs\**" />
+    <None Remove="logs\**" />
+  </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="Autofac.Configuration" Version="4.0.1" />
@@ -28,7 +35,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CleanBasicWithoutInfraProject.Application\CleanBasicWithoutInfraProject.Application.csproj" />
-    <ProjectReference Include="..\CleanBasicWithoutInfraProject.Domain\CleanBasicWithoutInfraProject.Domain.csproj" />
     <ProjectReference Include="..\CleanBasicWithoutInfraProject.Infrastructure\CleanBasicWithoutInfraProject.Infrastructure.csproj" />
   </ItemGroup>
 
@@ -42,5 +48,6 @@
     </ItemGroup>
     <Copy SourceFiles="@(DocFile)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="false" />
   </Target>
-  
+
 </Project>
+

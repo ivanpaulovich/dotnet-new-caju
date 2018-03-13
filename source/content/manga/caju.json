@@ -1,0 +1,8 @@
+{
+	"origin": "https://github.com/ivanpaulovich/manga/",
+	"architecture-style": "clean",		
+	"use-cases": "use-cases",
+	"ui": "ui",
+	"data-access": "data-access",
+	"tips": "tips"
+}

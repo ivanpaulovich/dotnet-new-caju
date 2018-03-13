@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Paulovich.Caju</id>
-    <version>0.1.36</version>
+    <version>0.1.46</version>
     <authors>Ivan Paulovich</authors>
     <owners>Ivan Paulovich</owners>
     <projectUrl>https://github.com/ivanpaulovich/caju</projectUrl>
     <licenseUrl>https://github.com/ivanpaulovich/caju/blob/master/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <title>Caju dotnet new templates: Back-end with the awesome architectures made easy! (Hexagonal, Clean or Event Sourcing architectures styles)</title>
+    <title>dotnet new caju templates: Back-end with the awesome architectures made easy! (Hexagonal, Clean or Event Sourcing architectures styles)</title>
     <description>
       At the first time use:
 
@@ -24,7 +24,7 @@
       $ dotnet new caju --architecture-style hexagonal --name "MyHexagonalProject"
     </summary>
     <releaseNotes>
-  - Switches.json with selected features information added
+  - caju.json with parameter information added
   - Empty template improved
     </releaseNotes>
     <tags>

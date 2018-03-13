@@ -4,14 +4,14 @@
 
     public class CleanBasicWithoutInfraProjectException : Exception
     {
-        internal CleanBasicWithoutInfraProjectException()
+        public CleanBasicWithoutInfraProjectException()
         { }
 
-        internal CleanBasicWithoutInfraProjectException(string message)
+        public CleanBasicWithoutInfraProjectException(string message)
             : base(message)
         { }
 
-        internal CleanBasicWithoutInfraProjectException(string message, Exception innerException)
+        public CleanBasicWithoutInfraProjectException(string message, Exception innerException)
             : base(message, innerException)
         { }
     }

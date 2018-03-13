@@ -8,4 +8,5 @@
     <ProjectReference Include="..\CleanBasicWithoutInfraProject.Domain\CleanBasicWithoutInfraProject.Domain.csproj" />
   </ItemGroup>
 
+
 </Project>

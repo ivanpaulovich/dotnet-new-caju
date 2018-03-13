@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CleanBasicWithoutInfraProject.UI.Model
+﻿namespace CleanBasicWithoutInfraProject.UI.Model
 {
+    using System;
+    using System.Collections.Generic;
+
     public class CustomerDetailsModel
     {
         public Guid CustomerId { get; }

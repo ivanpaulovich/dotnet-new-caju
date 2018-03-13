@@ -1,7 +1,6 @@
 ﻿namespace CleanBasicWithoutInfraProject.UI.Model
 {
     using System;
-
     public class TransactionModel
     {
         public double Amount { get; }

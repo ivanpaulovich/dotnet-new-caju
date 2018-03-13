@@ -1,0 +1,22 @@
+﻿{
+  "defaultAssembly": "HexagonalBasicMongoProject.UI",
+  "modules": [
+    {
+      "type": "HexagonalBasicMongoProject.UI.Modules.UIModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "HexagonalBasicMongoProject.UI.Modules.ApplicationModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "HexagonalBasicMongoProject.UI.Modules.InfrastructureModule",
+      "properties": {
+        "ConnectionString": "mongodb://10.0.75.1:27017",
+        "DatabaseName": "HexagonalBasicMongoProject-V01"
+      }
+    }
+  ]
+}

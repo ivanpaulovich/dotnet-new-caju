@@ -42,7 +42,7 @@
 
                 options.IncludeXmlComments(
                     Path.ChangeExtension(
-                        Assembly.GetAssembly(typeof(CleanBasicWithoutInfraProject.UI.Startup)).Location,
+                        Assembly.GetAssembly(typeof(Startup)).Location,
                         "xml"));
 
                 options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info

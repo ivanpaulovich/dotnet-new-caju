@@ -57,6 +57,12 @@
           "choice": "none",
           "description": "Without Use Cases"
         }
+      ],
+	  "replaces": "use-cases",
+	  "onlyIf": [
+        {
+          "after": "\"use-cases\": \""
+        }
       ]
     },
     "ui": {
@@ -80,32 +86,54 @@
           "choice": "both",
           "description": "Web API and Console"
         }
+      ],
+	  "replaces": "ui",
+	  "onlyIf": [
+        {
+          "after": "\"ui\": \""
+        }
       ]
     },
-    "infrastructure": {
+    "data-access": {
       "type": "parameter",
       "datatype": "choice",
-      "defaultValue": "mongodb",
+      "defaultValue": "mongo",
       "choices": [
         {
-          "choice": "mongodb",
+          "choice": "mongo",
           "description": "MongoDB"
         },
         {
-          "choice": "sqlserver",
-          "description": "Entity Framework and Dapper"
+          "choice": "entityframework",
+          "description": "Entity Framework Core"
+        },
+        {
+          "choice": "dapper",
+          "description": "Dapper"
         },
         {
           "choice": "none",
           "description": "No frameworks"
         },
+      ],
+	  "replaces": "data-access",
+	  "onlyIf": [
+        {
+          "after": "\"data-access\": \""
+        }
       ]
     },
     "tips": {
       "type": "parameter",
       "datatype": "bool",
       "description": "Includes architecture tips or not.",
-      "defaultValue": "true"
+      "defaultValue": "true",
+	  "replaces": "tips",
+	  "onlyIf": [
+        {
+          "after": "\"tips\": \""
+        }
+      ]
     },
     "Empty": {
       "type": "computed",
@@ -151,13 +179,17 @@
       "type": "computed",
       "value": "(ui == \"both\")"
     },
-	"MongoDB": {
+	"Mongo": {
       "type": "computed",
-      "value": "(infrastructure == \"mongodb\")"
+      "value": "(data-access == \"mongo\")"
     },
-	"I-SQLServer": {
+	"EntityFramework": {
       "type": "computed",
-      "value": "(infrastructure == \"sqlserver\")"
+      "value": "(data-access == \"entityframework\")"
+    },
+	"Dapper": {
+      "type": "computed",
+      "value": "(data-access == \"dapper\")"
     }
   },
   "sources": [
@@ -228,7 +260,25 @@
           "exclude": [
             "**/*.md"
           ]
-        }
+        },
+		{
+          "condition": "(!MongoDB)",
+          "exclude": [
+            "MyProject.Infrastructure/Mongo/**/*.cs"
+          ]
+        },
+		{
+          "condition": "(!Dapper)",
+          "exclude": [
+            "MyProject.Infrastructure/Dapper/**/*.cs"
+          ]
+        },
+		{
+          "condition": "(!EntityFramework)",
+          "exclude": [
+            "MyProject.Infrastructure/EntityFramework/**/*.cs"
+          ]
+        }		
       ]
     },
     {
@@ -297,7 +347,25 @@
           "exclude": [
             "**/*.md"
           ]
-        }
+        },
+		{
+          "condition": "(!MongoDB)",
+          "exclude": [
+            "MyProject.Infrastructure/Mongo/**/*.cs"
+          ]
+        },
+		{
+          "condition": "(!Dapper)",
+          "exclude": [
+            "MyProject.Infrastructure/Dapper/**/*.cs"
+          ]
+        },
+		{
+          "condition": "(!EntityFramework)",
+          "exclude": [
+            "MyProject.Infrastructure/EntityFramework/**/*.cs"
+          ]
+        }		
       ]
     },
     {
@@ -326,7 +394,6 @@
             "MyProject.Domain/Accounts/**/*.cs",
             "MyProject.Domain/Customers/**/*.cs",
             "MyProject.Domain/ValueObjects/**/*.cs",
-            "MyProject.Infrastructure/DataAccess/**/*.cs",
             "MyProject.Infrastructure/Mappings/**/*.cs"
           ]
         },
@@ -369,11 +436,21 @@
 		{
           "condition": "(!MongoDB)",
           "exclude": [
-            "MyProject.Infrastructure/DataAccess/AccountBalanceContext.cs",
-			"MyProject.Infrastructure/DataAccess/AccountRepository.cs",
-			"MyProject.Infrastructure/DataAccess/CustomerRepository.cs",
+            "MyProject.Infrastructure/Mongo/**/*.cs"
           ]
-        }		
+        },
+		{
+          "condition": "(!Dapper)",
+          "exclude": [
+            "MyProject.Infrastructure/Dapper/**/*.cs"
+          ]
+        },
+		{
+          "condition": "(!EntityFramework)",
+          "exclude": [
+            "MyProject.Infrastructure/EntityFramework/**/*.cs"
+          ]
+        }			
       ]
     }
   ]

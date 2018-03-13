@@ -1,33 +1,58 @@
 ﻿namespace CleanBasicWithoutInfraProject.UI.UseCases.Register
 {
-    using CleanBasicWithoutInfraProject.Application;
-    using CleanBasicWithoutInfraProject.Application.UseCases.Register;
     using Microsoft.AspNetCore.Mvc;
     using System.Threading.Tasks;
+    using CleanBasicWithoutInfraProject.Application.Commands.Register;
+    using CleanBasicWithoutInfraProject.UI.Model;
+    using System.Collections.Generic;
 
     [Route("api/[controller]")]
-    public class CustomersController : Microsoft.AspNetCore.Mvc.Controller
+    public class CustomersController : Controller
     {
-        private readonly IInputBoundary<RegisterInput> registerInput;
-        private readonly Presenter registerPresenter;
+        private readonly IRegisterService registerService;
 
-        public CustomersController(
-            IInputBoundary<RegisterInput> registerInput,
-            Presenter registerPresenter)
+        public CustomersController(IRegisterService registerService)
         {
-            this.registerInput = registerInput;
-            this.registerPresenter = registerPresenter;
+            this.registerService = registerService;
         }
 
         /// <summary>
         /// Register a new Customer
         /// </summary>
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody]RegisterRequest message)
+        public async Task<IActionResult> Post([FromBody]RegisterRequest request)
         {
-            var request = new RegisterInput(message.PIN, message.Name, message.InitialAmount);
-            await registerInput.Process(request);
-            return registerPresenter.ViewModel;
+            var command = new RegisterCommand(request.PIN, request.Name, request.InitialAmount);
+            RegisterResult result = await registerService.Process(command);
+
+            List<TransactionModel> transactions = new List<TransactionModel>();
+
+            foreach (var item in result.Account.Transactions)
+            {
+                var transaction = new TransactionModel(
+                    item.Amount,
+                    item.Description,
+                    item.TransactionDate);
+
+                transactions.Add(transaction);
+            }
+
+            AccountDetailsModel account = new AccountDetailsModel(
+                result.Account.AccountId,
+                result.Account.CurrentBalance,
+                transactions);
+
+            List<AccountDetailsModel> accounts = new List<AccountDetailsModel>();
+            accounts.Add(account);
+
+            Model model = new Model(
+                result.Customer.CustomerId,
+                result.Customer.Personnummer,
+                result.Customer.Name,
+                accounts
+            );
+
+            return CreatedAtRoute("GetCustomer", new { customerId = model.CustomerId }, model);
         }
     }
 }
