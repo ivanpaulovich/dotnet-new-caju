@@ -87,7 +87,7 @@ There are switches to generate your awesome application with your needs. Try aft
   * Dapper
   * Entity Framework
   * Kafka
-  * None
+  * None :white_check_mark:
 * Allow to choose **UI** implementations
   * Both
   * WebAPI
