@@ -8,14 +8,14 @@
     <projectUrl>https://github.com/ivanpaulovich/caju</projectUrl>
     <licenseUrl>https://github.com/ivanpaulovich/caju/blob/master/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <title>dotnet new caju templates: Back-end with the awesome architectures made easy! (Hexagonal, Clean or Event Sourcing architectures styles)</title>
+    <title>dotnet new caju: Templates for Back-end with the awesome architectures made easy! (Hexagonal, Clean or Event Sourcing architectures styles)</title>
     <description>
       At the first time use:
 
       $ dotnet new -i Paulovich.Caju
       $ dotnet new caju --name "MyProject"
 
-   Will be created a "MyProject" folder with a layered backend (Domain - Application - Infrastructure - UI) with the desired architecture style (Hexagonal, Clean or Event Sourcing).
+Will be created a "MyProject" folder with a layered backend (Domain - Application - Infrastructure - UI) with the desired architecture style (Hexagonal, Clean or Event Sourcing).
     </description>
     <summary>
       Try the following commands:
@@ -24,8 +24,8 @@
       $ dotnet new caju --architecture-style hexagonal --name "MyHexagonalProject"
     </summary>
     <releaseNotes>
-  - caju.json with parameter information added
-  - Empty template improved
+- caju.json with parameter information added
+- Empty template improved
     </releaseNotes>
     <tags>
       boilerplate
