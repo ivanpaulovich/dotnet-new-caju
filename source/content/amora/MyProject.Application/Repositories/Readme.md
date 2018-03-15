@@ -1,1 +1,0 @@
-﻿We expect that you expose to the Infrastructure Layer some repositories interfaces.

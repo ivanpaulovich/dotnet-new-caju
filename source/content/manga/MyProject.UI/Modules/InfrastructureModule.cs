@@ -1,8 +1,8 @@
 ﻿namespace MyProject.UI.Modules
 {
     using Autofac;
-#if (Mongo)
-    using MyProject.Infrastructure.Mongo;
+#if Mongo
+    using MyProject.Infrastructure.DataAccess.Mongo;
 #endif
     using MyProject.Infrastructure.Mappings;
 
@@ -16,8 +16,8 @@
         protected override void Load(ContainerBuilder builder)
         {
 #if (Mongo)
-            builder.RegisterType<MongoContext>()
-                .As<MongoContext>()
+            builder.RegisterType<AccountBalanceContext>()
+                .As<AccountBalanceContext>()
                 .WithParameter("connectionString", ConnectionString)
                 .WithParameter("databaseName", DatabaseName)
                 .SingleInstance();
@@ -29,7 +29,6 @@
             builder.RegisterAssemblyTypes(typeof(OutputConverter).Assembly)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
-
         }
     }
 }

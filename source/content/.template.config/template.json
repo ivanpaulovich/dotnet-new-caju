@@ -135,6 +135,27 @@
         }
       ]
     },
+	"service-bus": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "kafka",
+      "choices": [
+        {
+          "choice": "kafka",
+          "description": "Confluent.Kafka"
+        },
+        {
+          "choice": "none",
+          "description": "No frameworks"
+        },
+      ],
+	  "replaces": "service-bus",
+	  "onlyIf": [
+        {
+          "after": "\"service-bus\": \""
+        }
+      ]
+    },
     "Empty": {
       "type": "computed",
       "value": "(use-cases == \"none\")"
@@ -190,6 +211,34 @@
 	"Dapper": {
       "type": "computed",
       "value": "(data-access == \"dapper\")"
+    },
+	"Kafka": {
+      "type": "computed",
+      "value": "(service-bus == \"kafka\")"
+    },
+	"CloseAccount": {
+      "type": "computed",
+      "value": "(Full)"
+    },
+	"Deposit": {
+      "type": "computed",
+      "value": "(Full)"
+    },
+	"GetAccountDetails": {
+      "type": "computed",
+      "value": "(Full || ReadOnly)"
+    },
+	"GetCustomerDetails": {
+      "type": "computed",
+      "value": "(Full || ReadOnly || Basic)"
+    },
+	"Register": {
+      "type": "computed",
+      "value": "(Full || Basic)"
+    },
+	"Withdraw": {
+      "type": "computed",
+      "value": "(Full)"
     }
   },
   "sources": [
@@ -264,21 +313,27 @@
 		{
           "condition": "(!MongoDB)",
           "exclude": [
-            "MyProject.Infrastructure/Mongo/**/*.cs"
+            "MyProject.Infrastructure/DataAccess/Mongo/**/*.cs"
           ]
         },
 		{
           "condition": "(!Dapper)",
           "exclude": [
-            "MyProject.Infrastructure/Dapper/**/*.cs"
+            "MyProject.Infrastructure/DataAccess/Dapper/**/*.cs"
           ]
         },
 		{
           "condition": "(!EntityFramework)",
           "exclude": [
-            "MyProject.Infrastructure/EntityFramework/**/*.cs"
+            "MyProject.Infrastructure/DataAccess/EntityFramework/**/*.cs"
           ]
-        }		
+        },
+		{
+          "condition": "(UI-None)",
+          "exclude": [
+            "MyProject.UI/**/*"
+          ]
+        }			
       ]
     },
     {
@@ -351,19 +406,25 @@
 		{
           "condition": "(!MongoDB)",
           "exclude": [
-            "MyProject.Infrastructure/Mongo/**/*.cs"
+            "MyProject.Infrastructure/DataAccess/Mongo/**/*.cs"
           ]
         },
 		{
           "condition": "(!Dapper)",
           "exclude": [
-            "MyProject.Infrastructure/Dapper/**/*.cs"
+            "MyProject.Infrastructure/DataAccess/Dapper/**/*.cs"
           ]
         },
 		{
           "condition": "(!EntityFramework)",
           "exclude": [
-            "MyProject.Infrastructure/EntityFramework/**/*.cs"
+            "MyProject.Infrastructure/DataAccess/EntityFramework/**/*.cs"
+          ]
+        },
+		{
+          "condition": "(UI-None)",
+          "exclude": [
+            "MyProject.UI/**/*"
           ]
         }		
       ]
@@ -436,19 +497,25 @@
 		{
           "condition": "(!MongoDB)",
           "exclude": [
-            "MyProject.Infrastructure/Mongo/**/*.cs"
+            "MyProject.Infrastructure/DataAccess/Mongo/**/*.cs"
           ]
         },
 		{
           "condition": "(!Dapper)",
           "exclude": [
-            "MyProject.Infrastructure/Dapper/**/*.cs"
+            "MyProject.Infrastructure/DataAccess/Dapper/**/*.cs"
           ]
         },
 		{
           "condition": "(!EntityFramework)",
           "exclude": [
-            "MyProject.Infrastructure/EntityFramework/**/*.cs"
+            "MyProject.Infrastructure/DataAccess/EntityFramework/**/*.cs"
+          ]
+        },
+		{
+          "condition": "(UI-None)",
+          "exclude": [
+            "MyProject.UI/**/*"
           ]
         }			
       ]

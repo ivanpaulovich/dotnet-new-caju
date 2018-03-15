@@ -6,6 +6,8 @@ EXPOSE 80
 FROM microsoft/aspnetcore-build:2.0-jessie AS builder
 WORKDIR /src
 COPY . .
+WORKDIR /src/MyProject.Infrastructure
+RUN dotnet build -c Release
 WORKDIR /src/MyProject.UI
 RUN dotnet build -c Release -o /app
 #

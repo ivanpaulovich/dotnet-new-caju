@@ -1,1 +1,0 @@
-﻿We expect that you only expose to upper layers a Data Transfer Objects: Outputs

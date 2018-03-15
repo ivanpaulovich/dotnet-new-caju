@@ -2,7 +2,9 @@
 {
     using AutoMapper;
     using MyProject.Application.Results;
+#if (CloseAccount)
     using MyProject.Application.Commands.Close;
+#endif
     using MyProject.Domain.Accounts;
 
     public class AccountsProfile : Profile
@@ -23,9 +25,11 @@
                 .ForMember(dest => dest.Amount, opt => opt.MapFrom(src => src.Amount.Value))
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
                 .ForMember(dest => dest.TransactionDate, opt => opt.MapFrom(src => src.TransactionDate));
-
+#if (CloseAccount)
+	
             CreateMap<Account, CloseResult>()
                 .ForMember(dest => dest.AccountId, opt => opt.MapFrom(src => src.Id));
+#endif
         }
     }
 }
