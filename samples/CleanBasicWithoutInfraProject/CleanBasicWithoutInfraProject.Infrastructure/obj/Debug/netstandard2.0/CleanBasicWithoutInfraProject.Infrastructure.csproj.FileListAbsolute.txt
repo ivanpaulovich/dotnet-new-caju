@@ -1,0 +1,4 @@
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.Infrastructure\obj\Debug\netstandard2.0\CleanBasicWithoutInfraProject.Infrastructure.csproj.CoreCompileInputs.cache
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.Infrastructure\obj\Debug\netstandard2.0\CleanBasicWithoutInfraProject.Infrastructure.AssemblyInfoInputs.cache
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.Infrastructure\obj\Debug\netstandard2.0\CleanBasicWithoutInfraProject.Infrastructure.AssemblyInfo.cs
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.Infrastructure\obj\Debug\netstandard2.0\CleanBasicWithoutInfraProject.Infrastructure.csprojResolveAssemblyReference.cache

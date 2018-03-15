@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CleanBasicProject.UI</name>
+    </assembly>
+    <members>
+        <member name="M:CleanBasicProject.UI.UseCases.GetCustomerDetails.CustomersController.GetCustomer(System.Guid)">
+            <summary>
+            Get a Customer details 
+            </summary>
+        </member>
+        <member name="M:CleanBasicProject.UI.UseCases.Register.CustomersController.Post(CleanBasicProject.UI.UseCases.Register.RegisterRequest)">
+            <summary>
+            Register a new Customer
+            </summary>
+        </member>
+    </members>
+</doc>

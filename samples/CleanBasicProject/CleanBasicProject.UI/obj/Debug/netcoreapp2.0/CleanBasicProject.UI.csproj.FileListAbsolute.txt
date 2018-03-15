@@ -1,0 +1,17 @@
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\bin\Debug\netcoreapp2.0\CleanBasicProject.UI.xml
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\bin\Debug\netcoreapp2.0\CleanBasicProject.UI.deps.json
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\bin\Debug\netcoreapp2.0\CleanBasicProject.UI.runtimeconfig.json
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\bin\Debug\netcoreapp2.0\CleanBasicProject.UI.runtimeconfig.dev.json
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\bin\Debug\netcoreapp2.0\CleanBasicProject.UI.dll
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\bin\Debug\netcoreapp2.0\CleanBasicProject.UI.pdb
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\bin\Debug\netcoreapp2.0\CleanBasicProject.Application.dll
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\bin\Debug\netcoreapp2.0\CleanBasicProject.Domain.dll
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\bin\Debug\netcoreapp2.0\CleanBasicProject.Infrastructure.dll
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\bin\Debug\netcoreapp2.0\CleanBasicProject.Application.pdb
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\bin\Debug\netcoreapp2.0\CleanBasicProject.Domain.pdb
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\bin\Debug\netcoreapp2.0\CleanBasicProject.Infrastructure.pdb
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\obj\Debug\netcoreapp2.0\CleanBasicProject.UI.csproj.CoreCompileInputs.cache
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\obj\Debug\netcoreapp2.0\CleanBasicProject.UI.AssemblyInfoInputs.cache
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\obj\Debug\netcoreapp2.0\CleanBasicProject.UI.AssemblyInfo.cs
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\obj\Debug\netcoreapp2.0\CleanBasicProject.UI.dll
+C:\git\caju\samples\CleanBasicProject\CleanBasicProject.UI\obj\Debug\netcoreapp2.0\CleanBasicProject.UI.pdb

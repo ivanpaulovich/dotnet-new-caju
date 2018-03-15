@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1705;NU1701;CS1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Confluent.Kafka" Version="0.11.0" NoWarn="NU1701" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="DataAccess\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.4.4" />
+    <Compile Include="DataAccess\Mongo\*.cs" />
+  </ItemGroup>
+
+
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\EventSourcingEmptyProject.Application\EventSourcingEmptyProject.Application.csproj" />
+    <ProjectReference Include="..\EventSourcingEmptyProject.Domain\EventSourcingEmptyProject.Domain.csproj" />
+  </ItemGroup>
+  
+</Project>

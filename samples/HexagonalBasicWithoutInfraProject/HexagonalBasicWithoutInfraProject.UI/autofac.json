@@ -1,0 +1,20 @@
+﻿{
+  "defaultAssembly": "HexagonalBasicWithoutInfraProject.UI",
+  "modules": [
+    {
+      "type": "HexagonalBasicWithoutInfraProject.UI.Modules.UIModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "HexagonalBasicWithoutInfraProject.UI.Modules.ApplicationModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "HexagonalBasicWithoutInfraProject.UI.Modules.InfrastructureModule",
+      "properties": {
+      }
+    }
+  ]
+}

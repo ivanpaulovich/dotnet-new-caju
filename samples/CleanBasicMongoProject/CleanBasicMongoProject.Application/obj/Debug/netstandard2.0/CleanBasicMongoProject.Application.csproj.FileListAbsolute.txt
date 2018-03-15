@@ -1,0 +1,10 @@
+C:\git\caju\samples\CleanBasicMongoProject\CleanBasicMongoProject.Application\bin\Debug\netstandard2.0\CleanBasicMongoProject.Application.deps.json
+C:\git\caju\samples\CleanBasicMongoProject\CleanBasicMongoProject.Application\bin\Debug\netstandard2.0\CleanBasicMongoProject.Application.dll
+C:\git\caju\samples\CleanBasicMongoProject\CleanBasicMongoProject.Application\bin\Debug\netstandard2.0\CleanBasicMongoProject.Application.pdb
+C:\git\caju\samples\CleanBasicMongoProject\CleanBasicMongoProject.Application\bin\Debug\netstandard2.0\CleanBasicMongoProject.Domain.dll
+C:\git\caju\samples\CleanBasicMongoProject\CleanBasicMongoProject.Application\bin\Debug\netstandard2.0\CleanBasicMongoProject.Domain.pdb
+C:\git\caju\samples\CleanBasicMongoProject\CleanBasicMongoProject.Application\obj\Debug\netstandard2.0\CleanBasicMongoProject.Application.csproj.CoreCompileInputs.cache
+C:\git\caju\samples\CleanBasicMongoProject\CleanBasicMongoProject.Application\obj\Debug\netstandard2.0\CleanBasicMongoProject.Application.AssemblyInfoInputs.cache
+C:\git\caju\samples\CleanBasicMongoProject\CleanBasicMongoProject.Application\obj\Debug\netstandard2.0\CleanBasicMongoProject.Application.AssemblyInfo.cs
+C:\git\caju\samples\CleanBasicMongoProject\CleanBasicMongoProject.Application\obj\Debug\netstandard2.0\CleanBasicMongoProject.Application.dll
+C:\git\caju\samples\CleanBasicMongoProject\CleanBasicMongoProject.Application\obj\Debug\netstandard2.0\CleanBasicMongoProject.Application.pdb

@@ -1,6 +1,7 @@
 ﻿namespace MyProject.UI.Modules
 {
     using Autofac;
+    using MyProject.Application;
 
     public class ApplicationModule : Autofac.Module
     {
@@ -15,7 +16,7 @@
             // IOutputBoundary<>
             // IEventHandler
             //
-            builder.RegisterAssemblyTypes(typeof(Application.UseCases.Register.RegisterInteractor).Assembly)
+            builder.RegisterAssemblyTypes(typeof(IOutputConverter).Assembly)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
         }

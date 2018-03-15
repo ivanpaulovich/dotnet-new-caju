@@ -1,0 +1,4 @@
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.UI\obj\Debug\netcoreapp2.0\CleanBasicWithoutInfraProject.UI.csprojResolveAssemblyReference.cache
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.UI\obj\Debug\netcoreapp2.0\CleanBasicWithoutInfraProject.UI.csproj.CoreCompileInputs.cache
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.UI\obj\Debug\netcoreapp2.0\CleanBasicWithoutInfraProject.UI.AssemblyInfoInputs.cache
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.UI\obj\Debug\netcoreapp2.0\CleanBasicWithoutInfraProject.UI.AssemblyInfo.cs

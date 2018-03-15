@@ -1,0 +1,8 @@
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.Domain\bin\Debug\netstandard2.0\CleanBasicWithoutInfraProject.Domain.deps.json
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.Domain\bin\Debug\netstandard2.0\CleanBasicWithoutInfraProject.Domain.dll
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.Domain\bin\Debug\netstandard2.0\CleanBasicWithoutInfraProject.Domain.pdb
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.Domain\obj\Debug\netstandard2.0\CleanBasicWithoutInfraProject.Domain.csproj.CoreCompileInputs.cache
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.Domain\obj\Debug\netstandard2.0\CleanBasicWithoutInfraProject.Domain.AssemblyInfoInputs.cache
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.Domain\obj\Debug\netstandard2.0\CleanBasicWithoutInfraProject.Domain.AssemblyInfo.cs
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.Domain\obj\Debug\netstandard2.0\CleanBasicWithoutInfraProject.Domain.dll
+C:\git\caju\samples\CleanBasicWithoutInfraProject\CleanBasicWithoutInfraProject.Domain\obj\Debug\netstandard2.0\CleanBasicWithoutInfraProject.Domain.pdb

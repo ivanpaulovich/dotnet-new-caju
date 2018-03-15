@@ -1,0 +1,8 @@
+{
+	"origin": "https://github.com/ivanpaulovich/acerola/",
+	"architecture-style": "hexagonal",		
+	"use-cases": "basic",
+	"ui": "webapi",
+	"data-access": "none",
+	"tips": "True"
+}
