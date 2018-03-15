@@ -87,12 +87,12 @@ There are switches to generate your awesome application with your needs. Try aft
   * Dapper
   * Entity Framework
   * None :white_check_mark:
-* Allow to choose **UI** implementations
+* Allow to choose **UI** frameworks
   * Both
   * WebAPI
   * Console 
   * None
-* Allow to choose **Service Bus** implementations
+* Allow to choose **Service Bus** frameworks
   * Kafka 
   * None
 * Allow to skip the **dotnet restore** after code generation
