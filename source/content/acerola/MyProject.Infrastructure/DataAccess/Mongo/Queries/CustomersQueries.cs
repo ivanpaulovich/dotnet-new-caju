@@ -1,4 +1,4 @@
-﻿namespace MyProject.Infrastructure.Mongo.Queries
+﻿namespace MyProject.Infrastructure.DataAccess.Mongo.Queries
 {
     using MyProject.Application.Queries;
     using MongoDB.Driver;

@@ -1,4 +1,4 @@
-﻿namespace MyProject.Infrastructure.Mongo
+﻿namespace MyProject.Infrastructure.DataAccess.Mongo
 {
     using MyProject.Domain;
     using MyProject.Domain.Accounts;

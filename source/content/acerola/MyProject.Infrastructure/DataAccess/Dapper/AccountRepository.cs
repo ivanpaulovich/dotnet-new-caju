@@ -1,4 +1,4 @@
-﻿namespace MyProject.Infrastructure.Dapper
+﻿namespace MyProject.Infrastructure.DataAccess.Dapper
 {
     using MyProject.Application.Repositories;
     using System;

@@ -1,6 +1,5 @@
 ﻿namespace MyProject.UI.Modules
 {
-    using MyProject.Application.Commands.Register;
     using Autofac;
     using MyProject.Application;
 

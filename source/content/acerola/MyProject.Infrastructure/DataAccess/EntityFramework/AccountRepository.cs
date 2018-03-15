@@ -1,4 +1,4 @@
-﻿namespace MyProject.Infrastructure.EntityFramework
+﻿namespace MyProject.Infrastructure.Dapper.EntityFramework
 {
     using MyProject.Application.Repositories;
     using System;

@@ -1,4 +1,4 @@
-﻿namespace MyProject.Infrastructure.EntityFramework.Queries
+﻿namespace MyProject.Infrastructure.DataAccess.Dapper.Queries
 {
     using MyProject.Application.Queries;
     using System;
