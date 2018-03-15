@@ -1,29 +1,34 @@
 ﻿namespace MyProject.UI.Modules
 {
     using Autofac;
-    using MyProject.Application.ServiceBus;
-    using MyProject.Infrastructure.DataAccess;
-    using MyProject.Infrastructure.ServiceBus;
+    using MyProject.Infrastructure.Mappings;
+#if Mongo
+    using MyProject.Infrastructure.DataAccess.Mongo;
+#endif
 
     public class InfrastructureModule : Autofac.Module
     {
+#if (Mongo)
         public string ConnectionString { get; set; }
         public string DatabaseName { get; set; }
+#endif
 
         protected override void Load(ContainerBuilder builder)
         {
-            //
-            // Register all Types in MyProject.Infrastructure
-            //
-            builder.RegisterAssemblyTypes(typeof(CustomerRepository).Assembly)
-                .AsImplementedInterfaces()
-                .InstancePerLifetimeScope();
-
+#if (Mongo)
             builder.RegisterType<AccountBalanceContext>()
                 .As<AccountBalanceContext>()
                 .WithParameter("connectionString", ConnectionString)
                 .WithParameter("databaseName", DatabaseName)
                 .SingleInstance();
+#endif
+
+            //
+            // Register all Types in MyProject.Infrastructure
+            //
+            builder.RegisterAssemblyTypes(typeof(OutputConverter).Assembly)
+                .AsImplementedInterfaces()
+                .InstancePerLifetimeScope();
         }
     }
 }

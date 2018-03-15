@@ -2,28 +2,44 @@
 {
     using MyProject.Application;
     using MyProject.Domain;
-    using System.Collections.Generic;
-    using System;
-    using MyProject.Domain.Customers.Events;
-    using System.Reflection;
+#if !Empty
     using MyProject.Domain.Accounts.Events;
+    using MyProject.Domain.Customers.Events;
+#endif
+    using System;
+    using System.Collections.Generic;
+    using System.Reflection;
 
     public class Dispatcher : IDispatcher
     {
         private readonly Dictionary<Type, List<object>> handlers = new Dictionary<Type, List<object>>();
 
         public Dispatcher(
+#if Basic
+            IEventHandler<RegisteredDomainEvent> customerRegisteredEventhandler,
+            IEventHandler<OpenedDomainEvent> openedEventhandler
+#endif
+
+#if Full
             IEventHandler<RegisteredDomainEvent> customerRegisteredEventhandler,
             IEventHandler<DepositedDomainEvent> depositedEventhandler,
             IEventHandler<WithdrewDomainEvent> withdrewEventhandler,
             IEventHandler<ClosedDomainEvent> closedEventhandler,
-            IEventHandler<OpenedDomainEvent> openedEventhandler)
+            IEventHandler<OpenedDomainEvent> openedEventhandler
+#endif
+        )
         {
+#if Basic
+            Register(customerRegisteredEventhandler);
+#endif
+
+#if Full
             Register(customerRegisteredEventhandler);
             Register(depositedEventhandler);
             Register(withdrewEventhandler);
             Register(closedEventhandler);
             Register(openedEventhandler);
+#endif
         }
 
         private void Register(object handler)
