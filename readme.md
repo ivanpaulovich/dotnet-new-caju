@@ -98,7 +98,7 @@ There are switches to generate your awesome application with your needs. Try aft
   * Kafka
   * Azure Event Bus
   * None
-* Allow to skip the **dotnet restore** after code generation
+* Allow to skip the **dotnet restore** after code generation :white_check_mark:
 * Allow to include or to remove the **architecture tips** :white_check_mark:
 
 ## Common Issues
