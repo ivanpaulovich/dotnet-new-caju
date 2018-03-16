@@ -69,7 +69,8 @@ There are switches to generate your awesome application with your needs. Try aft
 | --data-access | `mongo` `entityframework` `dapper` `none` | `mongo` |
 | --tips | `true` `false` | `true` |
 | --service-bus | `kafka` `none` | `kafka` |
-> type `dotnet new caju --help` for the complete list of switches.
+| --skipRestore | `true` `false` | `false` |
+> Run `dotnet new caju --help` for the complete list of switches.
 
 ## Roadmap
 <a href="https://www.nuget.org/packages/Paulovich.Caju/" rel="Paulovich.Caju">![NuGet](https://buildstats.info/nuget/paulovich.caju)</a> [![Build Status](https://travis-ci.org/ivanpaulovich/caju.svg?branch=master)](https://travis-ci.org/ivanpaulovich/caju)
