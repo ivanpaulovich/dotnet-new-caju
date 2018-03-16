@@ -90,9 +90,9 @@ There are switches to generate your awesome application with your needs. Try aft
   * None :white_check_mark:
 * Allow to choose **UI** frameworks
   * Both
-  * WebAPI
+  * WebAPI :white_check_mark:
   * Console 
-  * None
+  * None :white_check_mark:
 * Allow to choose **Service Bus** frameworks
   * Kafka 
   * None
