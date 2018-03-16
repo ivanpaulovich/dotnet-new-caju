@@ -69,7 +69,7 @@ There are switches to generate your awesome application with your needs. Try aft
 | --data-access | `mongo` `entityframework` `dapper` `none` | `mongo` |
 | --tips | `true` `false` | `true` |
 | --service-bus | `kafka` `none` | `kafka` |
-| --skipRestore | `true` `false` | `false` |
+| --skip-restore | `true` `false` | `false` |
 
 Run `dotnet new caju --help` for the complete list of switches.
 
