@@ -34,6 +34,12 @@
           "choice": "eventsourcing",
           "description": "Event Sourcing"
         }
+      ],
+      "replaces": "architecture-style",
+      "onlyIf": [
+        {
+          "after": "\"architecture-style\": \""
+        }
       ]
     },
     "use-cases": {
@@ -135,15 +141,15 @@
         }
       ]
     },
-    "skipRestore": {
+    "skip-restore": {
       "type": "parameter",
       "datatype": "bool",
       "description": "Run dotnet restore after code generation.",
       "defaultValue": "false",
-      "replaces": "skipRestore",
+      "replaces": "skip-restore",
       "onlyIf": [
         {
-          "after": "\"skipRestore\": \""
+          "after": "\"skip-restore\": \""
         }
       ]
     },
@@ -344,6 +350,12 @@
           "exclude": [
             "MyProject.UI/**/*"
           ]
+        },
+        {
+          "condition": "(!UI-Webapi)",
+          "exclude": [
+			"Dockerfile"
+          ]
         }
       ]
     },
@@ -437,6 +449,18 @@
           "exclude": [
             "MyProject.UI/**/*"
           ]
+        },
+        {
+          "condition": "(!UI-Webapi)",
+          "exclude": [
+			"Dockerfile"
+          ]
+        },
+        {
+          "condition": "(!Kafka)",
+          "exclude": [
+            "MyProject.Infrastructure/ServiceBus/Bus.cs"
+          ]
         }
       ]
     },
@@ -528,6 +552,12 @@
           "exclude": [
             "MyProject.UI/**/*"
           ]
+        },
+        {
+          "condition": "(!UI-Webapi)",
+          "exclude": [
+			"Dockerfile"
+          ]
         }
       ]
     }
@@ -575,7 +605,7 @@
       ]
     },
     {
-      "condition": "(!skipRestore)",
+      "condition": "(!skip-restore)",
       "description": "Restore NuGet packages required by this project.",
       "manualInstructions": [
         {

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Paulovich.Caju</id>
-    <version>0.1.73</version>
+    <version>0.1.77</version>
     <authors>Ivan Paulovich</authors>
     <owners>Ivan Paulovich</owners>
     <projectUrl>https://github.com/ivanpaulovich/caju</projectUrl>
@@ -35,6 +35,7 @@ Will be created a "MyProject" folder with a layered backend (Domain - Applicatio
 - Domain-Driven Design (Aggregates, Entities, Value Objects, Commands, Domain Events)
 - Serilog Logging
 - UI projects options
+- Kafka as Service Bus or none.
     </releaseNotes>
     <tags>
       boilerplate
@@ -76,6 +77,8 @@ Will be created a "MyProject" folder with a layered backend (Domain - Applicatio
       dotnet
       layered
       architecture
+	  dotnet-cli
+	  dotnet-template
     </tags>
     <language>en-US</language>
     <packageTypes>

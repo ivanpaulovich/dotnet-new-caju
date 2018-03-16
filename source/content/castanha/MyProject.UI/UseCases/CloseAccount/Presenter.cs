@@ -3,17 +3,17 @@
     using MyProject.Application;
     using MyProject.Application.UseCases.CloseAccount;
     using Microsoft.AspNetCore.Mvc;
-
     public class Presenter : IOutputBoundary<CloseOutput>
+git
     {
         public IActionResult ViewModel { get; private set; }
         public CloseOutput Output { get; private set; }
 
-        public void Populate(CloseOutput response)
+        public void Populate(CloseOutput output)
         {
-            Output = response;
+            Output = output;
 
-            if (response == null)
+            if (output == null)
             {
                 ViewModel = new NoContentResult();
                 return;

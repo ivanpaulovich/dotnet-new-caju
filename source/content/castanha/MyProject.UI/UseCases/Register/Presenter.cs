@@ -11,11 +11,11 @@
         public IActionResult ViewModel { get; private set; }
         public RegisterOutput Output { get; private set; }
 
-        public void Populate(RegisterOutput response)
+        public void Populate(RegisterOutput output)
         {
-            Output = response;
+            Output = output;
 
-            if (response == null)
+            if (output == null)
             {
                 ViewModel = new NoContentResult();
                 return;
@@ -23,7 +23,7 @@
             
             List<TransactionModel> transactions = new List<TransactionModel>();
 
-            foreach (var item in response.Account.Transactions)
+            foreach (var item in output.Account.Transactions)
             {
                 var transaction = new TransactionModel(
                     item.Amount,
@@ -34,17 +34,17 @@
             }
 
             AccountDetailsModel account = new AccountDetailsModel(
-                response.Account.AccountId,
-                response.Account.CurrentBalance,
+                output.Account.AccountId,
+                output.Account.CurrentBalance,
                 transactions);
 
             List<AccountDetailsModel> accounts = new List<AccountDetailsModel>();
             accounts.Add(account);
 
             Model model = new Model(
-                response.Customer.CustomerId,
-                response.Customer.Personnummer,
-                response.Customer.Name,
+                output.Customer.CustomerId,
+                output.Customer.Personnummer,
+                output.Customer.Name,
                 accounts
             );
 

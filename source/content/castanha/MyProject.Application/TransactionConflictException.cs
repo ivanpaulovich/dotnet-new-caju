@@ -1,8 +1,9 @@
 ﻿using MyProject.Domain;
+using System;
 
 namespace MyProject.Application
 {
-    public class TransactionConflictException : MyProjectException
+    public class TransactionConflictException : Exception
     {
         public IAggregateRoot AggregateRoot { get; private set; }
         public IDomainEvent DomainEvent { get; private set; }

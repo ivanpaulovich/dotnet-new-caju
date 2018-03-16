@@ -1,6 +1,8 @@
-﻿namespace MyProject.Domain
+﻿using System;
+
+namespace MyProject.Domain
 {
-    public class DomainException : MyProjectException
+    public class DomainException : Exception
     {
         public string BusinessMessage { get; private set; }
 

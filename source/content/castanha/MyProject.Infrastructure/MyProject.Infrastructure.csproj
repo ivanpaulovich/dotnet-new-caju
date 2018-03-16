@@ -10,29 +10,24 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.2.2" />
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="Confluent.Kafka" Version="0.11.0" NoWarn="NU1701" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />    
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="DataAccess\**" />
+  <ItemGroup Condition="'$(service-bus)'=='kafka'">
+    <PackageReference Include="Confluent.Kafka" Version="0.11.0" NoWarn="NU1701" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(data-access)'=='mongo'">
     <PackageReference Include="MongoDB.Driver" Version="2.4.4" />
-    <Compile Include="DataAccess\Mongo\*.cs" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(data-access)'=='dapper'">
     <PackageReference Include="Dapper" Version="1.50.4" />
-    <Compile Include="DataAccess\Dapper\*.cs" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(data-access)'=='entityframework'">
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
-    <Compile Include="DataAccess\EntityFramework\*.cs" />
   </ItemGroup>
-
 
   <ItemGroup>
     <ProjectReference Include="..\MyProject.Application\MyProject.Application.csproj" />
