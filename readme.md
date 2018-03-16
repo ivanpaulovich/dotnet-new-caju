@@ -87,6 +87,7 @@ There are switches to generate your awesome application with your needs. Try aft
   * MongoDB :white_check_mark:
   * Dapper
   * Entity Framework
+  * Azure Cosmos DB
   * None :white_check_mark:
 * Allow to choose **UI** frameworks
   * Both
@@ -94,7 +95,8 @@ There are switches to generate your awesome application with your needs. Try aft
   * Console 
   * None :white_check_mark:
 * Allow to choose **Service Bus** frameworks
-  * Kafka 
+  * Kafka
+  * Azure Event Bus
   * None
 * Allow to skip the **dotnet restore** after code generation
 * Allow to include or to remove the **architecture tips** :white_check_mark:
