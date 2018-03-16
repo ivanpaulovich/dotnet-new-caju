@@ -58,8 +58,8 @@
           "description": "Without Use Cases"
         }
       ],
-	  "replaces": "use-cases",
-	  "onlyIf": [
+      "replaces": "use-cases",
+      "onlyIf": [
         {
           "after": "\"use-cases\": \""
         }
@@ -87,8 +87,8 @@
           "description": "Web API and Console"
         }
       ],
-	  "replaces": "ui",
-	  "onlyIf": [
+      "replaces": "ui",
+      "onlyIf": [
         {
           "after": "\"ui\": \""
         }
@@ -114,10 +114,10 @@
         {
           "choice": "none",
           "description": "No frameworks"
-        },
+        }
       ],
-	  "replaces": "data-access",
-	  "onlyIf": [
+      "replaces": "data-access",
+      "onlyIf": [
         {
           "after": "\"data-access\": \""
         }
@@ -128,14 +128,14 @@
       "datatype": "bool",
       "description": "Includes architecture tips or not.",
       "defaultValue": "true",
-	  "replaces": "tips",
-	  "onlyIf": [
+      "replaces": "tips",
+      "onlyIf": [
         {
           "after": "\"tips\": \""
         }
       ]
     },
-	"service-bus": {
+    "service-bus": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "kafka",
@@ -147,10 +147,10 @@
         {
           "choice": "none",
           "description": "No frameworks"
-        },
+        }
       ],
-	  "replaces": "service-bus",
-	  "onlyIf": [
+      "replaces": "service-bus",
+      "onlyIf": [
         {
           "after": "\"service-bus\": \""
         }
@@ -184,59 +184,59 @@
       "type": "computed",
       "value": "(architecture-style == \"eventsourcing\")"
     },
-	"UI-None": {
+    "UI-None": {
       "type": "computed",
       "value": "(ui == \"none\")"
     },
-	"UI-Webapi": {
+    "UI-Webapi": {
       "type": "computed",
       "value": "(ui == \"webapi\")"
     },
-	"UI-Console": {
+    "UI-Console": {
       "type": "computed",
       "value": "(ui == \"console\")"
     },
-	"UI-Both": {
+    "UI-Both": {
       "type": "computed",
       "value": "(ui == \"both\")"
     },
-	"Mongo": {
+    "Mongo": {
       "type": "computed",
       "value": "(data-access == \"mongo\")"
     },
-	"EntityFramework": {
+    "EntityFramework": {
       "type": "computed",
       "value": "(data-access == \"entityframework\")"
     },
-	"Dapper": {
+    "Dapper": {
       "type": "computed",
       "value": "(data-access == \"dapper\")"
     },
-	"Kafka": {
+    "Kafka": {
       "type": "computed",
       "value": "(service-bus == \"kafka\")"
     },
-	"CloseAccount": {
+    "CloseAccount": {
       "type": "computed",
       "value": "(Full)"
     },
-	"Deposit": {
+    "Deposit": {
       "type": "computed",
       "value": "(Full)"
     },
-	"GetAccountDetails": {
+    "GetAccountDetails": {
       "type": "computed",
       "value": "(Full || ReadOnly)"
     },
-	"GetCustomerDetails": {
+    "GetCustomerDetails": {
       "type": "computed",
       "value": "(Full || ReadOnly || Basic)"
     },
-	"Register": {
+    "Register": {
       "type": "computed",
       "value": "(Full || Basic)"
     },
-	"Withdraw": {
+    "Withdraw": {
       "type": "computed",
       "value": "(Full)"
     }
@@ -309,30 +309,30 @@
             "**/*.md"
           ]
         },
-		{
+        {
           "condition": "(!MongoDB)",
           "exclude": [
             "MyProject.Infrastructure/DataAccess/Mongo/**/*.cs"
           ]
         },
-		{
+        {
           "condition": "(!Dapper)",
           "exclude": [
             "MyProject.Infrastructure/DataAccess/Dapper/**/*.cs"
           ]
         },
-		{
+        {
           "condition": "(!EntityFramework)",
           "exclude": [
             "MyProject.Infrastructure/DataAccess/EntityFramework/**/*.cs"
           ]
         },
-		{
+        {
           "condition": "(UI-None)",
           "exclude": [
             "MyProject.UI/**/*"
           ]
-        }			
+        }
       ]
     },
     {
@@ -402,30 +402,30 @@
             "**/*.md"
           ]
         },
-		{
+        {
           "condition": "(!MongoDB)",
           "exclude": [
             "MyProject.Infrastructure/DataAccess/Mongo/**/*.cs"
           ]
         },
-		{
+        {
           "condition": "(!Dapper)",
           "exclude": [
             "MyProject.Infrastructure/DataAccess/Dapper/**/*.cs"
           ]
         },
-		{
+        {
           "condition": "(!EntityFramework)",
           "exclude": [
             "MyProject.Infrastructure/DataAccess/EntityFramework/**/*.cs"
           ]
         },
-		{
+        {
           "condition": "(UI-None)",
           "exclude": [
             "MyProject.UI/**/*"
           ]
-        }		
+        }
       ]
     },
     {
@@ -493,30 +493,72 @@
             "**/*.md"
           ]
         },
-		{
+        {
           "condition": "(!MongoDB)",
           "exclude": [
             "MyProject.Infrastructure/DataAccess/Mongo/**/*.cs"
           ]
         },
-		{
+        {
           "condition": "(!Dapper)",
           "exclude": [
             "MyProject.Infrastructure/DataAccess/Dapper/**/*.cs"
           ]
         },
-		{
+        {
           "condition": "(!EntityFramework)",
           "exclude": [
             "MyProject.Infrastructure/DataAccess/EntityFramework/**/*.cs"
           ]
         },
-		{
+        {
           "condition": "(UI-None)",
           "exclude": [
             "MyProject.UI/**/*"
           ]
-        }			
+        }
+      ]
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "path": "MyProject.Application/MyProject.Application.csproj"
+    },
+    {
+      "path": "MyProject.Domain/MyProject.Domain.csproj"
+    },
+    {
+      "path": "MyProject.Infrastructure/MyProject.Infrastructure.csproj"
+    },
+    {
+      "path": "MyProject.UI/MyProject.UI.csproj",
+	  "condition": "(UI-Webapi)"
+    }
+  ],
+  "postActions": [
+    {
+      "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
+      "args": {
+        "primaryOutputIndexes": "0;1;2;3"
+      },
+      "continueOnError": false,
+      "manualInstructions": [
+        {
+          "text": "Add projects to solution."
+        }
+      ]
+    },
+	{
+	  "condition": "(UI-Webapi)",
+      "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
+      "args": {
+        "primaryOutputIndexes": "0;1;2"
+      },
+      "continueOnError": false,
+      "manualInstructions": [
+        {
+          "text": "Add projects to solution."
+        }
       ]
     }
   ]
