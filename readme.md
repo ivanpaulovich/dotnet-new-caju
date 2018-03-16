@@ -70,7 +70,8 @@ There are switches to generate your awesome application with your needs. Try aft
 | --tips | `true` `false` | `true` |
 | --service-bus | `kafka` `none` | `kafka` |
 | --skipRestore | `true` `false` | `false` |
-> Run `dotnet new caju --help` for the complete list of switches.
+
+Run `dotnet new caju --help` for the complete list of switches.
 
 ## Roadmap
 <a href="https://www.nuget.org/packages/Paulovich.Caju/" rel="Paulovich.Caju">![NuGet](https://buildstats.info/nuget/paulovich.caju)</a> [![Build Status](https://travis-ci.org/ivanpaulovich/caju.svg?branch=master)](https://travis-ci.org/ivanpaulovich/caju)
