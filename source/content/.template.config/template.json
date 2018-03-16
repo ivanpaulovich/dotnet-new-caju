@@ -135,6 +135,18 @@
         }
       ]
     },
+    "skipRestore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Run dotnet restore after code generation.",
+      "defaultValue": "false",
+      "replaces": "skipRestore",
+      "onlyIf": [
+        {
+          "after": "\"skipRestore\": \""
+        }
+      ]
+    },
     "service-bus": {
       "type": "parameter",
       "datatype": "choice",
@@ -538,7 +550,7 @@
   "postActions": [
     {
       "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
-	  "condition": "(ui == \"none\")",
+      "condition": "(ui == \"none\")",
       "args": {
         "primaryOutputIndexes": "0;1;2"
       },
@@ -561,6 +573,17 @@
           "text": "Add projects to solution."
         }
       ]
+    },
+    {
+      "condition": "(!skipRestore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        {
+          "text": "Run 'dotnet restore'"
+        }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
     }
   ]
 }
