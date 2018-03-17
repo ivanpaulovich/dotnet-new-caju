@@ -71,7 +71,7 @@
         }
       ]
     },
-    "ui": {
+    "user-interface": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "webapi",
@@ -85,18 +85,18 @@
           "description": "Web API"
         },
         {
-          "choice": "console",
+          "choice": "consoleapp",
           "description": "Console"
         },
         {
-          "choice": "both",
-          "description": "Web API and Console"
+          "choice": "wcf",
+          "description": "WCF Application"
         }
       ],
-      "replaces": "ui",
+      "replaces": "user-interface",
       "onlyIf": [
         {
-          "after": "\"ui\": \""
+          "after": "\"user-interface\": \""
         }
       ]
     },
@@ -214,10 +214,6 @@
       "type": "computed",
       "value": "(ui == \"console\")"
     },
-    "UI-Both": {
-      "type": "computed",
-      "value": "(ui == \"both\")"
-    },
     "Mongo": {
       "type": "computed",
       "value": "(data-access == \"mongo\")"
@@ -267,14 +263,14 @@
         {
           "condition": "(Empty)",
           "exclude": [
-            "MyProject.UI/UseCases/Register/**/*.cs",
-            "MyProject.UI/UseCases/Deposit/**/*.cs",
-            "MyProject.UI/UseCases/Withdraw/**/*.cs",
-            "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
-            "MyProject.UI/UseCases/GetCustomerDetails/**/*.cs",
-            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-            "MyProject.UI/Model/**/*.cs",
-            "MyProject.UI/Modules/**/*.cs",
+            "MyProject.WebApi/UseCases/Register/**/*.cs",
+            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
+            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
+            "MyProject.WebApi/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.WebApi/UseCases/GetCustomerDetails/**/*.cs",
+            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
+            "MyProject.WebApi/Model/**/*.cs",
+            "MyProject.WebApi/Modules/**/*.cs",
             "MyProject.Application/Commands/Register/**/*.cs",
             "MyProject.Application/Commands/Deposit/**/*.cs",
             "MyProject.Application/Commands/Withdraw/**/*.cs",
@@ -294,10 +290,10 @@
         {
           "condition": "(ReadOnly)",
           "exclude": [
-            "MyProject.UI/UseCases/Register/**/*.cs",
-            "MyProject.UI/UseCases/Deposit/**/*.cs",
-            "MyProject.UI/UseCases/Withdraw/**/*.cs",
-            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.WebApi/UseCases/Register/**/*.cs",
+            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
+            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
+            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
             "MyProject.Application/Commands/Register/**/*.cs",
             "MyProject.Application/Commands/Deposit/**/*.cs",
             "MyProject.Application/Commands/Withdraw/**/*.cs",
@@ -307,10 +303,10 @@
         {
           "condition": "(Basic)",
           "exclude": [
-            "MyProject.UI/UseCases/Deposit/**/*.cs",
-            "MyProject.UI/UseCases/Withdraw/**/*.cs",
-            "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
-            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
+            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
+            "MyProject.WebApi/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
             "MyProject.Application/Commands/Deposit/**/*.cs",
             "MyProject.Application/Commands/Withdraw/**/*.cs",
             "MyProject.Application/Commands/GetAccountDetails/**/*.cs",
@@ -348,7 +344,7 @@
         {
           "condition": "(UI-None)",
           "exclude": [
-            "MyProject.UI/**/*"
+            "MyProject.WebApi/**/*"
           ]
         },
         {
@@ -366,14 +362,14 @@
         {
           "condition": "(Empty)",
           "exclude": [
-            "MyProject.UI/UseCases/Register/**/*.cs",
-            "MyProject.UI/UseCases/Deposit/**/*.cs",
-            "MyProject.UI/UseCases/Withdraw/**/*.cs",
-            "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
-            "MyProject.UI/UseCases/GetCustomerDetails/**/*.cs",
-            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-            "MyProject.UI/Model/**/*.cs",
-            "MyProject.UI/Modules/**/*.cs",
+            "MyProject.WebApi/UseCases/Register/**/*.cs",
+            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
+            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
+            "MyProject.WebApi/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.WebApi/UseCases/GetCustomerDetails/**/*.cs",
+            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
+            "MyProject.WebApi/Model/**/*.cs",
+            "MyProject.WebApi/Modules/**/*.cs",
             "MyProject.Application/UseCases/Register/**/*.cs",
             "MyProject.Application/UseCases/Deposit/**/*.cs",
             "MyProject.Application/UseCases/Withdraw/**/*.cs",
@@ -393,10 +389,10 @@
         {
           "condition": "(ReadOnly)",
           "exclude": [
-            "MyProject.UI/UseCases/Register/**/*.cs",
-            "MyProject.UI/UseCases/Deposit/**/*.cs",
-            "MyProject.UI/UseCases/Withdraw/**/*.cs",
-            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.WebApi/UseCases/Register/**/*.cs",
+            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
+            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
+            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
             "MyProject.Application/UseCases/Register/**/*.cs",
             "MyProject.Application/UseCases/Deposit/**/*.cs",
             "MyProject.Application/UseCases/Withdraw/**/*.cs",
@@ -406,10 +402,10 @@
         {
           "condition": "(Basic)",
           "exclude": [
-            "MyProject.UI/UseCases/Deposit/**/*.cs",
-            "MyProject.UI/UseCases/Withdraw/**/*.cs",
-            "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
-            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
+            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
+            "MyProject.WebApi/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
             "MyProject.Application/UseCases/Deposit/**/*.cs",
             "MyProject.Application/UseCases/Withdraw/**/*.cs",
             "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
@@ -447,7 +443,7 @@
         {
           "condition": "(UI-None)",
           "exclude": [
-            "MyProject.UI/**/*"
+            "MyProject.WebApi/**/*"
           ]
         },
         {
@@ -471,14 +467,14 @@
         {
           "condition": "(Empty)",
           "exclude": [
-            "MyProject.UI/UseCases/Register/**/*.cs",
-            "MyProject.UI/UseCases/Deposit/**/*.cs",
-            "MyProject.UI/UseCases/Withdraw/**/*.cs",
-            "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
-            "MyProject.UI/UseCases/GetCustomerDetails/**/*.cs",
-            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
-            "MyProject.UI/Model/**/*.cs",
-            "MyProject.UI/Modules/**/*.cs",
+            "MyProject.WebApi/UseCases/Register/**/*.cs",
+            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
+            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
+            "MyProject.WebApi/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.WebApi/UseCases/GetCustomerDetails/**/*.cs",
+            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
+            "MyProject.WebApi/Model/**/*.cs",
+            "MyProject.WebApi/Modules/**/*.cs",
             "MyProject.Application/UseCases/Register/**/*.cs",
             "MyProject.Application/UseCases/Deposit/**/*.cs",
             "MyProject.Application/UseCases/Withdraw/**/*.cs",
@@ -496,10 +492,10 @@
         {
           "condition": "(ReadOnly)",
           "exclude": [
-            "MyProject.UI/UseCases/Register/**/*.cs",
-            "MyProject.UI/UseCases/Deposit/**/*.cs",
-            "MyProject.UI/UseCases/Withdraw/**/*.cs",
-            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.WebApi/UseCases/Register/**/*.cs",
+            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
+            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
+            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
             "MyProject.Application/UseCases/Register/**/*.cs",
             "MyProject.Application/UseCases/Deposit/**/*.cs",
             "MyProject.Application/UseCases/Withdraw/**/*.cs",
@@ -509,10 +505,10 @@
         {
           "condition": "(Basic)",
           "exclude": [
-            "MyProject.UI/UseCases/Deposit/**/*.cs",
-            "MyProject.UI/UseCases/Withdraw/**/*.cs",
-            "MyProject.UI/UseCases/GetAccountDetails/**/*.cs",
-            "MyProject.UI/UseCases/CloseAccount/**/*.cs",
+            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
+            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
+            "MyProject.WebApi/UseCases/GetAccountDetails/**/*.cs",
+            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
             "MyProject.Application/UseCases/Deposit/**/*.cs",
             "MyProject.Application/UseCases/Withdraw/**/*.cs",
             "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
@@ -550,7 +546,7 @@
         {
           "condition": "(UI-None)",
           "exclude": [
-            "MyProject.UI/**/*"
+            "MyProject.WebApi/**/*"
           ]
         },
         {
@@ -573,14 +569,14 @@
       "path": "MyProject.Infrastructure/MyProject.Infrastructure.csproj"
     },
     {
-      "path": "MyProject.UI/MyProject.UI.csproj",
-      "condition": "(ui == \"webapi\" || ui == \"both\")"
+      "path": "MyProject.WebApi/MyProject.WebApi.csproj",
+      "condition": "(user-interface == \"webapi\")"
     }
   ],
   "postActions": [
     {
       "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
-      "condition": "(ui == \"none\")",
+      "condition": "(UI-None)",
       "args": {
         "primaryOutputIndexes": "0;1;2"
       },
@@ -592,7 +588,7 @@
       ]
     },
     {
-      "condition": "(ui == \"webapi\" || ui == \"both\")",
+      "condition": "(user-interface == \"webapi\")",
       "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
       "args": {
         "primaryOutputIndexes": "0;1;2;3"

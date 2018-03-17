@@ -8,15 +8,15 @@ WORKDIR /src
 COPY . .
 WORKDIR /src/MyProject.Infrastructure
 RUN dotnet build -c Release
-WORKDIR /src/MyProject.UI
+WORKDIR /src/MyProject.WebApi
 RUN dotnet build -c Release -o /app
 #
 #
-FROM builder AS publish
+FROM builder AS pu1blish
 RUN dotnet publish -c Release -o /app
 #
 #
 FROM base AS production
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "MyProject.UI.dll"]
+ENTRYPOINT ["dotnet", "MyProject.WebApi.dll"]

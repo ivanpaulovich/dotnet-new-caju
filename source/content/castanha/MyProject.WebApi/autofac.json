@@ -1,0 +1,31 @@
+﻿{
+  "defaultAssembly": "MyProject.WebApi",
+  "modules": [
+    //#if (!Empty)
+    {
+      "type": "MyProject.WebApi.Modules.WebApiModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "MyProject.WebApi.Modules.ApplicationModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "MyProject.WebApi.Modules.InfrastructureModule",
+      "properties": {
+        "ConnectionString": "mongodb://10.0.75.1:27017",
+        "DatabaseName": "MyProject-V01"
+      }
+    },
+    {
+      "type": "MyProject.WebApi.Modules.BusModule",
+      "properties": {
+        "BrokerList": "10.0.75.1:9092",
+        "Topic": "MyProject-V01"
+      }
+    }
+    //#endif
+  ]
+}
