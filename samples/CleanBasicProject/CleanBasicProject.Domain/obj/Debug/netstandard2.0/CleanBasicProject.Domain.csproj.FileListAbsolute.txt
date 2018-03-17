@@ -1,8 +1,0 @@
-C:\git\caju\samples\CleanBasicProject\CleanBasicProject.Domain\bin\Debug\netstandard2.0\CleanBasicProject.Domain.deps.json
-C:\git\caju\samples\CleanBasicProject\CleanBasicProject.Domain\bin\Debug\netstandard2.0\CleanBasicProject.Domain.dll
-C:\git\caju\samples\CleanBasicProject\CleanBasicProject.Domain\bin\Debug\netstandard2.0\CleanBasicProject.Domain.pdb
-C:\git\caju\samples\CleanBasicProject\CleanBasicProject.Domain\obj\Debug\netstandard2.0\CleanBasicProject.Domain.csproj.CoreCompileInputs.cache
-C:\git\caju\samples\CleanBasicProject\CleanBasicProject.Domain\obj\Debug\netstandard2.0\CleanBasicProject.Domain.AssemblyInfoInputs.cache
-C:\git\caju\samples\CleanBasicProject\CleanBasicProject.Domain\obj\Debug\netstandard2.0\CleanBasicProject.Domain.AssemblyInfo.cs
-C:\git\caju\samples\CleanBasicProject\CleanBasicProject.Domain\obj\Debug\netstandard2.0\CleanBasicProject.Domain.dll
-C:\git\caju\samples\CleanBasicProject\CleanBasicProject.Domain\obj\Debug\netstandard2.0\CleanBasicProject.Domain.pdb
