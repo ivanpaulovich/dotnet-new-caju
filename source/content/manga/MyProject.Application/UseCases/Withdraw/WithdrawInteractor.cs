@@ -31,7 +31,7 @@
             if (account == null)
                 throw new AccountNotFoundException($"The account {input.AccountId} does not exists or is already closed.");
 
-            Debit debit = new Debit(new Amount(input.Amount));
+            Debit debit = new Debit(input.Amount);
             account.Withdraw(debit);
 
             await accountWriteOnlyRepository.Update(account);

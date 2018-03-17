@@ -26,7 +26,7 @@
 
         internal Amount GetCurrentBalance()
         {
-            Amount totalAmount = new Amount(0);
+            Amount totalAmount = 0;
 
             //
             // TODO: Think on a better Strategy

@@ -17,6 +17,11 @@
             return Value.ToString();
         }
 
+        public static implicit operator Amount(double value)
+        {
+            return new Amount(value);
+        }
+
         public static Amount operator +(Amount amount1, Amount amount2)
         {
             return new Amount(amount1.Value + amount2.Value);

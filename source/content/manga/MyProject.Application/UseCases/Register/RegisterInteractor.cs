@@ -28,12 +28,10 @@
 
         public async Task Process(RegisterInput input)
         {
-            Customer customer = new Customer(
-                new PIN(input.PIN),
-                new Name(input.Name));
+            Customer customer = new Customer(input.PIN, input.Name);
 
             Account account = new Account();
-            Credit credit = new Credit(new Amount(input.InitialAmount));
+            Credit credit = new Credit(input.InitialAmount);
             account.Deposit(credit);
 
             customer.Register(account.Id);

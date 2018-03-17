@@ -27,7 +27,7 @@
 
         public void Close()
         {
-            if (Transactions.GetCurrentBalance() > new Amount(0))
+            if (Transactions.GetCurrentBalance() > 0)
                 throw new AccountCannotBeClosedException($"The account {Id} can not be closed because it has funds.");
         }
 

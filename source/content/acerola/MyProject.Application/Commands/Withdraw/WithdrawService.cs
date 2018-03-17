@@ -28,7 +28,7 @@
             if (account == null)
                 throw new AccountNotFoundException($"The account {command.AccountId} does not exists or is already closed.");
 
-            Debit debit = new Debit(new Amount(command.Amount));
+            Debit debit = new Debit(command.Amount);
             account.Withdraw(debit);
 
             await accountWriteOnlyRepository.Update(account);

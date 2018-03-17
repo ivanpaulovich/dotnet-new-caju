@@ -34,12 +34,10 @@
 
         public async Task Process(RegisterInput message)
         {
-            Customer customer = new Customer(
-                new PIN(message.PIN),
-                new Name(message.Name));
+            Customer customer = new Customer(message.PIN, message.Name);
 
             Account account = new Account();
-            account.Open(new Credit(new Amount(message.InitialAmount)));
+            account.Open(new Credit(message.InitialAmount));
             customer.Register(account.Id);
 
             var customerEvents = customer.GetEvents();

@@ -25,12 +25,10 @@
 
         public async Task<RegisterResult> Process(RegisterCommand command)
         {
-            Customer customer = new Customer(
-                new PIN(command.PIN),
-                new Name(command.Name));
+            Customer customer = new Customer(command.PIN, command.Name);
 
             Account account = new Account();
-            Credit credit = new Credit(new Amount(command.InitialAmount));
+            Credit credit = new Credit(command.InitialAmoun));
             account.Deposit(credit);
 
             customer.Register(account.Id);
