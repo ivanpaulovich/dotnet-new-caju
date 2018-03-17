@@ -62,15 +62,15 @@ For olher solution types check out the [Caju Samples folder](https://github.com/
 
 There are switches to generate your awesome application with your needs. Try after `dotnet new caju`:
 
-| Switch | Options | Default Value |
+| Switch | Default Value | Options |
 | --- | --- | --- |
-| --architecture-style | `clean` `hexagonal` `eventsourcing` | `clean` |
-| --use-cases | `full` `basic` `readonly` `none` | `full` |
-| --ui | `both` `webapi` `console` `none` | `webapi` |
-| --data-access | `mongo` `entityframework` `dapper` `none` | `mongo` |
-| --service-bus | `kafka` `none` | `kafka` |
-| --tips | `true` `false` | `true` |
-| --skip-restore | `true` `false` | `false` |
+| --architecture-style | `clean` | `clean` `hexagonal` `eventsourcing` |
+| --use-cases | `full` | `full` `basic` `readonly` `none` |
+| --user-interface | `webapi` | `webapi` `consoleapp` `wcf` `none` |
+| --data-access | `mongo` | `mongo` `entityframework` `dapper` `none` |
+| --service-bus | `kafka` | `kafka` `none` |
+| --tips | `true` | `true` `false` |
+| --skip-restore | `false` | `true` `false` |
 
 Run `dotnet new caju --help` for the complete list of switches.
 
