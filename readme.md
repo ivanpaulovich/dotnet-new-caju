@@ -68,8 +68,8 @@ There are switches to generate your awesome application with your needs. Try aft
 | --use-cases | `full` `basic` `readonly` `none` | `full` |
 | --ui | `both` `webapi` `console` `none` | `webapi` |
 | --data-access | `mongo` `entityframework` `dapper` `none` | `mongo` |
-| --tips | `true` `false` | `true` |
 | --service-bus | `kafka` `none` | `kafka` |
+| --tips | `true` `false` | `true` |
 | --skip-restore | `true` `false` | `false` |
 
 Run `dotnet new caju --help` for the complete list of switches.
