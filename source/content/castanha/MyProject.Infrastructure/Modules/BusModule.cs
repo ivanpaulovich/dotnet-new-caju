@@ -1,4 +1,4 @@
-﻿namespace MyProject.WebApi.Modules
+﻿namespace MyProject.Infrastructure.Modules
 {
     using Autofac;
     using MyProject.Application.ServiceBus;

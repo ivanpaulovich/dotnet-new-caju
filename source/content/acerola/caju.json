@@ -2,7 +2,7 @@
 	"origin": "https://github.com/ivanpaulovich/acerola/",
 	"architecture-style": "architecture-style",		
 	"use-cases": "use-cases",
-	"ui": "ui",
+	"user-interface": "user-interface",
 	"data-access": "data-access",
 	"tips": "tips",
 	"skip-restore": "skip-restore",

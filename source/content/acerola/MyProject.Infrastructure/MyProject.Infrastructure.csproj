@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.2.2" />
+	<PackageReference Include="Autofac" Version="4.6.0" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(data-access)'=='mongo'">

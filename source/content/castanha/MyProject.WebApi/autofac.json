@@ -1,26 +1,26 @@
 ﻿{
-  "defaultAssembly": "MyProject.WebApi",
+  "defaultAssembly": "MyProject.Infrastructure",
   "modules": [
     //#if (!Empty)
     {
-      "type": "MyProject.WebApi.Modules.WebApiModule",
+      "type": "MyProject.Infrastructure.Modules.WebApiModule",
       "properties": {
       }
     },
     {
-      "type": "MyProject.WebApi.Modules.ApplicationModule",
+      "type": "MyProject.Infrastructure.Modules.ApplicationModule",
       "properties": {
       }
     },
     {
-      "type": "MyProject.WebApi.Modules.InfrastructureModule",
+      "type": "MyProject.Infrastructure.Modules.InfrastructureModule",
       "properties": {
         "ConnectionString": "mongodb://10.0.75.1:27017",
         "DatabaseName": "MyProject-V01"
       }
     },
     {
-      "type": "MyProject.WebApi.Modules.BusModule",
+      "type": "MyProject.Infrastructure.Modules.BusModule",
       "properties": {
         "BrokerList": "10.0.75.1:9092",
         "Topic": "MyProject-V01"

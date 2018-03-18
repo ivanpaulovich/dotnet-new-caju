@@ -1,14 +1,14 @@
 ﻿namespace MyProject.WebApi
 {
-    using Autofac;
     using MyProject.WebApi.Filters;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
     using System.IO;
     using System.Reflection;
     using Autofac.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Autofac;
 
     public class Startup
     {
@@ -42,7 +42,7 @@
 
                 options.IncludeXmlComments(
                     Path.ChangeExtension(
-                        Assembly.GetAssembly(typeof(Startup)).Location,
+                        Assembly.GetEntryAssembly().Location,
                         "xml"));
 
                 options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info

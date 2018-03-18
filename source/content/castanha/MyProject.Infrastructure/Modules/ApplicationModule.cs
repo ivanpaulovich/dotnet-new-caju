@@ -1,4 +1,4 @@
-﻿namespace MyProject.WebApi.Modules
+﻿namespace MyProject.Infrastructure.Modules
 {
     using Autofac;
     using MyProject.Application;
@@ -10,7 +10,13 @@
             //
             // Register all Types in MyProject.Application
             //
-            builder.RegisterAssemblyTypes(typeof(IResultConverter).Assembly)
+            // IPublisher
+            // ISubscriber
+            // IInputBoundary<>
+            // IOutputBoundary<>
+            // IEventHandler
+            //
+            builder.RegisterAssemblyTypes(typeof(IOutputConverter).Assembly)
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
         }

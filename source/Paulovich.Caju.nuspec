@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Paulovich.Caju</id>
-    <version>0.1.82</version>
+    <version>0.1.85</version>
     <authors>Ivan Paulovich</authors>
     <owners>Ivan Paulovich</owners>
     <projectUrl>https://github.com/ivanpaulovich/caju</projectUrl>
@@ -86,6 +86,24 @@ Will be created a "MyProject" folder with a layered backend (Domain - Applicatio
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
+	<dependencies>
+		<dependency id="Confluent.Kafka" version="0.11.0" />
+		<dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="2.0.1" />
+		<dependency id="Dapper" version="1.50.4" />
+		<dependency id="Newtonsoft.Json" version="10.0.3" />    
+		<dependency id="AutoMapper" version="6.2.2" />
+		<dependency id="Autofac" version="4.6.0" />
+		<dependency id="Autofac.Configuration" version="4.0.1" />
+		<dependency id="Autofac.Extensions.DependencyInjection" version="4.2.0" />
+		<dependency id="Microsoft.AspNetCore.All" version="2.0.0" />
+		<dependency id="Serilog" version="2.6.0" />
+		<dependency id="Serilog.Extensions.Logging" version="2.0.2" />
+		<dependency id="Serilog.AspNetCore" version="2.1.0" />
+		<dependency id="Serilog.Sinks.Console" version="3.1.1" />
+		<dependency id="Serilog.Sinks.File" version="4.0.0" />
+		<dependency id="Serilog.Sinks.RollingFile" version="3.3.0" />
+		<dependency id="Swashbuckle.AspNetCore" version="1.0.0" />
+	</dependencies>
   </metadata>
   <files>
     <file src="**" exclude="**\bin\**\*;**\obj\**\*;**\*.user;**\*.log;" />

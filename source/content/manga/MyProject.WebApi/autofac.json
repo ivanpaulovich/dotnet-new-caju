@@ -1,19 +1,19 @@
 ﻿{
-  "defaultAssembly": "MyProject.WebApi",
+  "defaultAssembly": "MyProject.Infrastructure",
   "modules": [
     //#if (!Empty)
     {
-      "type": "MyProject.WebApi.Modules.WebApiModule",
+      "type": "MyProject.Infrastructure.Modules.WebApiModule",
       "properties": {
       }
     },
     {
-      "type": "MyProject.WebApi.Modules.ApplicationModule",
+      "type": "MyProject.Infrastructure.Modules.ApplicationModule",
       "properties": {
       }
     },
     {
-      "type": "MyProject.WebApi.Modules.InfrastructureModule",
+      "type": "MyProject.Infrastructure.Modules.InfrastructureModule",
       "properties": {
         //#if (Mongo)
         "ConnectionString": "mongodb://10.0.75.1:27017",

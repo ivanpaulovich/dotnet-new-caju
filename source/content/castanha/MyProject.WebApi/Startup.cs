@@ -1,6 +1,5 @@
 ﻿namespace MyProject.WebApi
 {
-    using Autofac;
     using MyProject.WebApi.Filters;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -44,7 +43,7 @@
 
                 options.IncludeXmlComments(
                     Path.ChangeExtension(
-                        Assembly.GetAssembly(typeof(MyProject.WebApi.Startup)).Location,
+                        Assembly.GetEntryAssembly().Location,
                         "xml"));
 
                 options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
