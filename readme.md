@@ -80,23 +80,23 @@ Run `dotnet new caju --help` for the complete list of switches.
   * [Clean Architecture](https://github.com/ivanpaulovich/manga) :white_check_mark:
   * [Hexagonal Architecture](https://github.com/ivanpaulovich/acerola) :white_check_mark:
   * [Event-Sourcing](https://github.com/ivanpaulovich/castanha) :white_check_mark:
-* Allow to choose built-in **use cases sets**
+* Allow to choose the built-in **use cases sets**
   * Full set of use cases :white_check_mark:
   * Basic set of use cases :white_check_mark:
   * Read Only :white_check_mark: 
   * None :white_check_mark:	
-* Allow to choose **data access** frameworks 
+* Allow to choose the **data access** frameworks 
   * MongoDB :white_check_mark:
   * Dapper
   * Entity Framework
   * Azure Cosmos DB
   * None :white_check_mark:
-* Allow to choose **UI** frameworks
+* Allow to choose the **UI** frameworks
   * Both
   * WebAPI :white_check_mark:
   * Console 
   * None :white_check_mark:
-* Allow to choose **Service Bus** frameworks
+* Allow to choose the **Service Bus** frameworks
   * Kafka :white_check_mark:
   * Azure Event Bus
   * None :white_check_mark:
