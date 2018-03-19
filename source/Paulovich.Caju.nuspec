@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Paulovich.Caju</id>
-    <version>0.2.2</version>
+    <version>0.2.3</version>
     <authors>Ivan Paulovich</authors>
     <owners>Ivan Paulovich</owners>
     <projectUrl>https://github.com/ivanpaulovich/caju</projectUrl>
@@ -24,6 +24,7 @@ Will be created a "MyProject" folder with a layered backend (Domain - Applicatio
       $ dotnet new caju --architecture-style hexagonal --name "MyHexagonalProject"
     </summary>
     <releaseNotes>
+-- FIX dependencies on restore
 - Architecture styles support
 -- Clean architecture with Input/Output/Interactors
 -- Hexagonal architecture with CommandHandlers, Commands and Command Results
@@ -87,12 +88,6 @@ Will be created a "MyProject" folder with a layered backend (Domain - Applicatio
       <packageType name="Template" />
     </packageTypes>
 	<dependencies>
-		<dependency id="Confluent.Kafka" version="0.11.0" />
-		<dependency id="Dapper" version="1.50.4" />
-		<dependency id="Newtonsoft.Json" version="10.0.3" />    
-		<dependency id="AutoMapper" version="6.2.2" />
-		<dependency id="Autofac" version="4.6.0" />
-		<dependency id="Serilog" version="2.6.0" />
 	</dependencies>
   </metadata>
   <files>
