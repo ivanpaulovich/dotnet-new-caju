@@ -270,7 +270,6 @@
             "MyProject.WebApi/UseCases/GetCustomerDetails/**/*.cs",
             "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
             "MyProject.WebApi/Model/**/*.cs",
-            "MyProject.WebApi/Modules/**/*.cs",
             "MyProject.Application/Commands/Register/**/*.cs",
             "MyProject.Application/Commands/Deposit/**/*.cs",
             "MyProject.Application/Commands/Withdraw/**/*.cs",
@@ -284,7 +283,8 @@
             "MyProject.Domain/Customers/**/*.cs",
             "MyProject.Domain/ValueObjects/**/*.cs",
             "MyProject.Infrastructure/DataAccess/**/*.cs",
-            "MyProject.Infrastructure/Mappings/**/*.cs"
+            "MyProject.Infrastructure/Mappings/**/*.cs",			
+            "MyProject.Infrastructure/Modules/**/*.cs"
           ]
         },
         {
@@ -368,8 +368,7 @@
             "MyProject.WebApi/UseCases/GetAccountDetails/**/*.cs",
             "MyProject.WebApi/UseCases/GetCustomerDetails/**/*.cs",
             "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
-            "MyProject.WebApi/Model/**/*.cs",
-            "MyProject.WebApi/Modules/**/*.cs",
+            "MyProject.WebApi/Model/**/*.cs",            
             "MyProject.Application/UseCases/Register/**/*.cs",
             "MyProject.Application/UseCases/Deposit/**/*.cs",
             "MyProject.Application/UseCases/Withdraw/**/*.cs",
@@ -383,7 +382,8 @@
             "MyProject.Domain/Customers/**/*.cs",
             "MyProject.Domain/ValueObjects/**/*.cs",
             "MyProject.Infrastructure/DataAccess/**/*.cs",
-            "MyProject.Infrastructure/Mappings/**/*.cs"
+            "MyProject.Infrastructure/Mappings/**/*.cs",
+			"MyProject.Infrastructure/Modules/**/*.cs"
           ]
         },
         {
@@ -474,7 +474,6 @@
             "MyProject.WebApi/UseCases/GetCustomerDetails/**/*.cs",
             "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
             "MyProject.WebApi/Model/**/*.cs",
-            "MyProject.WebApi/Modules/**/*.cs",
             "MyProject.Application/UseCases/Register/**/*.cs",
             "MyProject.Application/UseCases/Deposit/**/*.cs",
             "MyProject.Application/UseCases/Withdraw/**/*.cs",
@@ -486,8 +485,9 @@
             "MyProject.Domain/Accounts/**/*.cs",
             "MyProject.Domain/Customers/**/*.cs",
             "MyProject.Domain/ValueObjects/**/*.cs",
-            "MyProject.Infrastructure/Mappings/**/*.cs"
-          ]
+            "MyProject.Infrastructure/Mappings/**/*.cs",
+            "MyProject.Infrastructure/Modules/**/*.cs"
+			]
         },
         {
           "condition": "(ReadOnly)",
