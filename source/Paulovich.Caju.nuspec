@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Paulovich.Caju</id>
-    <version>0.2.4</version>
+    <version>0.2.5</version>
     <authors>Ivan Paulovich</authors>
     <owners>Ivan Paulovich</owners>
     <projectUrl>https://github.com/ivanpaulovich/caju</projectUrl>
@@ -12,7 +12,7 @@
     <description>
       At the first time use:
 
-      $ dotnet new -i Paulovich.Caju::0.2.4
+      $ dotnet new -i Paulovich.Caju::0.2.5
       $ dotnet new caju --name "MyProject"
 
 Will be created a "MyProject" folder with a layered backend (Domain - Application - Infrastructure - UI) with the desired architecture style (Hexagonal, Clean or Event Sourcing).

@@ -5,9 +5,19 @@
     using System;
     using System.Threading.Tasks;
 
-    public class CustomerReadOnlyRepository : ICustomerReadOnlyRepository
+    public class CustomerReadOnlyRepository : ICustomerReadOnlyRepository, ICustomerWriteOnlyRepository
     {
+        public Task Add(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<Customer> Get(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Update(Customer customer)
         {
             throw new NotImplementedException();
         }
