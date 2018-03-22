@@ -34,8 +34,7 @@ Clean Architecture Solution with basic use cases:
 ```sh
 dotnet new caju \
 	--architecture-style clean \
-	--use-cases basic \
-	-n "Clean-BasicProject"
+	--use-cases basic
 ```
 
 Hexagonal Architecture Solution with all use cases:
@@ -43,8 +42,7 @@ Hexagonal Architecture Solution with all use cases:
 ```sh
 dotnet new caju \
 	--architecture-style hexagonal \
-	--use-cases full \
-	-n "Hexagonal-FullProject"
+	--use-cases full
 ```
 
 Empty Event-Sourcing Solution:
@@ -52,8 +50,7 @@ Empty Event-Sourcing Solution:
 ```sh
 dotnet new caju \
 	--architecture-style eventsourcing \
-	--use-cases empty \
-	-n "EventSourcing-EmptyProject"
+	--use-cases empty
 ```
 
 For olher solution types check out the [Caju Samples folder](https://github.com/ivanpaulovich/caju/tree/master/samples).
