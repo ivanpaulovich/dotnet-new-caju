@@ -2,7 +2,6 @@
 {
     using System.Threading.Tasks;
     using MyProject.Application.Outputs;
-    using MyProject.Domain.ValueObjects;
     using MyProject.Application.Repositories;
     using MyProject.Domain.Accounts;
 
@@ -34,7 +33,7 @@
             Debit debit = new Debit(input.Amount);
             account.Withdraw(debit);
 
-            await accountWriteOnlyRepository.Update(account);
+            await accountWriteOnlyRepository.Update(account, debit);
 
             TransactionOutput transactionOutput = outputConverter.Map<TransactionOutput>(debit);
             WithdrawOutput output = new WithdrawOutput(

@@ -4,7 +4,7 @@
 
     public class Debit : Transaction
     {
-        public Debit()
+        protected Debit()
         {
 
         }

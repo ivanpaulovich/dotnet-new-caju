@@ -5,11 +5,11 @@
     public class Entity : IEntity
     {
         private Guid id = Guid.NewGuid();
-        public Guid Id 
-        { 
+        public virtual Guid Id
+        {
             get
             {
-                return id;                
+                return id;
             }
             protected set
             {

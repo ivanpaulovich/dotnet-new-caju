@@ -13,6 +13,10 @@
         public string DatabaseName { get; set; }
 #endif
 
+#if (Dapper)
+        public string DapperConnectionString { get; set; }
+#endif
+
         protected override void Load(ContainerBuilder builder)
         {
 #if (Mongo)
@@ -28,6 +32,9 @@
             //
             builder.RegisterAssemblyTypes(typeof(OutputConverter).Assembly)
                 .AsImplementedInterfaces()
+#if (Dapper)
+                .WithParameter("connectionString", DapperConnectionString)
+#endif
                 .InstancePerLifetimeScope();
         }
     }

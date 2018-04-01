@@ -1,11 +1,11 @@
-﻿namespace MyProject.Infrastructure.DataAccess.Dapper
+﻿namespace MyProject.Infrastructure.EntityFrameworkDataAccess
 {
     using MyProject.Application.Repositories;
     using MyProject.Domain.Customers;
     using System;
     using System.Threading.Tasks;
 
-    public class CustomerReadOnlyRepository : ICustomerReadOnlyRepository, ICustomerWriteOnlyRepository
+    public class CustomerRepository : ICustomerReadOnlyRepository, ICustomerWriteOnlyRepository
     {
         public Task Add(Customer customer)
         {

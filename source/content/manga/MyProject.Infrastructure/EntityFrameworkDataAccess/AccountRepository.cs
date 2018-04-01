@@ -1,4 +1,4 @@
-﻿namespace MyProject.Infrastructure.DataAccess.Dapper
+﻿namespace MyProject.Infrastructure.EntityFrameworkDataAccess
 {
     using MyProject.Application.Repositories;
     using MyProject.Domain.Accounts;

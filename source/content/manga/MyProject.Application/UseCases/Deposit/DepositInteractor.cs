@@ -1,7 +1,6 @@
 ﻿namespace MyProject.Application.UseCases.Deposit
 {
     using System.Threading.Tasks;
-    using MyProject.Domain.ValueObjects;
     using MyProject.Application.Repositories;
     using MyProject.Domain.Accounts;
     using MyProject.Application.Outputs;
@@ -34,7 +33,7 @@
             Credit credit = new Credit(input.Amount);
             account.Deposit(credit);
 
-            await accountWriteOnlyRepository.Update(account);
+            await accountWriteOnlyRepository.Update(account, credit);
 
             TransactionOutput transactionResponse = outputConverter.Map<TransactionOutput>(credit);
             DepositOutput output = new DepositOutput(transactionResponse, account.GetCurrentBalance().Value);

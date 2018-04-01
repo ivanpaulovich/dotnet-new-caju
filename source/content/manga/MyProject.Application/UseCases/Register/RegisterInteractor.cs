@@ -2,7 +2,6 @@
 {
     using System.Threading.Tasks;
     using MyProject.Domain.Customers;
-    using MyProject.Domain.ValueObjects;
     using MyProject.Application.Repositories;
     using MyProject.Domain.Accounts;
     using MyProject.Application.Outputs;
@@ -30,7 +29,7 @@
         {
             Customer customer = new Customer(input.PIN, input.Name);
 
-            Account account = new Account();
+            Account account = new Account(customer.Id);
             Credit credit = new Credit(input.InitialAmount);
             account.Deposit(credit);
 

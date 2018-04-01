@@ -528,19 +528,19 @@
         {
           "condition": "(!MongoDB)",
           "exclude": [
-            "MyProject.Infrastructure/DataAccess/Mongo/**/*.cs"
+            "MyProject.Infrastructure/MongoDataAccess/**/*.cs"
           ]
         },
         {
           "condition": "(!Dapper)",
           "exclude": [
-            "MyProject.Infrastructure/DataAccess/Dapper/**/*.cs"
+            "MyProject.Infrastructure/DapperDataAccess/**/*.cs"
           ]
         },
         {
           "condition": "(!EntityFramework)",
           "exclude": [
-            "MyProject.Infrastructure/DataAccess/EntityFramework/**/*.cs"
+            "MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.cs"
           ]
         },
         {
