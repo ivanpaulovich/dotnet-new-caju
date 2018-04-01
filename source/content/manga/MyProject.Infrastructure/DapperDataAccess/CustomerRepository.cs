@@ -40,6 +40,9 @@
                 string customerSQL = "SELECT * FROM Customer WHERE Id = @Id";
                 Proxies.Customer customer = await db
                     .QueryFirstOrDefaultAsync<Proxies.Customer>(customerSQL, new { id });
+					
+				if (customer == null)
+                    return null;
 
                 string accountSQL = "SELECT * FROM Account WHERE CustomerId = @Id";
                 IEnumerable<Guid> accounts = await db

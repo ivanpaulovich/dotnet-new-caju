@@ -1,4 +1,4 @@
-﻿namespace MyProject.Infrastructure.DataAccess.Mongo
+﻿namespace MyProject.Infrastructure.MongoDataAccess
 {
     using MyProject.Domain;
     using MyProject.Domain.Accounts;
@@ -6,12 +6,12 @@
     using MongoDB.Bson.Serialization;
     using MongoDB.Driver;
 
-    public class MongoContext
+    public class AccountBalanceContext
     {
         private readonly MongoClient mongoClient;
         private readonly IMongoDatabase database;
 
-        public MongoContext(string connectionString, string databaseName)
+        public AccountBalanceContext(string connectionString, string databaseName)
         {
             this.mongoClient = new MongoClient(connectionString);
             this.database = mongoClient.GetDatabase(databaseName);

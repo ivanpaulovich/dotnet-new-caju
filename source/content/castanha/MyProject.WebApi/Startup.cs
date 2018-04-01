@@ -10,6 +10,7 @@
     using Autofac.Configuration;
     using System.Threading;
     using MyProject.Application.ServiceBus;
+	using Autofac;
 
     public class Startup
     {

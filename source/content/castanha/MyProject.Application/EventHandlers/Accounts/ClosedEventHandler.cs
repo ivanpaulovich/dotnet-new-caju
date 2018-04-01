@@ -27,7 +27,7 @@
             if (account.Version != domainEvent.Version)
                 throw new TransactionConflictException(account, domainEvent);
 
-            accountWriteOnlyRepository.Delete(account).Wait();
+            accountWriteOnlyRepository.Delete(domainEvent).Wait();
         }
     }
 }

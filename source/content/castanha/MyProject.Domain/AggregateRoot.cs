@@ -8,7 +8,7 @@
         private readonly Dictionary<Type, Action<object>> handlers = new Dictionary<Type, Action<object>>();
         private readonly List<IDomainEvent> domainEvents = new List<IDomainEvent>();
         
-        public int Version { get; protected set; }
+        public virtual int Version { get; protected set; }
 
         public AggregateRoot()
         {

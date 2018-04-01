@@ -1,8 +1,8 @@
-﻿namespace MyProject.Infrastructure.DataAccess.Dapper
+﻿namespace MyProject.Infrastructure.EntityFrameworkDataAccess
 {
     using MyProject.Application.Repositories;
-    using System;
     using MyProject.Domain.Accounts;
+    using System;
     using System.Threading.Tasks;
 
     public class AccountRepository : IAccountReadOnlyRepository, IAccountWriteOnlyRepository

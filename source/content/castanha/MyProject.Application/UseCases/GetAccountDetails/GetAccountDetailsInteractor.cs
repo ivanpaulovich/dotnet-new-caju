@@ -3,6 +3,7 @@
     using System.Threading.Tasks;
     using MyProject.Application.Outputs;
     using MyProject.Application.Repositories;
+    using MyProject.Domain.Accounts;
 
     public class GetAccountDetailsInteractor : IInputBoundary<GetAccountDetailsInput>
     {
@@ -20,14 +21,11 @@
             this.outputConverter = responseConverter;
         }
 
-        public async Task Process(GetAccountDetailsInput message)
+        public async Task Process(GetAccountDetailsInput input)
         {
-            var account = await accountReadOnlyRepository.Get(message.AccountId);
-            if (account == null)
-            {
-                outputBoundary.Populate(null);
-                return;
-            }
+            Account account = await accountReadOnlyRepository.Get(input.AccountId);
+			if (account == null)
+                throw new AccountNotFoundException($"The account {input.AccountId} does not exists or is already closed.");
 
             AccountOutput output = outputConverter.Map<AccountOutput>(account);
             outputBoundary.Populate(output);

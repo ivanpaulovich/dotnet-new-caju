@@ -18,7 +18,7 @@
         {
             Account account = new Account();
             account.Apply(domainEvent);
-            accountWriteOnlyRepository.Add(account).Wait();
+            accountWriteOnlyRepository.Add(domainEvent).Wait();
         }
     }
 }

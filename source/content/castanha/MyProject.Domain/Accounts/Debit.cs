@@ -4,6 +4,11 @@
 
     public class Debit : Transaction
     {
+        protected Debit()
+        {
+
+        }
+
         public Debit(Amount amount)
             : base(amount)
         {

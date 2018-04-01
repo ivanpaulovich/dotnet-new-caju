@@ -3,14 +3,13 @@
     using System;
     using MyProject.Domain.ValueObjects;
     using MyProject.Domain.Customers.Events;
-    using MyProject.Domain.Accounts;
 
     public class Customer : AggregateRoot
     {
-        public Name Name { get; private set; }
-        public PIN PIN { get; private set; }
-        public AccountCollection Accounts { get; private set; }
-        
+        public virtual Name Name { get; protected set; }
+        public virtual PIN PIN { get; protected set; }
+        public virtual AccountCollection Accounts { get; protected set; }
+
         public Customer()
         {
             Register<RegisteredDomainEvent>(When);

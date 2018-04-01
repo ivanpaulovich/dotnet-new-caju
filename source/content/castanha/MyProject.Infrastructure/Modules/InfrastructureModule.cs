@@ -1,16 +1,20 @@
 ﻿namespace MyProject.Infrastructure.Modules
 {
     using Autofac;
-    using MyProject.Infrastructure.Mappings;
 #if Mongo
-    using MyProject.Infrastructure.DataAccess.Mongo;
+    using MyProject.Infrastructure.MongoDataAccess;
 #endif
+    using MyProject.Infrastructure.Mappings;
 
     public class InfrastructureModule : Autofac.Module
     {
 #if (Mongo)
         public string ConnectionString { get; set; }
         public string DatabaseName { get; set; }
+#endif
+
+#if (Dapper)
+        public string DapperConnectionString { get; set; }
 #endif
 
         protected override void Load(ContainerBuilder builder)
@@ -28,6 +32,9 @@
             //
             builder.RegisterAssemblyTypes(typeof(OutputConverter).Assembly)
                 .AsImplementedInterfaces()
+#if (Dapper)
+                .WithParameter("connectionString", DapperConnectionString)
+#endif
                 .InstancePerLifetimeScope();
         }
     }

@@ -1,4 +1,4 @@
-﻿namespace MyProject.Infrastructure.DataAccess.EntityFramework
+﻿namespace MyProject.Infrastructure.EntityFrameworkDataAccess
 {
     using MyProject.Application.Repositories;
     using MyProject.Domain.Customers;

@@ -4,7 +4,7 @@
 
     public class Credit : Transaction
     {
-        public Credit()
+        protected Credit()
         {
 
         }

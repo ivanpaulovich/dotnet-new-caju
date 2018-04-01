@@ -26,13 +26,13 @@
             this.responseConverter = responseConverter;
         }
 
-        public async Task Process(WithdrawInput command)
+        public async Task Process(WithdrawInput input)
         {
-            Account account = await accountReadOnlyRepository.Get(command.AccountId);
+            Account account = await accountReadOnlyRepository.Get(input.AccountId);
             if (account == null)
-                throw new AccountNotFoundException($"The account {command.AccountId} does not exists or is already closed.");
+                throw new AccountNotFoundException($"The account {input.AccountId} does not exists or is already closed.");
 
-            Debit debit = new Debit(command.Amount);
+            Debit debit = new Debit(input.Amount);
             account.Withdraw(debit);
 
             var domainEvents = account.GetEvents();

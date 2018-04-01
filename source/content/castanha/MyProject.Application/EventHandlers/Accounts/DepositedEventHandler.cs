@@ -28,7 +28,7 @@
                 throw new TransactionConflictException(account, domainEvent);
 
             account.Apply(domainEvent);
-            accountWriteOnlyRepository.Update(account).Wait();
+            accountWriteOnlyRepository.Update(domainEvent).Wait();
         }
     }
 }

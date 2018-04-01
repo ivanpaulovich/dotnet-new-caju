@@ -1,4 +1,4 @@
-﻿namespace MyProject.Infrastructure.DataAccess.Mongo
+﻿namespace MyProject.Infrastructure.MongoDataAccess
 {
     using MyProject.Application.Repositories;
     using MyProject.Domain.Customers;
@@ -8,9 +8,9 @@
 
     public class CustomerRepository : ICustomerReadOnlyRepository, ICustomerWriteOnlyRepository
     {
-        private readonly MongoContext mongoContext;
+        private readonly AccountBalanceContext mongoContext;
 
-        public CustomerRepository(MongoContext mongoContext)
+        public CustomerRepository(AccountBalanceContext mongoContext)
         {
             this.mongoContext = mongoContext;
         }

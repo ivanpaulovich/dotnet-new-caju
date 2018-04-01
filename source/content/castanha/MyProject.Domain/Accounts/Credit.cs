@@ -4,6 +4,11 @@
 
     public class Credit : Transaction
     {
+        protected Credit()
+        {
+
+        }
+
         public Credit(Amount amount)
             : base(amount)
         {

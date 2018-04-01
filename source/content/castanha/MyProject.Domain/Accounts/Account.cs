@@ -1,13 +1,12 @@
 ﻿namespace MyProject.Domain.Accounts
 {
-    using System;
     using MyProject.Domain.Accounts.Events;
-    using MyProject.Domain.Customers.Events;
     using MyProject.Domain.ValueObjects;
+	using System;
 
     public class Account : AggregateRoot
     {
-        public TransactionCollection Transactions { get; private set; }
+        public virtual TransactionCollection Transactions { get; protected set; }
 
         public Account()
         {
@@ -19,10 +18,11 @@
             Transactions = new TransactionCollection();
         }
 
-        public void Open(Credit credit)
+        public void Open(Guid customerId, Credit credit)
         {
             var domainEvent = new OpenedDomainEvent(
                     Id,
+                    customerId,
                     Version,
                     credit.Id,
                     credit.Amount,
@@ -38,7 +38,8 @@
                     Id,
                     Version,
                     credit.Id,
-                    credit.Amount
+                    credit.Amount,
+                    DateTime.Now
                 );
 
             Raise(domainEvent);
@@ -53,7 +54,8 @@
                     Id,
                     Version,
                     debit.Id,
-                    debit.Amount
+                    debit.Amount,
+                    DateTime.Now
                 );
 
             Raise(domainEvent);

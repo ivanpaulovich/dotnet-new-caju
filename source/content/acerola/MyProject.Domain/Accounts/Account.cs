@@ -1,15 +1,23 @@
 ﻿namespace MyProject.Domain.Accounts
 {
     using MyProject.Domain.ValueObjects;
+    using System;
 
     public class Account : Entity, IAggregateRoot
     {
-        public TransactionCollection Transactions { get; private set; }
-        public int Version { get; private set; }
+        public virtual Guid CustomerId { get; protected set; }
+        public virtual int Version { get; protected set; }
+        public virtual TransactionCollection Transactions { get; protected set; }
 
-        public Account()
+        protected Account()
         {
             Transactions = new TransactionCollection();
+        }
+
+        public Account(Guid customerId)
+            : this()
+        {
+            CustomerId = customerId;
         }
 
         public void Deposit(Credit credit)

@@ -1,8 +1,8 @@
 ﻿namespace MyProject.Infrastructure.Modules
 {
     using Autofac;
-#if (Mongo)
-    using MyProject.Infrastructure.DataAccess.Mongo;
+#if Mongo
+    using MyProject.Infrastructure.MongoDataAccess;
 #endif
     using MyProject.Infrastructure.Mappings;
 
@@ -13,11 +13,15 @@
         public string DatabaseName { get; set; }
 #endif
 
+#if (Dapper)
+        public string DapperConnectionString { get; set; }
+#endif
+
         protected override void Load(ContainerBuilder builder)
         {
 #if (Mongo)
-            builder.RegisterType<MongoContext>()
-                .As<MongoContext>()
+            builder.RegisterType<AccountBalanceContext>()
+                .As<AccountBalanceContext>()
                 .WithParameter("connectionString", ConnectionString)
                 .WithParameter("databaseName", DatabaseName)
                 .SingleInstance();
@@ -28,6 +32,9 @@
             //
             builder.RegisterAssemblyTypes(typeof(ResultConverter).Assembly)
                 .AsImplementedInterfaces()
+#if (Dapper)
+                .WithParameter("connectionString", DapperConnectionString)
+#endif
                 .InstancePerLifetimeScope();
         }
     }

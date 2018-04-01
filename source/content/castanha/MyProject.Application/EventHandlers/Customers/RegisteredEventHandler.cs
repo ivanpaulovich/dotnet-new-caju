@@ -18,7 +18,7 @@
         {
             Customer customer = new Customer();
             customer.Apply(domainEvent);
-            customerWriteOnlyRepository.Add(customer).Wait();
+            customerWriteOnlyRepository.Add(domainEvent).Wait();
         }
     }
 }

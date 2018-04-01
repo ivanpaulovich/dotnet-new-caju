@@ -30,7 +30,7 @@
             items = list.ToList();
         }
 
-        public void Add(Guid accountId)
+        internal void Add(Guid accountId)
         {
             items.Add(accountId);
         }

@@ -3,8 +3,9 @@
     using System.Collections.Generic;
     using System.Linq;
     using System;
+    using System.Collections;
 
-    public class AccountCollection
+    public class AccountCollection : IEnumerable<Guid>
     {
         private List<Guid> items;
         public IReadOnlyCollection<Guid> Items
@@ -13,7 +14,7 @@
             {
                 return items.AsReadOnly();
             }
-            private set
+            protected set
             {
                 items = value.ToList();
             }
@@ -24,9 +25,24 @@
             items = new List<Guid>();
         }
 
-        internal void Add(Guid accountId)
+        public AccountCollection(IEnumerable<Guid> list)
+        {
+            items = list.ToList();
+        }
+
+        public void Add(Guid accountId)
         {
             items.Add(accountId);
+        }
+
+        public IEnumerator<Guid> GetEnumerator()
+        {
+            return items.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return items.GetEnumerator();
         }
     }
 }

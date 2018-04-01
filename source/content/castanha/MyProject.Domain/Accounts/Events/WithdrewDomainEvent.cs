@@ -12,17 +12,20 @@
         public int Version { get; private set; }
         public Guid TransactionId { get; private set; }
         public Amount TransactionAmount { get; private set; }
+        public DateTime TransactionDate { get; private set; }
 
         public WithdrewDomainEvent(
             Guid aggregateRootId, 
             int version,
             Guid transactionId, 
-            Amount transactionAmount)
+            Amount transactionAmount,
+            DateTime transactionDate)
         {
             AggregateRootId = aggregateRootId;
             Version = version;
             TransactionId = transactionId;
             TransactionAmount = transactionAmount;
+            TransactionDate = transactionDate;
         }
     }
 }

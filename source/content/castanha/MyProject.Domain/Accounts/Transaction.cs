@@ -5,9 +5,14 @@
 
     public abstract class Transaction : Entity
     {
-        public Amount Amount { get; private set; }
+        public virtual Amount Amount { get; protected set; }
+        public virtual DateTime TransactionDate { get; protected set; }
         public abstract string Description { get; }
-        public DateTime TransactionDate { get; private set; }
+
+        protected Transaction()
+        {
+
+        }
 
         public Transaction(Amount amount)
         {

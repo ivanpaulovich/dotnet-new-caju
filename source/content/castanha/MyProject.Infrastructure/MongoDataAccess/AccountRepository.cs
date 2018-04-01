@@ -1,4 +1,4 @@
-﻿namespace MyProject.Infrastructure.DataAccess.Mongo
+﻿namespace MyProject.Infrastructure.MongoDataAccess
 {
     using MyProject.Application.Repositories;
     using MyProject.Domain.Accounts;
@@ -8,9 +8,9 @@
 
     public class AccountRepository : IAccountReadOnlyRepository, IAccountWriteOnlyRepository
     {
-        private readonly MongoContext mongoContext;
+        private readonly AccountBalanceContext mongoContext;
 
-        public AccountRepository(MongoContext mongoContext)
+        public AccountRepository(AccountBalanceContext mongoContext)
         {
             this.mongoContext = mongoContext;
         }
@@ -33,7 +33,7 @@
                 .SingleOrDefaultAsync();
         }
 
-        public async Task Update(Account account)
+        public async Task Update(Account account, Transaction transaction)
         {
             await mongoContext.Accounts.ReplaceOneAsync(e => e.Id == account.Id, account);
         }

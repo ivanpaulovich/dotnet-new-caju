@@ -10,19 +10,13 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.2.2" />
-	<PackageReference Include="Autofac" Version="4.6.0" />
+	  <PackageReference Include="Autofac" Version="4.6.0" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(data-access)'=='mongo'">
-    <PackageReference Include="MongoDB.Driver" Version="2.4.4" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(data-access)'=='dapper'">
-    <PackageReference Include="Dapper" Version="1.50.4" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(data-access)'=='entityframework'">
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.4.4" Condition="'$(data-access)'=='mongo'" />
+    <PackageReference Include="Dapper" Version="1.50.4" Condition="'$(data-access)'=='dapper'" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" Condition="'$(data-access)'=='entityframework'" />
   </ItemGroup>
 
   <ItemGroup>

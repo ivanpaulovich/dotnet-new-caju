@@ -50,7 +50,7 @@
             return totalAmount;
         }
 
-        public void Add(Transaction transaction)
+        internal void Add(Transaction transaction)
         {
             items.Add(transaction);
         }

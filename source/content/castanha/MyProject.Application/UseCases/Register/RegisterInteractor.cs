@@ -37,7 +37,7 @@
             Customer customer = new Customer(message.PIN, message.Name);
 
             Account account = new Account();
-            account.Open(new Credit(message.InitialAmount));
+            account.Open(customer.Id, new Credit(message.InitialAmount));
             customer.Register(account.Id);
 
             var customerEvents = customer.GetEvents();

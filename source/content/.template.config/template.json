@@ -326,19 +326,20 @@
         {
           "condition": "(!Mongo)",
           "exclude": [
-            "MyProject.Infrastructure/DataAccess/Mongo/**/*.cs"
+            "MyProject.Infrastructure/MongoDataAccess/**/*.cs"
           ]
         },
         {
           "condition": "(!Dapper)",
           "exclude": [
-            "MyProject.Infrastructure/DataAccess/Dapper/**/*.cs"
+            "MyProject.Infrastructure/DapperDataAccess/**/*.cs",
+			"MyProject.Infrastructure/DapperDataAccess/**/*.sql"
           ]
         },
         {
           "condition": "(!EntityFramework)",
           "exclude": [
-            "MyProject.Infrastructure/DataAccess/EntityFramework/**/*.cs"
+            "MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.cs"
           ]
         },
         {
@@ -425,19 +426,20 @@
         {
           "condition": "(!Mongo)",
           "exclude": [
-            "MyProject.Infrastructure/DataAccess/Mongo/**/*.cs"
+            "MyProject.Infrastructure/MongoDataAccess/**/*.cs"
           ]
         },
         {
           "condition": "(!Dapper)",
           "exclude": [
-            "MyProject.Infrastructure/DataAccess/Dapper/**/*.cs"
+            "MyProject.Infrastructure/DapperDataAccess/**/*.cs",
+			"MyProject.Infrastructure/DapperDataAccess/**/*.sql"
           ]
         },
         {
           "condition": "(!EntityFramework)",
           "exclude": [
-            "MyProject.Infrastructure/DataAccess/EntityFramework/**/*.cs"
+            "MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.cs"
           ]
         },
         {
@@ -455,7 +457,8 @@
         {
           "condition": "(!Kafka)",
           "exclude": [
-            "MyProject.Infrastructure/ServiceBus/Bus.cs"
+            "MyProject.Infrastructure/ServiceBus/Bus.cs",
+			"kafka.sh"
           ]
         }
       ]

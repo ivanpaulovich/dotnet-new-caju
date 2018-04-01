@@ -4,13 +4,13 @@
 
     public class Debit : Transaction
     {
-        public Debit()
+        protected Debit()
         {
 
         }
 
         public Debit(Amount amount)
-            :base(amount)
+            : base(amount)
         {
 
         }
