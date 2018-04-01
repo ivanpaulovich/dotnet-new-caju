@@ -2,7 +2,7 @@
 {
     using Autofac;
 #if Mongo
-    using MyProject.Infrastructure.DataAccess.Mongo;
+    using MyProject.Infrastructure.MongoDataAccess;
 #endif
     using MyProject.Infrastructure.Mappings;
 

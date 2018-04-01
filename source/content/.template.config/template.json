@@ -534,7 +534,8 @@
         {
           "condition": "(!Dapper)",
           "exclude": [
-            "MyProject.Infrastructure/DapperDataAccess/**/*.cs"
+            "MyProject.Infrastructure/DapperDataAccess/**/*.cs",
+			"MyProject.Infrastructure/DapperDataAccess/**/*.sql"
           ]
         },
         {
