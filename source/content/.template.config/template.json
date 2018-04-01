@@ -324,7 +324,7 @@
           ]
         },
         {
-          "condition": "(!MongoDB)",
+          "condition": "(!Mongo)",
           "exclude": [
             "MyProject.Infrastructure/DataAccess/Mongo/**/*.cs"
           ]
@@ -423,7 +423,7 @@
           ]
         },
         {
-          "condition": "(!MongoDB)",
+          "condition": "(!Mongo)",
           "exclude": [
             "MyProject.Infrastructure/DataAccess/Mongo/**/*.cs"
           ]
@@ -526,7 +526,7 @@
           ]
         },
         {
-          "condition": "(!MongoDB)",
+          "condition": "(!Mongo)",
           "exclude": [
             "MyProject.Infrastructure/MongoDataAccess/**/*.cs"
           ]
