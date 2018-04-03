@@ -7,7 +7,7 @@ Service Template to help you build evolvable and maintainable applications. It f
 ## Generate your own awesome Back-end!
 <a href="https://www.nuget.org/packages/Paulovich.Caju/" rel="Paulovich.Caju">![NuGet](https://buildstats.info/nuget/paulovich.caju)</a> [![Build Status](https://travis-ci.org/ivanpaulovich/caju.svg?branch=master)](https://travis-ci.org/ivanpaulovich/caju)
 
-To generate a .NET Back-end based on this template run:
+To generate your own awesome .NET Back-end simple run:
 
 ```sh
 dotnet new -i Paulovich.Caju::0.2.84
