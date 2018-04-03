@@ -84,7 +84,7 @@ Run `dotnet new caju --help` for the complete list of switches.
   * None :white_check_mark:	
 * Allow to choose the **data access** frameworks 
   * MongoDB :white_check_mark:
-  * Dapper
+  * Dapper :white_check_mark:
   * Entity Framework
   * Azure Cosmos DB
   * None :white_check_mark:
