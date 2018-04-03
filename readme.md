@@ -11,7 +11,7 @@ To generate your own awesome .NET Back-end simple run:
 
 ```sh
 dotnet new -i Paulovich.Caju::0.2.84
-dotnet new caju -n "MyProject"
+dotnet new caju
 ```
 
 ## The Architecture Styles
