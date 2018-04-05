@@ -11,12 +11,10 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <title>dotnet new caju: Templates for Back-end with the awesome architectures made easy! (Hexagonal, Clean or Event Sourcing architectures styles)</title>
     <description>
-      At the first time use:
-
       $ dotnet new -i Paulovich.Caju::0.2.84
-      $ dotnet new caju --name "MyProject"
+      $ dotnet new caju
 
-Will be created a "MyProject" folder with a layered backend (Domain - Application - Infrastructure - UI) with the desired architecture style (Hexagonal, Clean or Event Sourcing).
+Will be created a .NET Solution with a layered backend (Domain - Application - Infrastructure - UI) with the Clean Architecture Style. You can change to Hexagon or Event Sourcing.
     </description>
     <summary>
       Try the following commands:
