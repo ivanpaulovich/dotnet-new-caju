@@ -7,7 +7,7 @@ Service Template to help you build evolvable and maintainable applications. It f
 ## Generate your own awesome Back-end!
 <a href="https://www.nuget.org/packages/Paulovich.Caju/" rel="Paulovich.Caju">![NuGet](https://buildstats.info/nuget/paulovich.caju)</a> [![Build Status](https://travis-ci.org/ivanpaulovich/caju.svg?branch=master)](https://travis-ci.org/ivanpaulovich/caju)
 
-To generate a .NET Back-end based on this template run:
+To generate your own awesome .NET Back-end simple run:
 
 ```sh
 dotnet new -i Paulovich.Caju::0.2.85
@@ -21,7 +21,7 @@ This architecture implementations are a software that encapsulate Business Rules
 | Concept | Description |
 | --- | --- |
 | DDD | This Bounded Context of this project contains the Ubiquitious Language around Account Balance and designed inside Domain Layer and Application layer. We use the Eric Evans terms like Entities, Value Object, Aggregates Root and Domain Events. |
-| SOLID | The SOLID principles are all over the the solution. 
+| SOLID | The SOLID principles are all over the the solution. |
 | Entity-Boundary-Interactor (EBI) | The software implementation is agnostic from technology, framework, or database. The result is focus on the  use cases with input/output ports. |
 | Microservice | Designed around the Business Domain, having Continous Delivery and Independent Deployment. |
 
@@ -41,16 +41,16 @@ Hexagonal Architecture Solution with all use cases:
 
 ```sh
 dotnet new caju \
-	--architecture-style hexagonal \
-	--use-cases full
+  --architecture-style hexagonal \
+  --use-cases full
 ```
 
 Empty Event-Sourcing Solution:
 
 ```sh
 dotnet new caju \
-	--architecture-style eventsourcing \
-	--use-cases empty
+  --architecture-style eventsourcing \
+  --use-cases empty
 ```
 
 For olher solution types check out the [Caju Samples folder](https://github.com/ivanpaulovich/caju/tree/master/samples).
