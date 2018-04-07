@@ -15,7 +15,7 @@
             this.mongoContext = mongoContext;
         }
 
-        public async Task Add(Account account)
+        public async Task Add(Account account, Credit credit)
         {
             await mongoContext.Accounts.InsertOneAsync(account);
         }

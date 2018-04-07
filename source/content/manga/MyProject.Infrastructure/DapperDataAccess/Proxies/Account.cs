@@ -5,9 +5,12 @@
 
     internal class Account : Domain.Accounts.Account
     {
-        public void SetTransactions(IEnumerable<Transaction> transactions)
+        public Account(Domain.Accounts.Account account, IEnumerable<Transaction> transactions)
         {
-            Transactions = new Domain.Accounts.TransactionCollection(transactions);
+            this.Id = account.Id;
+            this.CustomerId = account.CustomerId;
+            this.Version = account.Version;
+            this.Transactions = new Domain.Accounts.TransactionCollection(transactions);
         }
     }
 }

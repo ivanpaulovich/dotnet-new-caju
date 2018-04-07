@@ -50,8 +50,8 @@
                 .FromSql(accountTransactionsOrdered, id)
                 .ToListAsync();
 
-            Proxies.Account customerProxy = new Proxies.Account(account, transactions);
-            return customerProxy;
+            Proxies.Account accountProxy = new Proxies.Account(account, transactions);
+            return accountProxy;
         }
 
         public async Task Update(Account account, Transaction transaction)

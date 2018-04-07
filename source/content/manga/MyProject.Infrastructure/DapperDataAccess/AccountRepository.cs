@@ -18,7 +18,7 @@
             this.connectionString = connectionString;
         }
 
-        public async Task Add(Account account)
+        public async Task Add(Account account, Credit credit)
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
@@ -44,7 +44,7 @@
                         transactionParameters.Add("@amount", debit.Amount.Value);
                         transactionParameters.Add("@description", debit.Description);
                         transactionParameters.Add("@transactionDate", debit.TransactionDate);
-                        transactionParameters.Add("@accountId", account.Id);
+                        transactionParameters.Add("@accountId", debit.AccountId);
                         transactionParameters.Add("@transactionType", 0);
 
                         int debitRows = await db.ExecuteAsync(insertDebitSQL, transactionParameters);
@@ -61,7 +61,7 @@
                         transactionParameters.Add("@amount", credit.Amount.Value);
                         transactionParameters.Add("@description", credit.Description);
                         transactionParameters.Add("@transactionDate", credit.TransactionDate);
-                        transactionParameters.Add("@accountId", account.Id);
+                        transactionParameters.Add("@accountId", credit.AccountId);
                         transactionParameters.Add("@transactionType", 1);
 
                         int debitRows = await db.ExecuteAsync(insertCreditSQL, transactionParameters);
@@ -120,9 +120,8 @@
                     }
                 }
 
-                account.SetTransactions(transactions);
-
-                return account;
+                Proxies.Account accountProxy = new Proxies.Account(account, transactions);
+                return accountProxy;
             }
         }
 
@@ -144,7 +143,7 @@
                     transactionParameters.Add("@amount", debit.Amount.Value);
                     transactionParameters.Add("@description", debit.Description);
                     transactionParameters.Add("@transactionDate", debit.TransactionDate);
-                    transactionParameters.Add("@accountId", account.Id);
+                    transactionParameters.Add("@accountId", debit.AccountId);
                     transactionParameters.Add("@transactionType", 0);
 
                     int debitRows = await db.ExecuteAsync(insertDebitSQL, transactionParameters);
@@ -161,7 +160,7 @@
                     transactionParameters.Add("@amount", credit.Amount.Value);
                     transactionParameters.Add("@description", credit.Description);
                     transactionParameters.Add("@transactionDate", credit.TransactionDate);
-                    transactionParameters.Add("@accountId", account.Id);
+                    transactionParameters.Add("@accountId", credit.AccountId);
                     transactionParameters.Add("@transactionType", 1);
 
                     int debitRows = await db.ExecuteAsync(insertCreditSQL, transactionParameters);

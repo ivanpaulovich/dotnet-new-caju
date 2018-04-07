@@ -330,7 +330,7 @@
           ]
         },
         {
-          "condition": "(!Dapper)",
+          "condition": "(!Dapper && !EntityFramework)",
           "exclude": [
             "MyProject.Infrastructure/DapperDataAccess/**/*.cs",
 			"MyProject.Infrastructure/DapperDataAccess/**/*.sql"
@@ -339,7 +339,8 @@
         {
           "condition": "(!EntityFramework)",
           "exclude": [
-            "MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.cs"
+            "MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.cs",
+			"MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.sql"
           ]
         },
         {
@@ -430,7 +431,7 @@
           ]
         },
         {
-          "condition": "(!Dapper)",
+          "condition": "(!Dapper && !EntityFramework)",
           "exclude": [
             "MyProject.Infrastructure/DapperDataAccess/**/*.cs",
 			"MyProject.Infrastructure/DapperDataAccess/**/*.sql"
@@ -439,7 +440,8 @@
         {
           "condition": "(!EntityFramework)",
           "exclude": [
-            "MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.cs"
+            "MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.cs",
+			"MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.sql"
           ]
         },
         {
@@ -544,7 +546,8 @@
         {
           "condition": "(!EntityFramework)",
           "exclude": [
-            "MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.cs"
+            "MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.cs",
+			"MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.sql"
           ]
         },
         {

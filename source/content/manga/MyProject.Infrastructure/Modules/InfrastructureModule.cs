@@ -5,6 +5,10 @@
     using MyProject.Infrastructure.MongoDataAccess;
 #endif
     using MyProject.Infrastructure.Mappings;
+#if (EntityFramework)
+    using MyProject.Infrastructure.EntityFrameworkDataAccess;
+    using Microsoft.EntityFrameworkCore;
+#endif
 
     public class InfrastructureModule : Autofac.Module
     {
