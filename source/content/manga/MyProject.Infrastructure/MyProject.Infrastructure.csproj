@@ -16,7 +16,7 @@
   <ItemGroup>
     <PackageReference Include="MongoDB.Driver" Version="2.4.4" Condition="'$(data-access)'=='mongo'" />
     <PackageReference Include="Dapper" Version="1.50.4" Condition="'$(data-access)'=='dapper'" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" Condition="'$(data-access)'=='entityframework'" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.0-preview1-final" Condition="'$(data-access)'=='entityframework'" />
   </ItemGroup>
 
   <ItemGroup>

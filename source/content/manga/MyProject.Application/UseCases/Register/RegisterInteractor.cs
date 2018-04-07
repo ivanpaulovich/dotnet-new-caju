@@ -30,13 +30,13 @@
             Customer customer = new Customer(input.PIN, input.Name);
 
             Account account = new Account(customer.Id);
-            Credit credit = new Credit(input.InitialAmount);
+            Credit credit = new Credit(account.Id, input.InitialAmount);
             account.Deposit(credit);
 
             customer.Register(account.Id);
 
             await customerWriteOnlyRepository.Add(customer);
-            await accountWriteOnlyRepository.Add(account);
+            await accountWriteOnlyRepository.Add(account, credit);
 
             CustomerOutput customerOutput = outputConverter.Map<CustomerOutput>(customer);
             AccountOutput accountOutput = outputConverter.Map<AccountOutput>(account);

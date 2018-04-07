@@ -1,6 +1,7 @@
 ﻿namespace MyProject.Domain.Accounts
 {
     using MyProject.Domain.ValueObjects;
+    using System;
 
     public class Debit : Transaction
     {
@@ -9,8 +10,8 @@
 
         }
 
-        public Debit(Amount amount)
-            :base(amount)
+        public Debit(Guid accountId, Amount amount)
+            : base(accountId, amount)
         {
 
         }

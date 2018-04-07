@@ -17,6 +17,10 @@
         public string DapperConnectionString { get; set; }
 #endif
 
+#if (EntityFramework)
+        public string SQLServerConnectionString { get; set; }
+#endif
+
         protected override void Load(ContainerBuilder builder)
         {
 #if (Mongo)
@@ -25,6 +29,15 @@
                 .WithParameter("connectionString", ConnectionString)
                 .WithParameter("databaseName", DatabaseName)
                 .SingleInstance();
+#endif
+#if (EntityFramework)
+            var optionsBuilder = new DbContextOptionsBuilder<DbContext>();
+                optionsBuilder.UseSqlServer(SQLServerConnectionString);
+                optionsBuilder.EnableSensitiveDataLogging(true);
+
+            builder.RegisterType<Context>()
+              .WithParameter(new TypedParameter(typeof(DbContextOptions), optionsBuilder.Options))
+              .InstancePerLifetimeScope();
 #endif
 
             //
