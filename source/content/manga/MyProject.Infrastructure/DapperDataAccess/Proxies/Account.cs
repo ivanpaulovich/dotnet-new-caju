@@ -5,11 +5,13 @@
 
     internal class Account : Domain.Accounts.Account
     {
-        public Account(Domain.Accounts.Account account, IEnumerable<Transaction> transactions)
+        public Account()
         {
-            this.Id = account.Id;
-            this.CustomerId = account.CustomerId;
-            this.Version = account.Version;
+
+        }
+
+        public void SetTransactions(IEnumerable<Transaction> transactions)
+        {
             this.Transactions = new TransactionCollection(transactions);
         }
     }

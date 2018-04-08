@@ -10,8 +10,8 @@ Service Template to help you build evolvable and maintainable applications. It f
 To generate your own awesome .NET Back-end simple run:
 
 ```sh
-dotnet new -i Paulovich.Caju::0.2.91
-dotnet new caju -n "MyProject"
+dotnet new -i Paulovich.Caju::0.2.93
+dotnet new caju
 ```
 
 ## The Architecture Styles
@@ -33,8 +33,8 @@ Clean Architecture Solution with basic use cases:
 
 ```sh
 dotnet new caju \
-	--architecture-style clean \
-	--use-cases basic
+  --architecture-style clean \
+  --use-cases basic
 ```
 
 Hexagonal Architecture Solution with all use cases:

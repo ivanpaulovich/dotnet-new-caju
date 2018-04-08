@@ -6,13 +6,14 @@
 
     internal class Customer : Domain.Customers.Customer
     {
-        public Customer(Domain.Customers.Customer customer, IEnumerable<Guid> accounts)
+        public Customer()
         {
-            this.Id = customer.Id;
-            this.Name = customer.Name;
-            this.PIN = customer.PIN;
+
+        }
+
+        public void SetAccounts(IEnumerable<Guid> accounts)
+        {
             this.Accounts = new AccountCollection(accounts);
-            this.Version = customer.Version;
         }
     }
 }

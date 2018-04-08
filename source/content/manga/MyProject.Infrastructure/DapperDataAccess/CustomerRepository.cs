@@ -48,8 +48,8 @@
                 IEnumerable<Guid> accounts = await db
                     .QueryAsync<Guid>(accountSQL, new { id });
 
-                Proxies.Customer customerProxy = new Proxies.Customer(customer, accounts);
-                return customerProxy;
+                customer.SetAccounts(accounts);
+                return customer;
             }
         }
 
