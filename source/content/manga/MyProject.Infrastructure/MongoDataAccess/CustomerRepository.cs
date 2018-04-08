@@ -8,9 +8,9 @@
 
     public class CustomerRepository : ICustomerReadOnlyRepository, ICustomerWriteOnlyRepository
     {
-        private readonly AccountBalanceContext mongoContext;
+        private readonly Context mongoContext;
 
-        public CustomerRepository(AccountBalanceContext mongoContext)
+        public CustomerRepository(Context mongoContext)
         {
             this.mongoContext = mongoContext;
         }

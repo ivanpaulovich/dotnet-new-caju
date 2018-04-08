@@ -8,9 +8,9 @@
 
     public class AccountRepository : IAccountReadOnlyRepository, IAccountWriteOnlyRepository
     {
-        private readonly AccountBalanceContext mongoContext;
+        private readonly Context mongoContext;
 
-        public AccountRepository(AccountBalanceContext mongoContext)
+        public AccountRepository(Context mongoContext)
         {
             this.mongoContext = mongoContext;
         }
