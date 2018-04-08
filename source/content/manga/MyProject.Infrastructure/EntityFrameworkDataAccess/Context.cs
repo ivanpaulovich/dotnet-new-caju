@@ -32,8 +32,7 @@
                 v => new Amount(v));
 
             modelBuilder.Entity<Account>()
-                .ToTable("Account")
-                .Ignore(p => p.Transactions);
+                .ToTable("Account");
 
             modelBuilder.Entity<Customer>()
                 .ToTable("Customer")

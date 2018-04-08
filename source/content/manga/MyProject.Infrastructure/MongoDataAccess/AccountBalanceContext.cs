@@ -67,6 +67,7 @@
             BsonClassMap.RegisterClassMap<Customer>(cm =>
             {
                 cm.AutoMap();
+                cm.Ignore(p => p.Accounts);
             });
         }
     }

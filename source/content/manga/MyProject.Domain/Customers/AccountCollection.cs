@@ -1,48 +1,22 @@
 ﻿namespace MyProject.Domain.Customers
 {
     using System.Collections.Generic;
-    using System.Linq;
     using System;
-    using System.Collections;
+    using System.Collections.ObjectModel;
 
-    public class AccountCollection : IEnumerable<Guid>
+    public class AccountCollection : Collection<Guid>
     {
-        private List<Guid> items;
-        public IReadOnlyCollection<Guid> Items
-        {
-            get
-            {
-                return items.AsReadOnly();
-            }
-            protected set
-            {
-                items = value.ToList();
-            }
-        }
-
         public AccountCollection()
         {
-            items = new List<Guid>();
+
         }
 
         public AccountCollection(IEnumerable<Guid> list)
         {
-            items = list.ToList();
-        }
-
-        internal void Add(Guid accountId)
-        {
-            items.Add(accountId);
-        }
-
-        public IEnumerator<Guid> GetEnumerator()
-        {
-            return items.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return items.GetEnumerator();
+            foreach (var item in list)
+            {
+                Items.Add(item);
+            }
         }
     }
 }

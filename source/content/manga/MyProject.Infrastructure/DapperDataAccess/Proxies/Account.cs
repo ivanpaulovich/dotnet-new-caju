@@ -10,7 +10,7 @@
             this.Id = account.Id;
             this.CustomerId = account.CustomerId;
             this.Version = account.Version;
-            this.Transactions = new Domain.Accounts.TransactionCollection(transactions);
+            this.Transactions = new TransactionCollection(transactions);
         }
     }
 }

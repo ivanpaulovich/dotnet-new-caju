@@ -6,10 +6,7 @@
 
         public Amount(double value)
         {
-            if (value < 0)
-                throw new AmountShouldBePositiveException($"Amount should be greater than zero ({value}).");
-
-            this.Value = value;
+            Value = value;
         }
 
         public override string ToString()

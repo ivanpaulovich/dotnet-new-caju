@@ -1,33 +1,22 @@
 ﻿namespace MyProject.Domain.Accounts
 {
     using MyProject.Domain.ValueObjects;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Collections.ObjectModel;
 
-    public class TransactionCollection : IEnumerable<Transaction>
+    public class TransactionCollection : Collection<Transaction>
     {
-        private List<Transaction> items;
-        public IReadOnlyCollection<Transaction> Items
-        {
-            get
-            {
-                return items.AsReadOnly();
-            }
-            protected set
-            {
-                items = value.ToList();
-            }
-        }
-
         public TransactionCollection()
         {
-            items = new List<Transaction>();
+
         }
 
         public TransactionCollection(IEnumerable<Transaction> list)
         {
-            items = list.ToList();
+            foreach (var item in list)
+            {
+                Items.Add(item);
+            }
         }
 
         public Amount GetCurrentBalance()
@@ -48,21 +37,6 @@
             }
 
             return totalAmount;
-        }
-
-        internal void Add(Transaction transaction)
-        {
-            items.Add(transaction);
-        }
-
-        public IEnumerator<Transaction> GetEnumerator()
-        {
-            return items.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return items.GetEnumerator();
         }
     }
 }

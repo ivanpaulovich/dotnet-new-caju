@@ -21,7 +21,6 @@ PRIMARY KEY CLUSTERED
 CREATE TABLE [Transaction](
 	[Id] [uniqueidentifier] NOT NULL,
 	[Amount] [float] NOT NULL,
-	[Description] [varchar](50) NOT NULL,
 	[TransactionDate] [datetime] NOT NULL,
 	[AccountId] [uniqueidentifier] NULL,
 	[TransactionType] [int] NULL,

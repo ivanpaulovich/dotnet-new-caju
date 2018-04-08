@@ -8,20 +8,20 @@
     using System.Collections.Generic;
     using System.Data.SqlClient;
 
-    internal class AccountRepository : IAccountReadOnlyRepository, IAccountWriteOnlyRepository
+    public class AccountRepository : IAccountReadOnlyRepository, IAccountWriteOnlyRepository
     {
-        private readonly Context _context;
+        private readonly Context context;
 
         public AccountRepository(Context context)
         {
-            _context = context ?? throw new ArgumentNullException(nameof(context));
+            this.context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public async Task Add(Account account, Credit credit)
         {
-            _context.Entry(credit).State = EntityState.Added;
-            await _context.Accounts.AddAsync(account);
-            int affectedRows = await _context.SaveChangesAsync();
+            context.Entry(credit).State = EntityState.Added;
+            await context.Accounts.AddAsync(account);
+            int affectedRows = await context.SaveChangesAsync();
         }
 
         public async Task Delete(Account account)
@@ -32,33 +32,29 @@
 
             var id = new SqlParameter("@Id", account.Id);
 
-            int affectedRows = await _context.Database.ExecuteSqlCommandAsync(
+            int affectedRows = await context.Database.ExecuteSqlCommandAsync(
                 deleteSQL, id);
         }
 
         public async Task<Account> Get(Guid id)
         {
-            var account = await _context.Accounts.FindAsync(id);
+            var account = await context.Accounts.FindAsync(id);
 
-            string accountTransactionsOrdered =
-                    @"SELECT * FROM [Transaction]
-                      WHERE AccountId = @p0 
-                      ORDER BY TransactionDate";
+            if (account == null)
+                return null;
 
-            IEnumerable<Transaction> transactions = await _context
-                .Transactions
-                .FromSql(accountTransactionsOrdered, id)
-                .ToListAsync();
+            await context.Entry(account)
+                .Collection(i => i.Transactions)
+                .LoadAsync();
 
-            Proxies.Account accountProxy = new Proxies.Account(account, transactions);
-            return accountProxy;
+            return account;
         }
 
         public async Task Update(Account account, Transaction transaction)
         {
-            _context.Entry(transaction).State = EntityState.Added;
+            context.Entry(transaction).State = EntityState.Added;
 
-            int affectedRows = await _context.SaveChangesAsync();
+            int affectedRows = await context.SaveChangesAsync();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿namespace MyProject.Infrastructure.DapperDataAccess.Proxies
 {
+    using MyProject.Domain.Customers;
     using System;
     using System.Collections.Generic;
 
