@@ -5,6 +5,10 @@
     using MyProject.Infrastructure.MongoDataAccess;
 #endif
     using MyProject.Infrastructure.Mappings;
+#if (EntityFramework)
+    using MyProject.Infrastructure.EntityFrameworkDataAccess;
+    using Microsoft.EntityFrameworkCore;
+#endif
 
     public class InfrastructureModule : Autofac.Module
     {
@@ -12,19 +16,30 @@
         public string ConnectionString { get; set; }
         public string DatabaseName { get; set; }
 #endif
-
 #if (Dapper)
         public string DapperConnectionString { get; set; }
+#endif
+#if (EntityFramework)
+        public string SQLServerConnectionString { get; set; }
 #endif
 
         protected override void Load(ContainerBuilder builder)
         {
 #if (Mongo)
-            builder.RegisterType<AccountBalanceContext>()
-                .As<AccountBalanceContext>()
+            builder.RegisterType<Context>()
+                .As<Context>()
                 .WithParameter("connectionString", ConnectionString)
                 .WithParameter("databaseName", DatabaseName)
                 .SingleInstance();
+#endif
+#if (EntityFramework)
+            var optionsBuilder = new DbContextOptionsBuilder<DbContext>();
+                optionsBuilder.UseSqlServer(SQLServerConnectionString);
+                optionsBuilder.EnableSensitiveDataLogging(true);
+
+            builder.RegisterType<Context>()
+              .WithParameter(new TypedParameter(typeof(DbContextOptions), optionsBuilder.Options))
+              .InstancePerLifetimeScope();
 #endif
 
             //

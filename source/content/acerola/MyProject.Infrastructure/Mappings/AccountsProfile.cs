@@ -14,7 +14,7 @@
             CreateMap<Account, AccountResult>()
                 .ForMember(dest => dest.AccountId, opt => opt.MapFrom(src => src.Id))
                 .ForMember(dest => dest.CurrentBalance, opt => opt.MapFrom(src => src.GetCurrentBalance().Value))
-                .ForMember(dest => dest.Transactions, opt => opt.MapFrom(src => src.Transactions.Items));
+                .ForMember(dest => dest.Transactions, opt => opt.MapFrom(src => src.Transactions));
 
             CreateMap<Debit, TransactionResult>()
                 .ForMember(dest => dest.Amount, opt => opt.MapFrom(src => src.Amount.Value))

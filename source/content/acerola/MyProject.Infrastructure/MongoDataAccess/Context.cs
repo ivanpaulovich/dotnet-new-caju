@@ -6,12 +6,12 @@
     using MongoDB.Bson.Serialization;
     using MongoDB.Driver;
 
-    public class AccountBalanceContext
+    public class Context
     {
         private readonly MongoClient mongoClient;
         private readonly IMongoDatabase database;
 
-        public AccountBalanceContext(string connectionString, string databaseName)
+        public Context(string connectionString, string databaseName)
         {
             this.mongoClient = new MongoClient(connectionString);
             this.database = mongoClient.GetDatabase(databaseName);

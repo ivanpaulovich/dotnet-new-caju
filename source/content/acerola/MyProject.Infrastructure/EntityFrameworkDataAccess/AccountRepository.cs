@@ -4,27 +4,57 @@
     using MyProject.Domain.Accounts;
     using System;
     using System.Threading.Tasks;
+    using Microsoft.EntityFrameworkCore;
+    using System.Collections.Generic;
+    using System.Data.SqlClient;
 
     public class AccountRepository : IAccountReadOnlyRepository, IAccountWriteOnlyRepository
     {
-        public Task Add(Account account)
+        private readonly Context context;
+
+        public AccountRepository(Context context)
         {
-            throw new NotImplementedException();
+            this.context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public Task Delete(Account account)
+        public async Task Add(Account account, Credit credit)
         {
-            throw new NotImplementedException();
+            context.Entry(credit).State = EntityState.Added;
+            await context.Accounts.AddAsync(account);
+            int affectedRows = await context.SaveChangesAsync();
         }
 
-        public Task<Account> Get(Guid id)
+        public async Task Delete(Account account)
         {
-            throw new NotImplementedException();
+            string deleteSQL =
+                    @"DELETE FROM [Transaction] WHERE AccountId = @Id;
+                      DELETE FROM Account WHERE Id = @Id;";
+
+            var id = new SqlParameter("@Id", account.Id);
+
+            int affectedRows = await context.Database.ExecuteSqlCommandAsync(
+                deleteSQL, id);
         }
 
-        public Task Update(Account account)
+        public async Task<Account> Get(Guid id)
         {
-            throw new NotImplementedException();
+            var account = await context.Accounts.FindAsync(id);
+
+            if (account == null)
+                return null;
+
+            await context.Entry(account)
+                .Collection(i => i.Transactions)
+                .LoadAsync();
+
+            return account;
+        }
+
+        public async Task Update(Account account, Transaction transaction)
+        {
+            context.Entry(transaction).State = EntityState.Added;
+
+            int affectedRows = await context.SaveChangesAsync();
         }
     }
 }

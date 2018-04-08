@@ -330,7 +330,7 @@
           ]
         },
         {
-          "condition": "(!Dapper && !EntityFramework)",
+          "condition": "(!Dapper)",
           "exclude": [
             "MyProject.Infrastructure/DapperDataAccess/**/*.cs",
 			"MyProject.Infrastructure/DapperDataAccess/**/*.sql"
@@ -431,7 +431,7 @@
           ]
         },
         {
-          "condition": "(!Dapper && !EntityFramework)",
+          "condition": "(!Dapper)",
           "exclude": [
             "MyProject.Infrastructure/DapperDataAccess/**/*.cs",
 			"MyProject.Infrastructure/DapperDataAccess/**/*.sql"

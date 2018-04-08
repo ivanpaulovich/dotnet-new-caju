@@ -17,10 +17,13 @@
       "properties": {
         //#if (Mongo)
         "ConnectionString": "mongodb://10.0.75.1:27017",
-        "DatabaseName": "MyProject-V01",
+        "DatabaseName": "MyProject-V01"
         //#endif
         //#if (Dapper)
-        "DapperConnectionString": "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=MyProjectDB;Integrated Security=True"
+        "DapperConnectionString": "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=MyProjectDB;Integrated Security=True",
+        //#endif
+        //#if (EntityFramework)
+        "SQLServerConnectionString": "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=MyProjectDB;Integrated Security=True"
         //#endif
       }
     }

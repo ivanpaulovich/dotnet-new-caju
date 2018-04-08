@@ -8,14 +8,14 @@
 
     public class AccountRepository : IAccountReadOnlyRepository, IAccountWriteOnlyRepository
     {
-        private readonly AccountBalanceContext mongoContext;
+        private readonly Context mongoContext;
 
-        public AccountRepository(AccountBalanceContext mongoContext)
+        public AccountRepository(Context mongoContext)
         {
             this.mongoContext = mongoContext;
         }
 
-        public async Task Add(Account account)
+        public async Task Add(Account account, Credit credit)
         {
             await mongoContext.Accounts.InsertOneAsync(account);
         }

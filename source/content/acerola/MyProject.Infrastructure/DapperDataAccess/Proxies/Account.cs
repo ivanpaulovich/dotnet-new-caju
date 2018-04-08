@@ -5,9 +5,14 @@
 
     internal class Account : Domain.Accounts.Account
     {
+        public Account()
+        {
+
+        }
+
         public void SetTransactions(IEnumerable<Transaction> transactions)
         {
-            Transactions = new Domain.Accounts.TransactionCollection(transactions);
+            this.Transactions = new TransactionCollection(transactions);
         }
     }
 }

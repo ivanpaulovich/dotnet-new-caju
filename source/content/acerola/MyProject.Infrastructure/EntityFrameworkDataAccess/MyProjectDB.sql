@@ -7,7 +7,6 @@ PRIMARY KEY CLUSTERED
 	[Id] ASC
 ))
 
-
 CREATE TABLE [Customer](
 	[Id] [uniqueidentifier] NOT NULL,
 	[Name] [varchar](100) NOT NULL,

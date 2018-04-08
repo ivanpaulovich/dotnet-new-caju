@@ -12,7 +12,7 @@
 
         protected Customer()
         {
-
+            Accounts = new AccountCollection();
         }
 
         public Customer(PIN pin, Name name)

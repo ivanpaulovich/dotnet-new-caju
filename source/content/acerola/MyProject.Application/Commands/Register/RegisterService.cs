@@ -27,14 +27,14 @@
         {
             Customer customer = new Customer(command.PIN, command.Name);
 
-            Account account = new Account();
-            Credit credit = new Credit(command.InitialAmoun));
+            Account account = new Account(customer.Id);
+            Credit credit = new Credit(account.Id, command.InitialAmount);
             account.Deposit(credit);
 
             customer.Register(account.Id);
 
             await customerWriteOnlyRepository.Add(customer);
-            await accountWriteOnlyRepository.Add(account);
+            await accountWriteOnlyRepository.Add(account, credit);
 
             CustomerResult customerResult = resultConverter.Map<CustomerResult>(customer);
             AccountResult accountResult = resultConverter.Map<AccountResult>(account);

@@ -18,7 +18,7 @@
             this.connectionString = connectionString;
         }
 
-        public async Task Add(Account account)
+        public async Task Add(Account account, Credit credit)
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
@@ -30,43 +30,18 @@
                 accountParameters.Add("@version", account.Version);
 
                 int accountRows = await db.ExecuteAsync(insertAccountSQL, accountParameters);
+                
+                string insertCreditSQL = "INSERT INTO [Transaction] (Id, Amount, TransactionDate, AccountId, TransactionType) " +
+                    "VALUES (@Id, @Amount, @TransactionDate, @AccountId, @TransactionType)";
 
-                foreach (Transaction transaction in account.Transactions)
-                {
-                    Debit debit = transaction as Debit;
-                    if (debit != null)
-                    {
-                        string insertDebitSQL = "INSERT INTO [Transaction] (Id, Amount, Description, TransactionDate, AccountId, TransactionType) " +
-                            "VALUES (@Id, @Amount, @Description, @TransactionDate, @AccountId, @TransactionType)";
+                DynamicParameters transactionParameters = new DynamicParameters();
+                transactionParameters.Add("@id", credit.Id);
+                transactionParameters.Add("@amount", credit.Amount.Value);
+                transactionParameters.Add("@transactionDate", credit.TransactionDate);
+                transactionParameters.Add("@accountId", credit.AccountId);
+                transactionParameters.Add("@transactionType", 1);
 
-                        DynamicParameters transactionParameters = new DynamicParameters();
-                        transactionParameters.Add("@id", debit.Id);
-                        transactionParameters.Add("@amount", debit.Amount.Value);
-                        transactionParameters.Add("@description", debit.Description);
-                        transactionParameters.Add("@transactionDate", debit.TransactionDate);
-                        transactionParameters.Add("@accountId", account.Id);
-                        transactionParameters.Add("@transactionType", 0);
-
-                        int debitRows = await db.ExecuteAsync(insertDebitSQL, transactionParameters);
-                    }
-
-                    Credit credit = transaction as Credit;
-                    if (credit != null)
-                    {
-                        string insertCreditSQL = "INSERT INTO [Transaction] (Id, Amount, Description, TransactionDate, AccountId, TransactionType) " +
-                            "VALUES (@Id, @Amount, @Description, @TransactionDate, @AccountId, @TransactionType)";
-
-                        DynamicParameters transactionParameters = new DynamicParameters();
-                        transactionParameters.Add("@id", credit.Id);
-                        transactionParameters.Add("@amount", credit.Amount.Value);
-                        transactionParameters.Add("@description", credit.Description);
-                        transactionParameters.Add("@transactionDate", credit.TransactionDate);
-                        transactionParameters.Add("@accountId", account.Id);
-                        transactionParameters.Add("@transactionType", 1);
-
-                        int debitRows = await db.ExecuteAsync(insertCreditSQL, transactionParameters);
-                    }
-                }
+                int creditRows = await db.ExecuteAsync(insertCreditSQL, transactionParameters);
             }
         }
 
@@ -89,8 +64,8 @@
                 string accountSQL = @"SELECT * FROM Account WHERE Id = @Id";
                 Proxies.Account account = await db
                     .QueryFirstOrDefaultAsync<Proxies.Account>(accountSQL, new { id });
-					
-				if (account == null)
+
+                if (account == null)
                     return null;
 
                 var transactions = new List<Transaction>();
@@ -124,7 +99,6 @@
                 }
 
                 account.SetTransactions(transactions);
-
                 return account;
             }
         }
@@ -139,15 +113,14 @@
                 Debit debit = transaction as Debit;
                 if (debit != null)
                 {
-                    string insertDebitSQL = "INSERT INTO [Transaction] (Id, Amount, Description, TransactionDate, AccountId, TransactionType) " +
-                        "VALUES (@Id, @Amount, @Description, @TransactionDate, @AccountId, @TransactionType)";
+                    string insertDebitSQL = "INSERT INTO [Transaction] (Id, Amount, TransactionDate, AccountId, TransactionType) " +
+                        "VALUES (@Id, @Amount, @TransactionDate, @AccountId, @TransactionType)";
 
                     DynamicParameters transactionParameters = new DynamicParameters();
                     transactionParameters.Add("@id", debit.Id);
                     transactionParameters.Add("@amount", debit.Amount.Value);
-                    transactionParameters.Add("@description", debit.Description);
                     transactionParameters.Add("@transactionDate", debit.TransactionDate);
-                    transactionParameters.Add("@accountId", account.Id);
+                    transactionParameters.Add("@accountId", debit.AccountId);
                     transactionParameters.Add("@transactionType", 0);
 
                     int debitRows = await db.ExecuteAsync(insertDebitSQL, transactionParameters);
@@ -156,18 +129,17 @@
                 Credit credit = transaction as Credit;
                 if (credit != null)
                 {
-                    string insertCreditSQL = "INSERT INTO [Transaction] (Id, Amount, Description, TransactionDate, AccountId, TransactionType) " +
-                        "VALUES (@Id, @Amount, @Description, @TransactionDate, @AccountId, @TransactionType)";
+                    string insertCreditSQL = "INSERT INTO [Transaction] (Id, Amount, TransactionDate, AccountId, TransactionType) " +
+                        "VALUES (@Id, @Amount, @TransactionDate, @AccountId, @TransactionType)";
 
                     DynamicParameters transactionParameters = new DynamicParameters();
                     transactionParameters.Add("@id", credit.Id);
                     transactionParameters.Add("@amount", credit.Amount.Value);
-                    transactionParameters.Add("@description", credit.Description);
                     transactionParameters.Add("@transactionDate", credit.TransactionDate);
-                    transactionParameters.Add("@accountId", account.Id);
+                    transactionParameters.Add("@accountId", credit.AccountId);
                     transactionParameters.Add("@transactionType", 1);
 
-                    int debitRows = await db.ExecuteAsync(insertCreditSQL, transactionParameters);
+                    int creditRows = await db.ExecuteAsync(insertCreditSQL, transactionParameters);
                 }
             }
         }
