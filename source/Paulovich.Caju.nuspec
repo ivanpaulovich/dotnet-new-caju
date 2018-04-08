@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Paulovich.Caju</id>
-    <version>0.2.96</version>
+    <version>0.2.97</version>
     <authors>Ivan Paulovich</authors>
     <owners>Ivan Paulovich</owners>
     <projectUrl>https://github.com/ivanpaulovich/caju</projectUrl>
@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <title>dotnet new caju: Templates for Back-end with the awesome architectures made easy! (Hexagonal, Clean or Event Sourcing architectures styles)</title>
     <description>
-      $ dotnet new -i Paulovich.Caju::0.2.96
+      $ dotnet new -i Paulovich.Caju::0.2.97
       $ dotnet new caju
 
 Will be created a .NET Solution with a layered backend (Domain - Application - Infrastructure - UI) with the Clean Architecture Style. You can choose Hexagon or Event Sourcing styles.
@@ -23,6 +23,7 @@ Will be created a .NET Solution with a layered backend (Domain - Application - I
       $ dotnet new caju --architecture-style hexagonal --name "MyHexagonalProject"
     </summary>
     <releaseNotes>
+-- Entity Framework support
 -- FIX dependencies on dotnet new restore
 - Architecture styles support
 -- Clean architecture with Input/Output/Interactors

@@ -1,11 +1,11 @@
-﻿namespace test01.Infrastructure.MongoDataAccess.Queries
+﻿namespace MyProject.Infrastructure.MongoDataAccess.Queries
 {
     using System;
     using System.Threading.Tasks;
-    using test01.Application;
-    using test01.Application.Queries;
-    using test01.Application.Results;
-    using test01.Infrastructure.EntityFrameworkDataAccess;
+    using MyProject.Application;
+    using MyProject.Application.Queries;
+    using MyProject.Application.Results;
+    using MyProject.Infrastructure.EntityFrameworkDataAccess;
 
     public class AccountsQueries : IAccountsQueries
     {
