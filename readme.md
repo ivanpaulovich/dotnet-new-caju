@@ -10,7 +10,7 @@ Service Template to help you build evolvable and maintainable applications. It f
 To generate your own awesome .NET Back-end simple run:
 
 ```sh
-dotnet new -i Paulovich.Caju::0.2.97
+dotnet new -i Paulovich.Caju::0.2.98
 dotnet new caju
 ```
 
