@@ -1,7 +1,6 @@
 ﻿namespace MyProject.Application.EventHandlers
 {
     using MyProject.Application.Repositories;
-    using MyProject.Domain.Customers;
     using MyProject.Domain.Customers.Events;
 
     public class RegisteredEventHandler : IEventHandler<RegisteredDomainEvent>
@@ -16,8 +15,6 @@
 
         public void Handle(RegisteredDomainEvent domainEvent)
         {
-            Customer customer = new Customer();
-            customer.Apply(domainEvent);
             customerWriteOnlyRepository.Add(domainEvent).Wait();
         }
     }

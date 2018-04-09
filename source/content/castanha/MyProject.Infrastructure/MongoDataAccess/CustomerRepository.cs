@@ -5,6 +5,7 @@
     using MongoDB.Driver;
     using System;
     using System.Threading.Tasks;
+    using MyProject.Domain.Customers.Events;
 
     public class CustomerRepository : ICustomerReadOnlyRepository, ICustomerWriteOnlyRepository
     {
@@ -24,16 +25,13 @@
             return customer;
         }
 
-        public async Task Add(Customer customer)
+        public async Task Add(RegisteredDomainEvent domainEvent)
         {
+            Customer customer = new Customer();
+            customer.Apply(domainEvent);
+
             await mongoContext.Customers
                 .InsertOneAsync(customer);
-        }
-
-        public async Task Update(Customer customer)
-        {
-            await mongoContext.Customers
-                .ReplaceOneAsync(e => e.Id == customer.Id, customer);
         }
     }
 }
