@@ -32,13 +32,12 @@
 
                 int accountRows = await db.ExecuteAsync(insertAccountSQL, accountParameters);
 
-                string insertCreditSQL = "INSERT INTO [Transaction] (Id, Amount, Description, TransactionDate, AccountId, TransactionType) " +
-                    "VALUES (@Id, @Amount, @Description, @TransactionDate, @AccountId, @TransactionType)";
+                string insertCreditSQL = "INSERT INTO [Transaction] (Id, Amount, TransactionDate, AccountId, TransactionType) " +
+                    "VALUES (@Id, @Amount, @TransactionDate, @AccountId, @TransactionType)";
 
                 DynamicParameters transactionParameters = new DynamicParameters();
                 transactionParameters.Add("@id", domainEvent.TransactionId);
                 transactionParameters.Add("@amount", domainEvent.TransactionAmount.Value);
-                transactionParameters.Add("@description", "Credit");
                 transactionParameters.Add("@transactionDate", domainEvent.TransactionDate);
                 transactionParameters.Add("@accountId", domainEvent.AggregateRootId);
                 transactionParameters.Add("@transactionType", 1);
@@ -120,13 +119,12 @@
 
                 int rowsAffected = await db.ExecuteAsync(updateAccountSQL, accountParameters);
 
-                string insertCreditSQL = "INSERT INTO [Transaction] (Id, Amount, Description, TransactionDate, AccountId, TransactionType) " +
-                    "VALUES (@Id, @Amount, @Description, @TransactionDate, @AccountId, @TransactionType)";
+                string insertCreditSQL = "INSERT INTO [Transaction] (Id, Amount, TransactionDate, AccountId, TransactionType) " +
+                    "VALUES (@Id, @Amount, @TransactionDate, @AccountId, @TransactionType)";
 
                 DynamicParameters transactionParameters = new DynamicParameters();
                 transactionParameters.Add("@id", domainEvent.TransactionId);
                 transactionParameters.Add("@amount", domainEvent.TransactionAmount.Value);
-                transactionParameters.Add("@description", "Credit");
                 transactionParameters.Add("@transactionDate", domainEvent.TransactionDate);
                 transactionParameters.Add("@accountId", domainEvent.AggregateRootId);
                 transactionParameters.Add("@transactionType", 1);
@@ -146,13 +144,12 @@
 
                 int rowsAffected = await db.ExecuteAsync(updateAccountSQL, accountParameters);
 
-                string insertCreditSQL = "INSERT INTO [Transaction] (Id, Amount, Description, TransactionDate, AccountId, TransactionType) " +
-                    "VALUES (@Id, @Amount, @Description, @TransactionDate, @AccountId, @TransactionType)";
+                string insertCreditSQL = "INSERT INTO [Transaction] (Id, Amount, TransactionDate, AccountId, TransactionType) " +
+                    "VALUES (@Id, @Amount, @TransactionDate, @AccountId, @TransactionType)";
 
                 DynamicParameters transactionParameters = new DynamicParameters();
                 transactionParameters.Add("@id", domainEvent.TransactionId);
                 transactionParameters.Add("@amount", domainEvent.TransactionAmount.Value);
-                transactionParameters.Add("@description", "Debit");
                 transactionParameters.Add("@transactionDate", domainEvent.TransactionDate);
                 transactionParameters.Add("@accountId", domainEvent.AggregateRootId);
                 transactionParameters.Add("@transactionType", 0);

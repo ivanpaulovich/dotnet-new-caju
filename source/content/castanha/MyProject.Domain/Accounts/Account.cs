@@ -6,6 +6,7 @@
 
     public class Account : AggregateRoot
     {
+        public virtual Guid CustomerId { get; protected set; }
         public virtual TransactionCollection Transactions { get; protected set; }
 
         public Account()
@@ -81,9 +82,11 @@
             //
 
             Id = domainEvent.AggregateRootId;
+            CustomerId = domainEvent.CustomerId;
             Transactions = new TransactionCollection();
 
             Transaction credit = new Credit(
+                domainEvent.AggregateRootId,
                 domainEvent.TransactionId,
                 domainEvent.TransactionAmount,
                 domainEvent.TransactionDate);
@@ -98,13 +101,13 @@
 
         protected void When(DepositedDomainEvent domainEvent)
         {
-            Transaction credit = new Credit(domainEvent.TransactionAmount);
+            Transaction credit = new Credit(domainEvent.AggregateRootId, domainEvent.TransactionAmount);
             Transactions.Add(credit);
         }
 
         protected void When(WithdrewDomainEvent domainEvent)
         {
-            Transaction debit = new Debit(domainEvent.TransactionAmount);
+            Transaction debit = new Debit(domainEvent.AggregateRootId, domainEvent.TransactionAmount);
             Transactions.Add(debit);
         }
 

@@ -1,6 +1,7 @@
 ﻿namespace MyProject.Domain.Accounts
 {
     using MyProject.Domain.ValueObjects;
+    using System;
 
     public class Credit : Transaction
     {
@@ -9,13 +10,13 @@
 
         }
 
-        public Credit(Amount amount)
-            : base(amount)
+        public Credit(Guid accountId, Amount amount)
+            : base(accountId, amount)
         {
         }
 
-        public Credit(System.Guid transactionId, Amount amount, System.DateTime transactionDate)
-            : base(amount, transactionDate)
+        public Credit(Guid transactionId, Guid accountId, Amount amount, DateTime transactionDate)
+            : base(accountId, amount, transactionDate)
         {
             Id = transactionId;
         }

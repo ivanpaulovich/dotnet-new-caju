@@ -6,6 +6,6 @@
 
     public interface ICustomerWriteOnlyRepository
     {
-        Task Add(RegisteredDomainEvent customer);
+        Task Add(RegisteredDomainEvent domainEvent);
     }
 }

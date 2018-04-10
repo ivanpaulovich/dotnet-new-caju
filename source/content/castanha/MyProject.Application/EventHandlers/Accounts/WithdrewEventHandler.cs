@@ -1,6 +1,7 @@
 ﻿namespace MyProject.Application.EventHandlers
 {
     using MyProject.Application.Repositories;
+    using MyProject.Domain.Accounts;
     using MyProject.Domain.Accounts.Events;
 
     public class WithdrewEventHandler : IEventHandler<WithdrewDomainEvent>

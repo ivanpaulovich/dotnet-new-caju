@@ -7,6 +7,7 @@
     {
         public virtual Amount Amount { get; protected set; }
         public virtual DateTime TransactionDate { get; protected set; }
+        public virtual Guid AccountId { get; protected set; }
         public abstract string Description { get; }
 
         protected Transaction()
@@ -14,14 +15,15 @@
 
         }
 
-        public Transaction(Amount amount)
+        public Transaction(Guid accountId, Amount amount)
         {
+            AccountId = accountId;
             TransactionDate = DateTime.Now;
             Amount = amount;
         }
 
-        public Transaction(Amount amount, DateTime transactionDate)
-            : this(amount)
+        public Transaction(Guid accountId, Amount amount, DateTime transactionDate)
+            : this(accountId, amount)
         {
             TransactionDate = transactionDate;
         }

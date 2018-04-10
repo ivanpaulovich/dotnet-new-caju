@@ -22,6 +22,9 @@
         //#if (Dapper)
         "DapperConnectionString": "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=MyProjectDB;Integrated Security=True"
         //#endif
+		//#if (EntityFramework)
+        "SQLServerConnectionString": "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=MyProjectDB;Integrated Security=True"
+        //#endif
       }
     },
     {
