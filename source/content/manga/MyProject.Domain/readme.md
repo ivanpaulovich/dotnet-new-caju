@@ -6,7 +6,7 @@ Beginning with the Enterprise Business Rules Layer we are talking about Aggregat
 
 In short words, the previous components are the business entities that encapsulates fields and prevents unexpected changes or behaviors, these components maintain the application state in the most reliable way. Now, let me highlight some characteristics of this data structures:
 
-* Aggregate Roots controls the entities graph and are used by repositories for data persistence. The software craftsman Vaugn Vernon wrote the [rules for designing effective aggregates][https://vaughnvernon.co/?p=838] and I highly recommend watching the video [Curing you Domain Model Anemia with Effective & Clean Tips from the Real World][https://www.youtube.com/watch?v=zzxinXTIMmo] from Edson Yanaga these helped me a lot to enrich my model.
+* Aggregate Roots controls the entities graph and are used by repositories for data persistence. The software craftsman Vaugn Vernon wrote the [rules for designing effective aggregates](https://vaughnvernon.co/?p=838) and I highly recommend watching the video [Curing you Domain Model Anemia with Effective & Clean Tips from the Real World](https://www.youtube.com/watch?v=zzxinXTIMmo) from Edson Yanaga these helped me a lot to enrich my model.
 * You will see that majority of the classes have properties with _private sets_ or _protected sets_ in order to prevent unexpected state changes from the several clients along the Use Cases (we avoid _public sets when possible)_.
 * We had to make exceptions for _constructors_ due of deserialization requirements.
 * Value Objects are expected to be immutable and they have the most closed fields. Fields that change only when we create a new instance of the Value Object.
