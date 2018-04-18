@@ -6,7 +6,7 @@ Let's move to the Application Business Rules Layer that contains the Use Cases o
 
 So our Use Cases implementations are first-class modules in the root of this layer. The shape of a Use Case is an **Interactor** object that receives an **Input**, do some work then pass the **Output** through the currently **Presenter** instance as shown in the following figure:
 
-![][8]
+![Clean Architecture Diagram by Uncle Bob](https://paulovich.net/wp-content/uploads/2018/04/Flow-Of-Control.png)
 
 In the previous Flow of Control we have:
 
