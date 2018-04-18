@@ -2,8 +2,6 @@ Caju: Back-end with awesome architectures made easy!
 =========
 Service Template to help you build evolvable and maintainable applications. Its was built following SOLID principles and on Domain-Driven Design. This tool increases productivity on developing your next microservices.
 
-![dotnet new caju](https://raw.githubusercontent.com/ivanpaulovich/caju/master/images/dotnet-new-caju-0.2.84.gif)
-
 ## Generate your own awesome Back-end!
 
 ```sh
@@ -15,12 +13,10 @@ dotnet new caju
 
 We prevent our software to be coupled from technology details like User Interface, Data Access frameworks or Web Servers. And there are some concepts that guided us:
 
-| Concept | Description |
-| --- | --- |
-| Hexagonal | Allow an application to equally be driven by users, programs, automated test or batch scripts, and to be developed and tested in isolation from its eventual run-time devices and databases.. |
-| SOLID | The SOLID principles are all over the the solution. |
-| Entity-Boundary-Interactor (EBI) | The software implementation is agnostic from technology, framework, or database. The result is focus on the  use cases with input/output ports. |
-| Microservice | Designed around the Business Domain, having Continous Delivery and Independent Deployment. |
+* Allow an application to equally be driven by users, programs, automated test or batch scripts, and to be developed and tested in isolation from its eventual run-time devices and databases.
+* The SOLID principles are all over the the solution.
+* The software implementation is agnostic from technology, framework, or database. The result is focus on the  use cases with input/output ports. |
+* Designed around the Business Domain, having Continous Delivery and Independent Deployment.
 
 ## Sample applications
 
