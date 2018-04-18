@@ -1,5 +1,3 @@
-Caju: Back-end with awesome architectures made easy!
-=========
 Service Template to help you build evolvable and maintainable applications. Its was built following SOLID principles and on Domain-Driven Design. This tool increases productivity on developing your next microservices.
 
 ## Generate your own awesome Back-end!
