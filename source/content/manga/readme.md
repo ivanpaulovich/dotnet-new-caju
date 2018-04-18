@@ -1,8 +1,7 @@
-[Source](https://paulovich.net/clean-architecture-for-net-applications/ "Permalink to Clean Architecture for .NET Applications – Paulovich.NET")
-
 # Clean Architecture for .NET Applications – Paulovich.NET
 
-I'd like to introduce my service template for .NET Applications based on the Clean Architecture style. You can download the full [source code][1] or you can play with the [dotnet new caju ][2]tool using the following commands:
+I'd like to introduce my service template for .NET Applications based on the Clean Architecture style. You can download the full [Source Code](https://github.com/ivanpaulovich/manga-clean-architecture "Permalink to Manga Clean Architecture")
+ or you can play with the `dotnet new caju` tool using the following commands:
     
     
     $ dotnet new -i Paulovich.Caju::0.3.1
@@ -11,13 +10,10 @@ I'd like to introduce my service template for .NET Applications based on the Cle
       --use-cases full 
       --user-interface webapi
 
-As the SOLID principles and the Clean Architecture rules are worth to write about it, I am starting this blogging series explaining the decisions we have made through the development of the Manga Project. Feedback are welcome!
+Clean Architecture [expects at least 4 layers](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html "The Clean Architecture") and in each layer there are common components. Starting with the layers from inside to the outer ones:
 
-Clean Architecture [expects at least 4 layers][3] and in each layer there are common components. Starting with the layers from inside to the outer ones:
-
-![Clean Architecture Diagram by Uncle Bob][4]
-
-Clean Architecture Diagram by Uncle Bob
+![Clean Architecture Diagram by Uncle Bob](https://paulovich.net/wp-content/uploads/2018/04/CleanArchitecture-Uncle-Bob.jpg)
+*Clean Architecture Diagram by Uncle Bob*
 
 1. Enterprise Business Rules
 2. Application Business Rules
