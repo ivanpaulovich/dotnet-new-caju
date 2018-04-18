@@ -26,8 +26,7 @@ And this is how looks a Controller for the Register Use Case. We must highlight 
             this.registerPresenter = registerPresenter;
         }
     
-        /// 
-
+        ///
         /// Register a new Customer
         /// 
 
