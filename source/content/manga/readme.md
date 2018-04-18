@@ -4,7 +4,7 @@ I'd like to introduce my service template for .NET Applications based on the Cle
  or you can play with the `dotnet new caju` tool using the following commands:
     
     
-    $ dotnet new -i Paulovich.Caju::0.3.1
+    $ dotnet new -i Paulovich.Caju::0.3.3
     $ dotnet new caju --architecture-style clean 
       --data-access mongo 
       --use-cases full 
