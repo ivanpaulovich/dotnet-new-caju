@@ -58,7 +58,7 @@ There are switches to generate your awesome application with your needs. Try aft
 * --tips `true` `false`
 * --skip-restore `true` `false`
 
-Add the switch `--help` for the complete list of options.
+Use the switch `--help` for the complete list of options.
 
 ## Roadmap
 
