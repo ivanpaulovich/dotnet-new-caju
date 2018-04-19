@@ -1,4 +1,4 @@
-![Caju](https://raw.githubusercontent.com/ivanpaulovich/caju/master/images/caju-icon.png) Caju: Back-end with awesome architectures made easy!
+![Caju](https://raw.githubusercontent.com/ivanpaulovich/caju/master/images/caju-icon.png) Caju: .NET apps with awesome architectures!
 =========
 Service Template to help you build evolvable and maintainable applications. It follows the principles from the [Clean Architecture book](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164) and built on Domain-Driven Design. This tool increases productivity on developing your next microservices.
 
@@ -10,20 +10,18 @@ Service Template to help you build evolvable and maintainable applications. It f
 To generate your own awesome .NET Back-end simple run:
 
 ```sh
-dotnet new -i Paulovich.Caju::0.3.3
+dotnet new -i Paulovich.Caju::0.4.0
 dotnet new caju
 ```
 
 ## The Architecture Styles
 
-This architecture implementations are a software that encapsulate Business Rules in Use Cases and the Enteprise Rules in Entities. We prevent our software to be coupled from technology details like User Interface, Data Access frameworks or Web Servers. And there is some concepts which guided us:
+We prevent our software to be coupled from technology details like User Interface, Data Access frameworks or Web Servers. And there are some concepts that guided us:
 
-| Concept | Description |
-| --- | --- |
-| DDD | This Bounded Context of this project contains the Ubiquitious Language around Account Balance and designed inside Domain Layer and Application layer. We use the Eric Evans terms like Entities, Value Object, Aggregates Root and Domain Events. |
-| SOLID | The SOLID principles are all over the the solution. |
-| Entity-Boundary-Interactor (EBI) | The software implementation is agnostic from technology, framework, or database. The result is focus on the  use cases with input/output ports. |
-| Microservice | Designed around the Business Domain, having Continous Delivery and Independent Deployment. |
+* Allow an application to equally be driven by users, programs, automated test or batch scripts, and to be developed and tested in isolation from its eventual run-time devices and databases.
+* The SOLID principles are all over the the solution.
+* The software implementation is agnostic from technology, framework, or database. The result is focus on the  use cases with input/output ports. |
+* Designed around the Business Domain, having Continous Delivery and Independent Deployment.
 
 ## Sample applications
 
@@ -32,44 +30,35 @@ Run `dotnet new -i Paulovich.Caju` then try the following commands.
 Clean Architecture Solution with basic use cases:
 
 ```sh
-dotnet new caju \
-  --architecture-style clean \
-  --use-cases basic
+dotnet new clean --use-cases basic
 ```
 
 Hexagonal Architecture Solution with all use cases:
 
 ```sh
-dotnet new caju \
-  --architecture-style hexagonal \
-  --use-cases full
+dotnet new hexagonal --use-cases full
 ```
 
 Empty Event-Sourcing Solution:
 
 ```sh
-dotnet new caju \
-  --architecture-style eventsourcing \
-  --use-cases empty
+dotnet new eventsourcing` --use-cases empty
 ```
 
 For olher solution types check out the [Caju Samples folder](https://github.com/ivanpaulovich/caju/tree/master/samples).
 
 ## Switches
 
-There are switches to generate your awesome application with your needs. Try after `dotnet new caju`:
+There are switches to generate your awesome application with your needs. Try after `dotnet new clean` or `dotnet new hexagonal` or `dotnet new eventsourcing``:
 
-| Switch | Default Value | Options |
-| --- | --- | --- |
-| --architecture-style | `clean` | `clean` `hexagonal` `eventsourcing` |
-| --use-cases | `full` | `full` `basic` `readonly` `none` |
-| --user-interface | `webapi` | `webapi` `consoleapp` `wcf` `none` |
-| --data-access | `mongo` | `mongo` `entityframework` `dapper` `none` |
-| --service-bus | `kafka` | `kafka` `none` |
-| --tips | `true` | `true` `false` |
-| --skip-restore | `false` | `true` `false` |
+* --use-cases `full` `basic` `readonly` `none`
+* --user-interface `webapi` `none`
+* --data-access `mongo` `entityframework` `dapper` `none`
+* --service-bus `kafka` `none`
+* --tips `true` `false`
+* --skip-restore `true` `false`
 
-Run `dotnet new caju --help` for the complete list of switches.
+Add the switch `--help` for the complete list of options.
 
 ## Roadmap
 
