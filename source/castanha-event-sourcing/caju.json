@@ -1,6 +1,6 @@
 {
-	"origin": "https://github.com/ivanpaulovich/acerola/",
-	"architecture-style": "architecture-style",		
+	"origin": "https://github.com/ivanpaulovich/castanha-event-sourcing",
+	"architecture-style": "eventsourcing",		
 	"use-cases": "use-cases",
 	"user-interface": "user-interface",
 	"data-access": "data-access",

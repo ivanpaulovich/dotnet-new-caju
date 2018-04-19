@@ -4,10 +4,10 @@ I'd like to introduce my service template for .NET Applications based on the Cle
  or you can play with the `dotnet new caju` tool using the following commands:
     
     
-    $ dotnet new -i Paulovich.Caju::0.3.3
-    $ dotnet new caju --architecture-style clean 
-      --data-access mongo 
-      --use-cases full 
+    $ dotnet new -i Paulovich.Caju::0.4.0
+    $ dotnet new clean \
+      --data-access mongo \
+      --use-cases full \
       --user-interface webapi
 
 Clean Architecture [expects at least 4 layers](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html "The Clean Architecture") and in each layer there are common components. Starting with the layers from inside to the outer ones:

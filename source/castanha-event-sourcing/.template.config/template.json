@@ -6,10 +6,9 @@
     "Library",
     "Web API"
   ],
-  "name": "Caju: Back-end with the awesome architectures made easy!",
-  "identity": "Paulovich.Caju",
-  "groupIdentity": "Paulovich.Caju",
-  "shortName": "caju",
+  "name": "Event-Sourcing for .NET Applications!",
+  "identity": "Paulovich.EventSourcing",
+  "shortName": "eventsourcing",
   "tags": {
     "language": "C#",
     "type": "project"
@@ -17,31 +16,6 @@
   "sourceName": "MyProject",
   "preferNameDirectory": true,
   "symbols": {
-    "architecture-style": {
-      "type": "parameter",
-      "datatype": "choice",
-      "defaultValue": "clean",
-      "choices": [
-        {
-          "choice": "clean",
-          "description": "Clean Architecture"
-        },
-        {
-          "choice": "hexagonal",
-          "description": "Hexagonal Architecture"
-        },
-        {
-          "choice": "eventsourcing",
-          "description": "Event Sourcing"
-        }
-      ],
-      "replaces": "architecture-style",
-      "onlyIf": [
-        {
-          "after": "\"architecture-style\": \""
-        }
-      ]
-    },
     "use-cases": {
       "type": "parameter",
       "datatype": "choice",
@@ -83,14 +57,6 @@
         {
           "choice": "webapi",
           "description": "Web API"
-        },
-        {
-          "choice": "consoleapp",
-          "description": "Console"
-        },
-        {
-          "choice": "wcf",
-          "description": "WCF Application"
         }
       ],
       "replaces": "user-interface",
@@ -190,18 +156,6 @@
       "type": "computed",
       "value": "(use-cases == \"full\")"
     },
-    "Clean-Architecture": {
-      "type": "computed",
-      "value": "(architecture-style == \"clean\")"
-    },
-    "Hexagonal-Architecture": {
-      "type": "computed",
-      "value": "(architecture-style == \"hexagonal\")"
-    },
-    "Event-Sourcing-Architecture": {
-      "type": "computed",
-      "value": "(architecture-style == \"eventsourcing\")"
-    },
     "UI-None": {
       "type": "computed",
       "value": "(ui == \"none\")"
@@ -209,10 +163,6 @@
     "UI-Webapi": {
       "type": "computed",
       "value": "(ui == \"webapi\")"
-    },
-    "UI-Console": {
-      "type": "computed",
-      "value": "(ui == \"console\")"
     },
     "Mongo": {
       "type": "computed",
@@ -257,109 +207,6 @@
   },
   "sources": [
     {
-      "condition": "(Hexagonal-Architecture)",
-      "source": "./acerola/",
-      "modifiers": [
-        {
-          "condition": "(Empty)",
-          "exclude": [
-            "MyProject.WebApi/UseCases/Register/**/*.cs",
-            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
-            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
-            "MyProject.WebApi/UseCases/GetAccountDetails/**/*.cs",
-            "MyProject.WebApi/UseCases/GetCustomerDetails/**/*.cs",
-            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
-            "MyProject.WebApi/Model/**/*.cs",
-            "MyProject.Application/Commands/Register/**/*.cs",
-            "MyProject.Application/Commands/Deposit/**/*.cs",
-            "MyProject.Application/Commands/Withdraw/**/*.cs",
-            "MyProject.Application/Commands/GetAccountDetails/**/*.cs",
-            "MyProject.Application/Commands/GetCustomerDetails/**/*.cs",
-            "MyProject.Application/Commands/Close/**/*.cs",
-            "MyProject.Application/Queries/**/*.cs",
-            "MyProject.Application/Results/**/*.cs",
-            "MyProject.Application/Repositories/**/*.cs",
-            "MyProject.Domain/Accounts/**/*.cs",
-            "MyProject.Domain/Customers/**/*.cs",
-            "MyProject.Domain/ValueObjects/**/*.cs",
-            "MyProject.Infrastructure/DataAccess/**/*.cs",
-            "MyProject.Infrastructure/Mappings/**/*.cs",			
-            "MyProject.Infrastructure/Modules/**/*.cs"
-          ]
-        },
-        {
-          "condition": "(ReadOnly)",
-          "exclude": [
-            "MyProject.WebApi/UseCases/Register/**/*.cs",
-            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
-            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
-            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
-            "MyProject.Application/Commands/Register/**/*.cs",
-            "MyProject.Application/Commands/Deposit/**/*.cs",
-            "MyProject.Application/Commands/Withdraw/**/*.cs",
-            "MyProject.Application/Commands/Close/**/*.cs"
-          ]
-        },
-        {
-          "condition": "(Basic)",
-          "exclude": [
-            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
-            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
-            "MyProject.WebApi/UseCases/GetAccountDetails/**/*.cs",
-            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
-            "MyProject.Application/Commands/Deposit/**/*.cs",
-            "MyProject.Application/Commands/Withdraw/**/*.cs",
-            "MyProject.Application/Commands/GetAccountDetails/**/*.cs",
-            "MyProject.Application/Commands/Close/**/*.cs"
-          ]
-        },
-        {
-          "condition": "(Full)",
-          "exclude": []
-        },
-        {
-          "condition": "(!docs)",
-          "exclude": [
-            "**/*.md"
-          ]
-        },
-        {
-          "condition": "(!Mongo)",
-          "exclude": [
-            "MyProject.Infrastructure/MongoDataAccess/**/*.cs"
-          ]
-        },
-        {
-          "condition": "(!Dapper)",
-          "exclude": [
-            "MyProject.Infrastructure/DapperDataAccess/**/*.cs",
-			"MyProject.Infrastructure/DapperDataAccess/**/*.sql"
-          ]
-        },
-        {
-          "condition": "(!EntityFramework)",
-          "exclude": [
-            "MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.cs",
-			"MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.sql"
-          ]
-        },
-        {
-          "condition": "(UI-None)",
-          "exclude": [
-            "MyProject.WebApi/**/*"
-          ]
-        },
-        {
-          "condition": "(!UI-Webapi)",
-          "exclude": [
-			"Dockerfile"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "(Event-Sourcing-Architecture)",
-      "source": "./castanha/",
       "modifiers": [
         {
           "condition": "(Empty)",
@@ -461,105 +308,6 @@
           "exclude": [
             "MyProject.Infrastructure/ServiceBus/Bus.cs",
 			"kafka.sh"
-          ]
-        }
-      ]
-    },
-    {
-      "condition": "(Clean-Architecture)",
-      "source": "./manga/",
-      "modifiers": [
-        {
-          "condition": "(Empty)",
-          "exclude": [
-            "MyProject.WebApi/UseCases/Register/**/*.cs",
-            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
-            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
-            "MyProject.WebApi/UseCases/GetAccountDetails/**/*.cs",
-            "MyProject.WebApi/UseCases/GetCustomerDetails/**/*.cs",
-            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
-            "MyProject.WebApi/Model/**/*.cs",
-            "MyProject.Application/UseCases/Register/**/*.cs",
-            "MyProject.Application/UseCases/Deposit/**/*.cs",
-            "MyProject.Application/UseCases/Withdraw/**/*.cs",
-            "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
-            "MyProject.Application/UseCases/GetCustomerDetails/**/*.cs",
-            "MyProject.Application/UseCases/CloseAccount/**/*.cs",
-            "MyProject.Application/Outputs/**/*.cs",
-            "MyProject.Application/DataAccess/**/*.cs",
-            "MyProject.Domain/Accounts/**/*.cs",
-            "MyProject.Domain/Customers/**/*.cs",
-            "MyProject.Domain/ValueObjects/**/*.cs",
-            "MyProject.Infrastructure/Mappings/**/*.cs",
-            "MyProject.Infrastructure/Modules/**/*.cs"
-			]
-        },
-        {
-          "condition": "(ReadOnly)",
-          "exclude": [
-            "MyProject.WebApi/UseCases/Register/**/*.cs",
-            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
-            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
-            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
-            "MyProject.Application/UseCases/Register/**/*.cs",
-            "MyProject.Application/UseCases/Deposit/**/*.cs",
-            "MyProject.Application/UseCases/Withdraw/**/*.cs",
-            "MyProject.Application/UseCases/CloseAccount/**/*.cs"
-          ]
-        },
-        {
-          "condition": "(Basic)",
-          "exclude": [
-            "MyProject.WebApi/UseCases/Deposit/**/*.cs",
-            "MyProject.WebApi/UseCases/Withdraw/**/*.cs",
-            "MyProject.WebApi/UseCases/GetAccountDetails/**/*.cs",
-            "MyProject.WebApi/UseCases/CloseAccount/**/*.cs",
-            "MyProject.Application/UseCases/Deposit/**/*.cs",
-            "MyProject.Application/UseCases/Withdraw/**/*.cs",
-            "MyProject.Application/UseCases/GetAccountDetails/**/*.cs",
-            "MyProject.Application/UseCases/CloseAccount/**/*.cs"
-          ]
-        },
-        {
-          "condition": "(Full)",
-          "exclude": []
-        },
-        {
-          "condition": "(!docs)",
-          "exclude": [
-            "**/*.md"
-          ]
-        },
-        {
-          "condition": "(!Mongo)",
-          "exclude": [
-            "MyProject.Infrastructure/MongoDataAccess/**/*.cs"
-          ]
-        },
-        {
-          "condition": "(!Dapper)",
-          "exclude": [
-            "MyProject.Infrastructure/DapperDataAccess/**/*.cs",
-			"MyProject.Infrastructure/DapperDataAccess/**/*.sql"
-          ]
-        },
-        {
-          "condition": "(!EntityFramework)",
-          "exclude": [
-            "MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.cs",
-			"MyProject.Infrastructure/EntityFrameworkDataAccess/**/*.sql"
-          ]
-        },
-        {
-          "condition": "(UI-None)",
-          "exclude": [
-            "MyProject.WebApi/**/*"
-          ]
-        },
-        {
-          "condition": "(!UI-Webapi)",
-          "exclude": [
-			"Dockerfile"
           ]
         }
       ]

@@ -2,41 +2,35 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Paulovich.Caju</id>
-    <version>0.3.3</version>
+    <version>0.4.0</version>
     <authors>Ivan Paulovich</authors>
     <owners>Ivan Paulovich</owners>
     <projectUrl>https://github.com/ivanpaulovich/caju</projectUrl>
     <licenseUrl>https://github.com/ivanpaulovich/caju/blob/master/license</licenseUrl>
 	<iconUrl>https://raw.githubusercontent.com/ivanpaulovich/caju/master/images/caju-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <title>dotnet new caju: Templates for Back-end with the awesome architectures made easy! (Hexagonal, Clean or Event Sourcing architectures styles)</title>
+    <title>dotnet new clean; dotnet new hexagonal; dotnet new eventsourcing; # awesome architectures!</title>
     <description>
-$ dotnet new -i Paulovich.Caju::0.3.3
-$ dotnet new caju
+$ dotnet new -i Paulovich.Caju::0.4.0
+$ dotnet new clean
 
-Will be created a .NET Solution with a layered backend (Domain - Application - Infrastructure - UI) with the Clean Architecture Style. You can choose Hexagon or Event Sourcing styles.
+It generates a .NET Solution with a layered backend (Domain - Application - Infrastructure - UI) based on the Clean Architecture Style.
     </description>
     <summary>
-      Try the following commands:
-
-      $ dotnet new caju --use-cases basic --name "MyBasicProject"
-      $ dotnet new caju --architecture-style hexagonal --name "MyHexagonalProject"
+$ dotnet new clean --use-cases basic
+$ dotnet new hexagonal --use-cases readonly
+$ dotnet new eventsourcing --use-cases full
     </summary>
     <releaseNotes>
--- Entity Framework support
--- FIX dependencies on dotnet new restore
-- Architecture styles support
--- Clean architecture with Input/Output/Interactors
--- Hexagonal architecture with CommandHandlers, Commands and Command Results
--- Event Sourcing with CQRS and Domain Events
-- WebAPI
+- Clean, Hexagonal or Event-Sourcing architecture styles
+- Entity Framework Core; Dapper; MongoDB Data Access frameworks
+- Different sets of use-cases.
+- Kafka as service-bus for Event-Sourcing
+- WebAPI templates
 - Docker images optimized for startup
-- Mongo.Driver, EntityFramework.Core, Confluent.Kafka or Dapper data access frameworks 
-- Layerd application with (Application - Domain - Infrastructure - UI)
+- Layerd application with Domain, Application, Infrastructure and UI
 - Domain-Driven Design (Aggregates, Entities, Value Objects, Commands, Domain Events)
 - Serilog Logging
-- UI projects options
-- Kafka as Service Bus or none.
     </releaseNotes>
     <tags>
       boilerplate
