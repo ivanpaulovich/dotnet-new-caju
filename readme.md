@@ -16,11 +16,11 @@ dotnet new clean
 
 ## The Architecture Styles
 
-We prevent our software to be coupled from technology details like User Interface, Data Access frameworks or Web Servers. And there are some concepts that guided us:
+We prevent our software to be coupled from technology details like User Interface, Data Access frameworks, Service Bus or Web Servers. And there are some concepts that guided us:
 
 * Allow an application to equally be driven by users, programs, automated test or batch scripts, and to be developed and tested in isolation from its eventual run-time devices and databases.
 * The SOLID principles are all over the the solution.
-* The software implementation is agnostic from technology, framework, or database. The result is focus on the  use cases with input/output ports. |
+* The software implementation is agnostic from technology, framework, or database. The result is focus on the  use cases with input/output ports.
 * Designed around the Business Domain, having Continous Delivery and Independent Deployment.
 
 ## Sample applications
@@ -74,8 +74,9 @@ Add the switch `--help` for the complete list of options.
 * Allow to choose the **data access** frameworks 
   * MongoDB :white_check_mark:
   * Dapper :white_check_mark:
-  * Entity Framework :white_check_mark:
+  * Entity Framework Core :white_check_mark:
   * Azure Cosmos DB
+  * NHibernate Core
   * None :white_check_mark:
 * Allow to choose the **UI** frameworks
   * Both
