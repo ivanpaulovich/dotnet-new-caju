@@ -49,7 +49,7 @@ For olher solution types check out the [Caju Samples folder](https://github.com/
 
 ## Switches
 
-There are switches to generate your awesome application with your needs. Try after `dotnet new clean` or `dotnet new hexagonal` or `dotnet new eventsourcing``:
+There are switches to generate your awesome application with your needs. Try after `dotnet new clean` or `dotnet new hexagonal` or `dotnet new eventsourcing`:
 
 * --use-cases `full` `basic` `readonly` `none`
 * --user-interface `webapi` `none`
