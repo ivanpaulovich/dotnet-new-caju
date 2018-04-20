@@ -38,7 +38,7 @@ dotnet new hexagonal --use-cases full
 Empty Event-Sourcing Solution:
 
 ```sh
-dotnet new eventsourcing` --use-cases empty
+dotnet new eventsourcing --use-cases empty
 ```
 
 For olher solution types check out the [Caju Samples folder](https://github.com/ivanpaulovich/dotnet-new-caju/tree/master/samples).
