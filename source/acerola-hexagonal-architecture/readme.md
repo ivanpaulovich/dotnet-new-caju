@@ -13,4 +13,11 @@
 * The ports and adapters are implemented outside of the application as plugins.
 * Externally we have other systems.
 
+## Application Layers
+
 ![Layered Application](https://raw.githubusercontent.com/ivanpaulovich/caju/master/images/Layers.png)
+
+* Domain is independent.
+* Application Services knows the Domain Layer.
+* Adapters inside the infrastructure depends on Domain and Application.
+* UI uses the Application and loads infrastructure by indirection.
