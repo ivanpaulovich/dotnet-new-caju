@@ -47,7 +47,7 @@ public class AccountsController : Controller
 The WebApi has Controllers that dot not depends on Application Services implementation details, its easy to mock this services. In an Enterprise Application we use to have multiple Ports.
 
 ## Port Components
-For the same reason we have components in Application Layer we also design components in a Port. For instance, our WebApi is organized by use cases:
+We design components in a Port segregated by use cases:
 
 * Request (DepositRequest)
 * Controller + Action (DepositController)
