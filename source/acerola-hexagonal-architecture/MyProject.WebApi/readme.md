@@ -1,5 +1,5 @@
 ## Ports
-An Port is an way an Actor can interact with the Application Layer. The role of the Port is to translate the Actor’s input into structures the Application Services can understand. For instance an Port could be an Web Application, an Console App or a Batch Script. I need to point out that the Actor could be an real user or another system.
+An Port is an way an Actor can interact with the Application Layer. The role of the Port is to translate the Actor's input into structures the Application Services can understand. For instance an Port could be an Web Application, an Console App or a Batch Script. I need to point out that the Actor could be an real user or another system.
 
 For this article the Port supports the REST protocol and was implemented using WebApi framework.
 
