@@ -386,11 +386,6 @@
                     <h4 class="text-uppercase mb-4">Connect</h4>
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/ivanpaulovich/">
-                                <i class="fa fa-fw fa-linkedin"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
                             <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/ivanpaulovich" data-size="large" data-show-count="true" aria-label="Follow @ivanpaulovich on GitHub">Follow @ivanpaulovich</a>
                         </li>
@@ -523,14 +518,15 @@
         $(document).ready(function () {
 
             $("#mainForm").submit(function (e) {
+                
+                e.preventDefault();
+
                 if (document.activeElement.id === 'hexagonal')
                     orderHexagonal();
                 else if (document.activeElement.id === 'clean')
                     orderClean();
                 else if (document.activeElement.id === 'eventsourcing')
                     orderEventSourcing();
-
-                e.preventDefault();
 
                 return false;
             });
