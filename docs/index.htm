@@ -673,13 +673,12 @@
                         $('#step1_Ready').show();
                     }
 
-                    if ($('#step2_Waiting').is(":visible")) {
-                        if ((new Date(data.dotNetNewFinishedUtcDate)).getFullYear() >= 2018) {
-                            $('#outputlines').text(data.dotNetNewOutput);
-                            $('#step2_Waiting').hide();
-                            $('#step2_Ready').show();
-                        }
+                    if ((new Date(data.dotNetNewFinishedUtcDate)).getFullYear() >= 2018) {
+                        $('#outputlines').text(data.dotNetNewOutput);
+                        $('#step2_Waiting').hide();
+                        $('#step2_Ready').show();
                     }
+                    
 
                     if ($('#step3_Waiting').is(":visible")) {
                         if ((new Date(data.uploadFinished)).getFullYear() >= 2018) {
