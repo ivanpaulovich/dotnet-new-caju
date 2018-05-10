@@ -1,0 +1,703 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Caju - Generate your next .NET microservice!</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Plugin CSS -->
+    <link href="/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template -->
+    <link href="/css/freelancer.min.css" rel="stylesheet">
+</head>
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="/">Caju</a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Order for Free!</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Architecture Styles</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container">
+            <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
+            <h1 class="text-uppercase mb-0">Caju</h1>
+            <hr class="star-light">
+            <h2 class="font-weight-light mb-0">Generate your next .NET microservice!</h2>
+        </div>
+    </header>
+
+    <form class="needs-validation" novalidate id="mainForm">
+        <!-- About Section -->
+        <section class="bg-white text-dark mb-0" id="about">
+            <div class="container">
+                <h2 class="text-center text-uppercase text-secondary">Set your preferences</h2>
+                <hr class="star-dark mb-5">
+
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="form-group">
+                            <label>Project Name</label>
+                            <input class="form-control form-control-lg" id="project-name" type="text" placeholder="Project Name" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        Choose the <span class="badge badge-pill badge-primary">Architecture Style</span> below and set your preferences:
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link" id="nav-hexagonal-tab" data-toggle="tab" href="#nav-hexagonal" role="tab" aria-controls="nav-hexagonal" aria-selected="true">Hexagonal</a>
+                                <a class="nav-item nav-link" id="nav-clean-tab" data-toggle="tab" href="#nav-clean" role="tab" aria-controls="nav-clean" aria-selected="false">Clean</a>
+                                <a class="nav-item nav-link" id="nav-eventsourcing-tab" data-toggle="tab" href="#nav-eventsourcing" role="tab" aria-controls="nav-eventsourcing" aria-selected="false">Event Sourcing</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show" id="nav-hexagonal" role="tabpanel" aria-labelledby="nav-hexagonal-tab">
+                                <div class="card">
+                                    <h5 class="card-header" id="Hexagonal_Name">Type Your Project Name</h5>
+                                    <div class="card-body">
+
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="Hexagonal_DataAccess">Data Access</label>
+                                            </div>
+                                            <select class="custom-select" id="Hexagonal_DataAccess" name="Hexagonal_DataAccess">
+                                                <option selected>Data Access...</option>
+                                                <option value="entityframework" selected>SQL Server with Entity Framework</option>
+                                                <option value="dapper">SQL Server with Dapper</option>
+                                                <option value="mongo">MongoDB</option>
+                                                <option value="none">None</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="Hexagonal_UseCases">Use Cases Sets</label>
+                                            </div>
+                                            <select class="custom-select" id="Hexagonal_UseCases" name="Hexagonal_UseCases">
+                                                <option selected>Choose...</option>
+                                                <option value="full" selected>Full writing and reading use cases</option>
+                                                <option value="basic">One writing and one reading use cases</option>
+                                                <option value="readonly">Only one reading use case</option>
+                                                <option value="none">None</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="Hexagonal_IncludeWebApi" name="Hexagonal_IncludeWebApi" checked>
+                                            <label class="custom-control-label" for="Hexagonal_IncludeWebApi">Include Web API</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="Hexagonal_IncludeDocumentation" name="Hexagonal_IncludeDocumentation" checked>
+                                            <label class="custom-control-label" for="Hexagonal_IncludeDocumentation">Include Documentation</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="Hexagonal_SkipRestore" name="Hexagonal_SkipRestore">
+                                            <label class="custom-control-label" for="Hexagonal_SkipRestore">Restore Nuget Packages</label>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <div class="text-center mt-4">
+                                            <input class="btn btn-primary" type="submit" value="Order for Free!" id="hexagonal" />
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="tab-pane fade" id="nav-clean" role="tabpanel" aria-labelledby="nav-hexagonal-tab">
+
+
+                                <div class="card">
+                                    <h5 class="card-header" id="Clean_Name">Type Your Project Name</h5>
+
+
+                                    <div class="card-body">
+
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="Clean_DataAccess">Data Access</label>
+                                            </div>
+                                            <select class="custom-select" id="Clean_DataAccess" name="Clean_DataAccess">
+                                                <option selected>Data Access...</option>
+                                                <option value="entityframework" selected>SQL Server with Entity Framework</option>
+                                                <option value="dapper">SQL Server with Dapper</option>
+                                                <option value="mongo">MongoDB</option>
+                                                <option value="none">None</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="Clean_UseCases">Use Cases Sets</label>
+                                            </div>
+                                            <select class="custom-select" id="Clean_UseCases" name="Clean_UseCases">
+                                                <option selected>Choose...</option>
+                                                <option value="full" selected>Full writing and reading use cases</option>
+                                                <option value="basic">One writing and one reading use cases</option>
+                                                <option value="readonly">Only one reading use case</option>
+                                                <option value="none">None</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="Clean_IncludeWebApi" name="Clean_IncludeWebApi" checked>
+                                            <label class="custom-control-label" for="Clean_IncludeWebApi">Include Web API</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="Clean_IncludeDocumentation" name="Clean_IncludeDocumentation" checked>
+                                            <label class="custom-control-label" for="Clean_IncludeDocumentation">Include Documentation</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="Clean_SkipRestore" name="Clean_SkipRestore">
+                                            <label class="custom-control-label" for="Clean_SkipRestore">Restore Nuget Packages</label>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <div class="text-center mt-4">
+                                            <input class="btn btn-primary" type="submit" value="Order for Free!" id="clean" />
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="nav-eventsourcing" role="tabpanel" aria-labelledby="nav-eventsourcing-tab">
+                                <div class="card">
+                                    <h5 class="card-header" id="EventSourcing_Name">Type Your Project Name</h5>
+                                    <div class="card card-body">
+
+
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="EventSourcing_DataAccess">Data Access</label>
+                                            </div>
+                                            <select class="custom-select" id="EventSourcing_DataAccess">
+                                                <option selected>Data Access...</option>
+                                                <option value="1" selected>SQL Server with Entity Framework</option>
+                                                <option value="2">SQL Server with Dapper</option>
+                                                <option value="3">MongoDB</option>
+                                                <option value="4">None</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text" for="EventSourcing_UseCases">Use Cases Sets</label>
+                                            </div>
+                                            <select class="custom-select" id="EventSourcing_UseCases">
+                                                <option selected>Choose...</option>
+                                                <option value="1" selected>Full writing and reading use cases</option>
+                                                <option value="2">One writing and reading use cases</option>
+                                                <option value="3">Only one reading use case</option>
+                                                <option value="4">None</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="EventSourcing_IncludServiceBus" checked>
+                                            <label class="custom-control-label" for="EventSourcing_IncludServiceBus">Include Service Bus Client</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="EventSourcing_IncludeWebApi" checked>
+                                            <label class="custom-control-label" for="EventSourcing_IncludeWebApi">Include Web API</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="EventSourcing_IncludeDocumentation" checked>
+                                            <label class="custom-control-label" for="EventSourcing_IncludeDocumentation">Include Documentation</label>
+                                        </div>
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="EventSourcing_SkipRestore">
+                                            <label class="custom-control-label" for="EventSourcing_SkipRestore">Restore Nuget Packages</label>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <div class="text-center mt-4">
+                                            <input class="btn btn-primary" type="submit" value="Order for Free!" id="eventsourcing" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </form>
+
+    <!-- About Section -->
+    <section class="bg-white text-dark mb-0" id="running" style="display: none">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="mt-4">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Step</th>
+                                    <th scope="col">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="step1_Waiting">
+                                    <th scope="row" class="text-center"><span class="badge badge-success align-top">#1</span><span class="align-middle">Received</span></th>
+                                    <td style="text-align: left">
+                                        <i class="fa fa-refresh fa-spin" style="font-size:24px"></i> <pre>dotnet new --install "Paulovich.Caju"</pre>
+                                    </td>
+                                </tr>
+                                <tr id="step1_Ready" style="display: none">
+                                    <th scope="row" class="text-center"><span class="badge badge-success align-top">#1</span><span class="align-middle">Received</span></th>
+                                    <td style="text-align: left">
+                                        <pre>dotnet new --install "Paulovich.Caju"</pre>
+                                        <pre id="commandlines"></pre>
+                                    </td>
+                                </tr>
+                                <tr id="step2_Waiting">
+                                    <th scope="row" class="text-center"><span class="badge badge-info align-top">#2</span><br /><span class="align-middle">Output</span></th>
+                                    <td style="text-align: left">
+                                        <i class="fa fa-refresh fa-spin" style="font-size:24px"></i> Waiting for available resources...
+                                    </td>
+                                </tr>
+                                <tr id="step2_Ready" style="display: none">
+                                    <th scope="row" class="text-center"><span class="badge badge-success align-top">#2</span><br><span class="align-middle">Output</span></th>
+                                    <td>
+                                        <pre style="white-space: pre-wrap;overflow-y:scroll;height:200px;text-align: left" id="outputlines"></pre>
+                                    </td>
+                                </tr>
+                                <tr id="step3_Waiting">
+                                    <th scope="row" class="text-center"><span class="badge badge-info align-top">#3</span><span class="align-middle">Download</span></th>
+                                    <td>
+                                        <i class="fa fa-refresh fa-spin" style="font-size:24px"></i> <span id="linkpreview"></span>
+                                    </td>
+                                </tr>
+                                <tr id="step3_Ready" style="display: none">
+                                    <th scope="row" class="text-center"><span class="badge badge-success align-top">#3</span><span class="align-middle">Download</span></th>
+                                    <td>
+                                        <a href=""></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center mt-4" id="downloadRow" style="display: none">
+                        <a class="btn btn-xl btn-outline-primary" href="">
+                            <i class="fa fa-download mr-2"></i>
+                            Download Now!
+                        </a>
+                    </div>
+                    <div class="col-lg-8 mx-auto">
+                        <div class="clearfix">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="alert alert-primary" role="alert">
+                        <h5 class="alert-heading">If you want to go faster. Try running the step #1 in your local machine <span class="badge badge-primary">PRO Tip!</span></h5>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer text-center" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Blog</h4>
+                    <p class="lead mb-0">
+                        <a href="https://paulovich.net">
+                            Paulovich.NET
+                        </a>
+                    </p>
+                </div>
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Connect</h4>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/ivanpaulovich/">
+                                <i class="fa fa-fw fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-uppercase mb-4">Get Involved</h4>
+                    <p class="lead mb-0">
+                        Fork our project, collaborate and give it a stargazer
+                        <a href="https://github.com/ivanpaulovich/dotnet-new-caju">dotnet new caju</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright py-4 text-center text-white">
+        <div class="container">
+            <small>Copyright &copy; Ivan Paulovich 2018</small>
+        </div>
+    </div>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+    <!-- Portfolio Modals -->
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+        <div class="portfolio-modal-dialog bg-white">
+            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+                <i class="fa fa-3x fa-times"></i>
+            </a>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-secondary text-uppercase mb-0">Hexagonal Architecture</h2>
+                        <hr class="star-dark mb-5">
+                        <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
+                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                            <i class="fa fa-close"></i>
+                            Close Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
+        <div class="portfolio-modal-dialog bg-white">
+            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+                <i class="fa fa-3x fa-times"></i>
+            </a>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-secondary text-uppercase mb-0">Clean Architecture</h2>
+                        <hr class="star-dark mb-5">
+                        <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
+                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                            <i class="fa fa-close"></i>
+                            Close Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
+        <div class="portfolio-modal-dialog bg-white">
+            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+                <i class="fa fa-3x fa-times"></i>
+            </a>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-secondary text-uppercase mb-0">Event Sourcing</h2>
+                        <hr class="star-dark mb-5">
+                        <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
+                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                        <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                            <i class="fa fa-close"></i>
+                            Close Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="/js/jqBootstrapValidation.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="/js/freelancer.min.js"></script>
+
+    @*
+    <script language="javascript">
+        $(document).ready(function () {
+            $('#pills-tab a').on('click', function (e) {
+                if ($(this).hasClass('active')) {
+                    var target_pane = $(this).attr('href');
+                    $(target_pane).children('.card').toggle(!$(target_pane).is(":visible"));
+                }
+            });
+        });
+
+    </script>*@
+
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+
+    <script language="javascript">
+        $(document).ready(function () {
+
+            $("#mainForm").submit(function (e) {
+                if (document.activeElement.id === 'hexagonal')
+                    orderHexagonal();
+                else if (document.activeElement.id === 'clean')
+                    orderHexagonal();
+                else if (document.activeElement.id === 'eventsourcing')
+                    orderEventSourcing();
+
+                e.preventDefault();
+
+                return false;
+            });
+
+
+            function orderHexagonal() {
+
+                var actionurl = 'http://grape.westus2.cloudapp.azure.com:8030/api/Orders/Hexagonal';
+
+                var order = new Object();
+                order.name = $('#Hexagonal_Name').text();
+                order.useCases = $('#Hexagonal_UseCases')[0].value;
+                order.userInterface = $('#Hexagonal_IncludeWebApi')[0].value == true ? 'webapi' : 'none';
+                order.dataAccess = $('#Hexagonal_DataAccess')[0].value;
+                order.tips = $('#Hexagonal_IncludeDocumentation')[0].value == true;
+                order.skipRestore = $('#Hexagonal_SkipRestore')[0].value == true;
+
+                $.ajax({
+                    url: actionurl,
+                    type: 'post',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: 'application/json',
+                    data: JSON.stringify(order),
+                    success: function (data) {
+                        getTracking(JSON.parse(returnval.responseText).orderId);
+                        $('#mainForm').hide();
+                        $('#running').show();
+                    },
+                    error: function (returnval) {
+                        getTracking(JSON.parse(returnval.responseText).orderId);
+                        $('#mainForm').hide();
+                        $('#running').show();
+                    }
+                });
+
+                return false;
+            };
+
+            function orderClean() {
+
+                var actionurl = 'http://grape.westus2.cloudapp.azure.com:8030/api/Orders/Clean';
+
+                var order = new Object();
+                order.name = $('#Clean_Name').text();
+                order.useCases = $('#Clean_UseCases')[0].value;
+                order.userInterface = $('#Clean_IncludeWebApi')[0].value == true ? 'webapi' : 'none';
+                order.dataAccess = $('#Clean_DataAccess')[0].value;
+                order.tips = $('#Clean_IncludeDocumentation')[0].value == true;
+                order.skipRestore = $('#Clean_SkipRestore')[0].value == true;
+
+                $.ajax({
+                    url: actionurl,
+                    type: 'post',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: 'application/json',
+                    data: JSON.stringify(order),
+                    success: function (data) {
+                        getTracking(JSON.parse(returnval.responseText).orderId);
+                        $('#mainForm').hide();
+                        $('#running').show();
+                    },
+                    error: function (returnval) {
+                        getTracking(JSON.parse(returnval.responseText).orderId);
+                        $('#mainForm').hide();
+                        $('#running').show();
+                    }
+                });
+            }
+
+            function orderEventSourcing() {
+
+                var actionurl = 'http://grape.westus2.cloudapp.azure.com:8030/api/Orders/EventSourcing';
+
+                var order = new Object();
+                order.name = $('#EventSourcing_Name').text();
+                order.useCases = $('#EventSourcing_UseCases')[0].value;
+                order.userInterface = $('#EventSourcing_IncludeWebApi')[0].value == true ? 'webapi' : 'none';
+                order.dataAccess = $('#EventSourcing_DataAccess')[0].value;
+                order.tips = $('#EventSourcing_IncludeDocumentation')[0].value == true;
+                order.skipRestore = $('#EventSourcing_SkipRestore')[0].value == true;
+                order.serviceBus = $('#EventSourcing_ServiceBus')[0].value == true ? 'kafka' : 'none';
+
+                $.ajax({
+                    url: actionurl,
+                    type: 'post',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: 'application/json',
+                    data: JSON.stringify(order),
+                    success: function (data) {
+                        getTracking(JSON.parse(returnval.responseText).orderId);
+                        $('#mainForm').hide();
+                        $('#running').show();
+                    },
+                    error: function (returnval) {
+                        getTracking(JSON.parse(returnval.responseText).orderId);
+                        $('#mainForm').hide();
+                        $('#running').show();
+                    }
+                });
+            }
+
+            $('#project-name').on('input', function () {
+                var input = $(this);
+                var re = /^[a-zA-Z0-9]{1,32}$/;
+                var is_good_name = re.test(input.val());
+                if (is_good_name) {
+                    input.removeClass("invalid").addClass("valid");
+                }
+                else {
+                    input.removeClass("valid").addClass("invalid");
+                }
+            });
+
+            $('#project-name').keyup(function (event) {
+                var input = $(this);
+                var re = /^[a-zA-Z0-9]{1,32}$/;
+                var is_good_name = re.test(input.val());
+                if (is_good_name) {
+                    input.removeClass("invalid").addClass("valid");
+                }
+                else {
+                    input.removeClass("valid").addClass("invalid");
+                }
+            });
+
+            $('#project-name').keyup(function () {
+                $('#Hexagonal_Name').text($(this).val());
+                $('#Clean_Name').text($(this).val());
+                $('#EventSourcing_Name').text($(this).val());
+            });
+
+            function getTracking(id) {
+
+                var actionurl = 'http://grape.westus2.cloudapp.azure.com:8032/api/Orders/' + id;
+
+                $.get(actionurl, function (data, status) {
+
+                    if ($('#step1_Waiting').is(":visible")) {
+                        $('#commandlines').text(data.commandLines);
+
+                        $('#linkpreview').text(data.downloadUrl);
+                        $('#step3_Ready a').attr("href", data.downloadUrl);
+                        $('#step3_Ready a').text(data.downloadUrl);
+                        $('#downloadRow a').attr("href", data.downloadUrl);
+                        $('#step1_Waiting').hide();
+                        $('#step1_Ready').show();
+                    }
+
+                    if ($('#step2_Waiting').is(":visible")) {
+                        if ((new Date(data.dotNetNewFinishedUtcDate)).getFullYear() >= 2018) {
+                            $('#outputlines').text(data.dotNetNewOutput);
+                            $('#step2_Waiting').hide();
+                            $('#step2_Ready').show();
+                        }
+                    }
+
+                    if ($('#step3_Waiting').is(":visible")) {
+                        if ((new Date(data.uploadFinished)).getFullYear() >= 2018) {
+                            $('#step3_Waiting a').attr("href", data.downloadUrl);
+                            $('#step3_Waiting').hide();
+                            $('#step3_Ready').show();
+                            $('#downloadRow').show();
+                        }
+                    }
+
+                });
+            }
+
+        });
+    </script>
+
+
+</body>
+</html>
