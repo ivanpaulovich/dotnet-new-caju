@@ -520,7 +520,7 @@
 
             function orderHexagonal() {
 
-                var actionurl = 'http://grape.westus2.cloudapp.azure.com:8030/api/Orders/Hexagonal';
+                var actionurl = 'https://grape.westus2.cloudapp.azure.com/cart/api/Orders/Hexagonal';
 
                 var order = new Object();
                 order.name = $('#Hexagonal_Name').text();
@@ -553,7 +553,7 @@
 
             function orderClean() {
 
-                var actionurl = 'http://grape.westus2.cloudapp.azure.com:8030/api/Orders/Clean';
+                var actionurl = 'https://grape.westus2.cloudapp.azure.com/cart/api/Orders/Clean';
 
                 var order = new Object();
                 order.name = $('#Clean_Name').text();
@@ -584,7 +584,7 @@
 
             function orderEventSourcing() {
 
-                var actionurl = 'http://grape.westus2.cloudapp.azure.com:8030/api/Orders/EventSourcing';
+                var actionurl = 'https://grape.westus2.cloudapp.azure.com/cart/api/Orders/EventSourcing';
 
                 var order = new Object();
                 order.name = $('#EventSourcing_Name').text();
@@ -646,7 +646,7 @@
 
             function getTracking(id) {
 
-                var actionurl = 'http://grape.westus2.cloudapp.azure.com:8032/api/Orders/' + id;
+                var actionurl = 'https://grape.westus2.cloudapp.azure.com/tracking/api/Orders/' + id;
 
                 $.get(actionurl, function (data, status) {
 
