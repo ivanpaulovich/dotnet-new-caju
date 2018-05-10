@@ -18,6 +18,18 @@
     <link href="css/freelancer.min.css" rel="stylesheet">
 </head>
 <body id="page-top">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119013472-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119013472-1');
+</script>
+
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
         <div class="container">
@@ -537,12 +549,12 @@
                     dataType: 'application/json',
                     data: JSON.stringify(order),
                     success: function (data) {
-                        getTracking(JSON.parse(returnval.responseText).orderId);
+                        setInterval(function() { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
                         $('#mainForm').hide();
                         $('#running').show();
                     },
                     error: function (returnval) {
-                        getTracking(JSON.parse(returnval.responseText).orderId);
+                        setInterval(function() { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
                         $('#mainForm').hide();
                         $('#running').show();
                     }
@@ -570,12 +582,12 @@
                     dataType: 'application/json',
                     data: JSON.stringify(order),
                     success: function (data) {
-                        getTracking(JSON.parse(returnval.responseText).orderId);
+                        setInterval(function() { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
                         $('#mainForm').hide();
                         $('#running').show();
                     },
                     error: function (returnval) {
-                        getTracking(JSON.parse(returnval.responseText).orderId);
+                        setInterval(function() { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
                         $('#mainForm').hide();
                         $('#running').show();
                     }
@@ -602,12 +614,12 @@
                     dataType: 'application/json',
                     data: JSON.stringify(order),
                     success: function (data) {
-                        getTracking(JSON.parse(returnval.responseText).orderId);
+                        setInterval(function() { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
                         $('#mainForm').hide();
                         $('#running').show();
                     },
                     error: function (returnval) {
-                        getTracking(JSON.parse(returnval.responseText).orderId);
+                        setInterval(function() { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
                         $('#mainForm').hide();
                         $('#running').show();
                     }
