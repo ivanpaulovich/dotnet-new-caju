@@ -33,7 +33,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="/">Caju</a>
+            <a class="navbar-brand js-scroll-trigger" href="https://ivanpaulovich.github.io/dotnet-new-caju/">Caju</a>
             <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fa fa-bars"></i>
@@ -674,11 +674,11 @@
                     }
 
                     if ((new Date(data.dotNetNewFinishedUtcDate)).getFullYear() >= 2018) {
-                        $('#outputlines').text(data.dotNetNewOutput);
+                        if (!str || 0 === str.length)
+                            $('#outputlines').text(data.dotNetNewOutput);
                         $('#step2_Waiting').hide();
                         $('#step2_Ready').show();
                     }
-                    
 
                     if ($('#step3_Waiting').is(":visible")) {
                         if ((new Date(data.uploadFinished)).getFullYear() >= 2018) {
