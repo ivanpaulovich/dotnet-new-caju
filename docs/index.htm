@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Caju - Generate your next .NET microservice!</title>
+    <meta name="author" content="Ivan Paulovich">
+    <title>Caju - Generate your next .NET microservices!</title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template -->
@@ -16,24 +16,28 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template -->
     <link href="css/freelancer.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css" />
 </head>
 <body id="page-top">
+
+    <a href="https://github.com/ivanpaulovich/dotnet-new-caju/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:9999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119013472-1"></script>
     <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-119013472-1');
+        gtag('config', 'UA-119013472-1');
     </script>
 
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="https://ivanpaulovich.github.io/dotnet-new-caju/">Caju</a>
+            <a class="navbar-brand js-scroll-trigger" href="http://caju.paulovich.net/">Caju</a>
             <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fa fa-bars"></i>
@@ -51,10 +55,10 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
         <div class="container">
-            <img class="img-fluid mb-5 d-block mx-auto" src="img/caju_72.png" alt="">
+            <img class="img-fluid mb-5 d-block mx-auto" src="img/caju_256.png" alt="">
             <h1 class="text-uppercase mb-0">Caju</h1>
             <hr class="star-light">
-            <h2 class="font-weight-light mb-0">Generate your next .NET microservice!</h2>
+            <h2 class="font-weight-light mb-0">Generate your next .NET microservices!</h2>
         </div>
     </header>
 
@@ -67,11 +71,14 @@
 
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <div class="form-group">
+                        <div class="form-group has-feedback">
                             <label>Project Name</label>
-                            <input class="form-control form-control-lg" id="project-name" type="text" placeholder="Project Name" required>
+                            <input class="form-control form-control-lg" id="project-name" type="text" placeholder="Please enter your Project Name *" required="required" data-error="Project Name is required.">
                             <div class="valid-feedback">
                                 Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please provide a Project Name.
                             </div>
                         </div>
                     </div>
@@ -374,27 +381,38 @@
                 <div class="col-md-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">Blog</h4>
                     <p class="lead mb-0">
+                        <span>I share some thoughts and ideas in my blog</span>
                         <a href="https://paulovich.net">
                             Paulovich.NET
                         </a>
+                        <br /> <br />
+                        <!-- Place this tag where you want the button to render. -->
+                        <a class="github-button" href="https://github.com/ivanpaulovich/dotnet-new-caju/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork ivanpaulovich/dotnet-new-caju on GitHub">Fork</a>
                     </p>
                 </div>
-                <div class="col-md-4 mb-5 mb-lg-0">
+                <div class="col-md-4">
                     <h4 class="text-uppercase mb-4">Connect</h4>
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item">
-                            <!-- Place this tag where you want the button to render. -->
-                            <a class="github-button" href="https://github.com/ivanpaulovich" data-size="large" data-show-count="true" aria-label="Follow @ivanpaulovich on GitHub">Follow @ivanpaulovich</a>
-                        </li>
-                    </ul>
+                    <p class="lead mb-0">
+                        <span>I have other interesting projects on github.</span> <br /> <br />
+                        <!-- Place this tag where you want the button to render. -->
+                        <a class="github-button" href="https://github.com/ivanpaulovich" data-size="large" data-show-count="true" aria-label="Follow @ivanpaulovich on GitHub">Follow @ivanpaulovich</a>
+                        <br /><br />
+                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/ivanpaulovich/">
+                            <i class="fa fa-fw fa-linkedin"></i>
+                        </a>
+                    </p>
                 </div>
                 <div class="col-md-4">
                     <h4 class="text-uppercase mb-4">Get Involved</h4>
                     <p class="lead mb-0">
-                        <!-- Place this tag where you want the button to render. -->
-                        <a class="github-button" href="https://github.com/ivanpaulovich/caju/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork ivanpaulovich/caju on GitHub">Fork</a>
+                        <span>Want to help us improve Caju? Check out our source, start a discussion or give it a star!</span> <br /> <br />
                         <!-- Place this tag where you want the button to render. -->
                         <a class="github-button" href="https://github.com/ivanpaulovich/caju" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ivanpaulovich/caju on GitHub">Star</a>
+
+                        <br /> <br />
+
+                        <!-- Place this tag where you want the button to render. -->
+                        <a class="github-button" href="https://github.com/ivanpaulovich/dotnet-new-caju/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue ivanpaulovich/dotnet-new-caju on GitHub">Issue</a>
                     </p>
                 </div>
             </div>
@@ -411,73 +429,7 @@
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
-    <!-- Portfolio Modals -->
-    <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
-        <div class="portfolio-modal-dialog bg-white">
-            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                <i class="fa fa-3x fa-times"></i>
-            </a>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2 class="text-secondary text-uppercase mb-0">Hexagonal Architecture</h2>
-                        <hr class="star-dark mb-5">
-                        <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
-                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                        <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                            <i class="fa fa-close"></i>
-                            Close Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
-        <div class="portfolio-modal-dialog bg-white">
-            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                <i class="fa fa-3x fa-times"></i>
-            </a>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2 class="text-secondary text-uppercase mb-0">Clean Architecture</h2>
-                        <hr class="star-dark mb-5">
-                        <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
-                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                        <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                            <i class="fa fa-close"></i>
-                            Close Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio Modal 3 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
-        <div class="portfolio-modal-dialog bg-white">
-            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-                <i class="fa fa-3x fa-times"></i>
-            </a>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2 class="text-secondary text-uppercase mb-0">Event Sourcing</h2>
-                        <hr class="star-dark mb-5">
-                        <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
-                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                        <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                            <i class="fa fa-close"></i>
-                            Close Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -510,196 +462,11 @@
         })();
     </script>
 
-
-    <script language="javascript">
-        $(document).ready(function () {
-
-            $("#mainForm").submit(function (e) {
-
-                e.preventDefault();
-
-                if (!$('#project-name').val())
-                    return false;
-
-                if (document.activeElement.id === 'hexagonal')
-                    orderHexagonal();
-                else if (document.activeElement.id === 'clean')
-                    orderClean();
-                else if (document.activeElement.id === 'eventsourcing')
-                    orderEventSourcing();
-
-                return false;
-            });
-
-
-            function orderHexagonal() {
-
-                var actionurl = 'https://grape.westus2.cloudapp.azure.com/cart/api/Orders/Hexagonal';
-
-                var order = new Object();
-                order.name = $('#Hexagonal_Name').text();
-                order.useCases = $('#Hexagonal_UseCases')[0].value;
-                order.userInterface = $('#Hexagonal_IncludeWebApi')[0].value == true ? 'webapi' : 'none';
-                order.dataAccess = $('#Hexagonal_DataAccess')[0].value;
-                order.tips = $('#Hexagonal_IncludeDocumentation')[0].value == true;
-                order.skipRestore = $('#Hexagonal_SkipRestore')[0].value == true;
-
-                $.ajax({
-                    url: actionurl,
-                    type: 'post',
-                    contentType: "application/json; charset=utf-8",
-                    dataType: 'application/json',
-                    data: JSON.stringify(order),
-                    success: function (data) {
-                        setInterval(function() { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
-                        $('#mainForm').hide();
-                        $('#running').show();
-                    },
-                    error: function (returnval) {
-                        setInterval(function() { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
-                        $('#mainForm').hide();
-                        $('#running').show();
-                    }
-                });
-
-                return false;
-            };
-
-            function orderClean() {
-
-                var actionurl = 'https://grape.westus2.cloudapp.azure.com/cart/api/Orders/Clean';
-
-                var order = new Object();
-                order.name = $('#Clean_Name').text();
-                order.useCases = $('#Clean_UseCases')[0].value;
-                order.userInterface = $('#Clean_IncludeWebApi')[0].value == true ? 'webapi' : 'none';
-                order.dataAccess = $('#Clean_DataAccess')[0].value;
-                order.tips = $('#Clean_IncludeDocumentation')[0].value == true;
-                order.skipRestore = $('#Clean_SkipRestore')[0].value == true;
-
-                $.ajax({
-                    url: actionurl,
-                    type: 'post',
-                    contentType: "application/json; charset=utf-8",
-                    dataType: 'application/json',
-                    data: JSON.stringify(order),
-                    success: function (data) {
-                        setInterval(function() { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
-                        $('#mainForm').hide();
-                        $('#running').show();
-                    },
-                    error: function (returnval) {
-                        setInterval(function() { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
-                        $('#mainForm').hide();
-                        $('#running').show();
-                    }
-                });
-            }
-
-            function orderEventSourcing() {
-
-                var actionurl = 'https://grape.westus2.cloudapp.azure.com/cart/api/Orders/EventSourcing';
-
-                var order = new Object();
-                order.name = $('#EventSourcing_Name').text();
-                order.useCases = $('#EventSourcing_UseCases')[0].value;
-                order.userInterface = $('#EventSourcing_IncludeWebApi')[0].value == true ? 'webapi' : 'none';
-                order.dataAccess = $('#EventSourcing_DataAccess')[0].value;
-                order.tips = $('#EventSourcing_IncludeDocumentation')[0].value == true;
-                order.skipRestore = $('#EventSourcing_SkipRestore')[0].value == true;
-                order.serviceBus = $('#EventSourcing_IncludeServiceBus')[0].value == true ? 'kafka' : 'none';
-
-                $.ajax({
-                    url: actionurl,
-                    type: 'post',
-                    contentType: "application/json; charset=utf-8",
-                    dataType: 'application/json',
-                    data: JSON.stringify(order),
-                    success: function (data) {
-                        setInterval(function() { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
-                        $('#mainForm').hide();
-                        $('#running').show();
-                    },
-                    error: function (returnval) {
-                        setInterval(function() { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
-                        $('#mainForm').hide();
-                        $('#running').show();
-                    }
-                });
-            }
-
-            $('#project-name').on('input', function () {
-                var input = $(this);
-                var re = /^[a-zA-Z0-9]{1,32}$/;
-                var is_good_name = re.test(input.val());
-                if (is_good_name) {
-                    input.removeClass("invalid").addClass("valid");
-                }
-                else {
-                    input.removeClass("valid").addClass("invalid");
-                }
-            });
-
-            $('#project-name').keyup(function (event) {
-                var input = $(this);
-                var re = /^[a-zA-Z0-9]{1,32}$/;
-                var is_good_name = re.test(input.val());
-                if (is_good_name) {
-                    input.removeClass("invalid").addClass("valid");
-                }
-                else {
-                    input.removeClass("valid").addClass("invalid");
-                }
-            });
-
-            $('#project-name').keyup(function () {
-                $('#Hexagonal_Name').text($(this).val());
-                $('#Clean_Name').text($(this).val());
-                $('#EventSourcing_Name').text($(this).val());
-            });
-
-            function getTracking(id) {
-
-                var actionurl = 'https://grape.westus2.cloudapp.azure.com/tracking/api/Orders/' + id;
-
-                $.get(actionurl, function (data, status) {
-
-                    if ($('#step1_Waiting').is(":visible")) {
-                        $('#commandlines').text(data.commandLines);
-
-                        $('#linkpreview').text(data.downloadUrl);
-                        $('#step3_Ready a').attr("href", data.downloadUrl);
-                        $('#step3_Ready a').text(data.downloadUrl);
-                        $('#downloadRow a').attr("href", data.downloadUrl);
-                        $('#step1_Waiting').hide();
-                        $('#step1_Ready').show();
-                    }
-
-                    if ((new Date(data.dotNetNewFinishedUtcDate)).getFullYear() >= 2018) {
-                        if (data.dotNetNewOutput || 0 !== data.dotNetNewOutput.length)
-                            $('#outputlines').text(data.dotNetNewOutput);
-
-                        $('#step2_Waiting').hide();
-                        $('#step2_Ready').show();
-                    }
-
-                    if ($('#step3_Waiting').is(":visible")) {
-                        if ((new Date(data.uploadFinished)).getFullYear() >= 2018) {
-                            $('#step3_Waiting a').attr("href", data.downloadUrl);
-                            $('#step3_Waiting').hide();
-                            $('#step3_Ready').show();
-                            $('#downloadRow').show();
-                        }
-                    }
-
-                });
-            }
-
-        });
-    </script>
+    <script src="js/caju.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
 </body>
 </html>
