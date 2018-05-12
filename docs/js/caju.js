@@ -1,7 +1,7 @@
 $(document).ready(function () {
    
     $('#formHexagonal').on('submit', function (e) {
-        if (!$('#mainForm').valid()) {
+        if ($('#mainForm').valid()) {
             orderHexagonal();
         }
 
