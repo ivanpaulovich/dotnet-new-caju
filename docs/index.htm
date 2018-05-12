@@ -65,15 +65,16 @@
         </div>
     </header>
 
-    <form class="needs-validation" novalidate id="mainForm">
-        <!-- About Section -->
-        <section class="bg-white text-dark mb-0" id="about">
-            <div class="container">
-                <h2 class="text-center text-uppercase text-secondary">Set your preferences</h2>
-                <hr class="star-dark mb-5">
+    <section class="bg-white text-dark mb-0" id="preferences">
+        <div class="container">
+            <h2 class="text-center text-uppercase text-secondary">Set your preferences</h2>
+            <hr class="star-dark mb-5">
 
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
+            <div class="row">
+
+                <div class="col-lg-8 mx-auto">
+                    <form id="mainForm">
+
                         <div class="form-group has-feedback">
                             <label>Project Name</label>
                             <input class="form-control form-control-lg" id="project-name" type="text" placeholder="Please enter your Project Name *" required="required" data-error="Project Name is required.">
@@ -84,31 +85,38 @@
                                 Please provide a Project Name.
                             </div>
                         </div>
-                    </div>
+
+                    </form>
                 </div>
 
 
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        Choose the <span class="badge badge-pill badge-primary">Architecture Style</span> below and set your preferences:
-                    </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    Choose the <span class="badge badge-pill badge-primary">Architecture Style</span> below and set your preferences:
                 </div>
+            </div>
 
 
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
 
-                        <nav>
-                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link" id="nav-hexagonal-tab" data-toggle="tab" href="#nav-hexagonal" role="tab" aria-controls="nav-hexagonal" aria-selected="true">Hexagonal</a>
-                                <a class="nav-item nav-link" id="nav-clean-tab" data-toggle="tab" href="#nav-clean" role="tab" aria-controls="nav-clean" aria-selected="false">Clean</a>
-                                <a class="nav-item nav-link" id="nav-eventsourcing-tab" data-toggle="tab" href="#nav-eventsourcing" role="tab" aria-controls="nav-eventsourcing" aria-selected="false">Event Sourcing</a>
-                            </div>
-                        </nav>
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show" id="nav-hexagonal" role="tabpanel" aria-labelledby="nav-hexagonal-tab">
-                                <div class="card">
-                                    <h5 class="card-header" id="Hexagonal_Name">Type Your Project Name</h5>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link" id="nav-hexagonal-tab" data-toggle="tab" href="#nav-hexagonal" role="tab" aria-controls="nav-hexagonal" aria-selected="true">Hexagonal</a>
+                            <a class="nav-item nav-link" id="nav-clean-tab" data-toggle="tab" href="#nav-clean" role="tab" aria-controls="nav-clean" aria-selected="false">Clean</a>
+                            <a class="nav-item nav-link" id="nav-eventsourcing-tab" data-toggle="tab" href="#nav-eventsourcing" role="tab" aria-controls="nav-eventsourcing" aria-selected="false">Event Sourcing</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show" id="nav-hexagonal" role="tabpanel" aria-labelledby="nav-hexagonal-tab">
+                            <div class="card">
+                                <h5 class="card-header" id="Hexagonal_Name">Type Your Project Name</h5>
+
+                                <form class="needs-validation" novalidate id="formHexagonal">
+
                                     <div class="card-body">
 
                                         <div class="input-group mb-3">
@@ -154,21 +162,25 @@
 
 
                                     </div>
+
                                     <div class="card-footer text-muted">
                                         <div class="text-center mt-4">
-                                            <input class="btn btn-primary" type="button" value="Order for Free!" id="hexagonal" />
+                                            <input class="btn btn-primary" type="submit" value="Order for Free!" id="hexagonal" />
                                         </div>
                                     </div>
-                                </div>
 
-
+                                </form>
                             </div>
-                            <div class="tab-pane fade" id="nav-clean" role="tabpanel" aria-labelledby="nav-hexagonal-tab">
 
 
-                                <div class="card">
-                                    <h5 class="card-header" id="Clean_Name">Type Your Project Name</h5>
+                        </div>
+                        <div class="tab-pane fade" id="nav-clean" role="tabpanel" aria-labelledby="nav-hexagonal-tab">
 
+
+                            <div class="card">
+                                <h5 class="card-header" id="Clean_Name">Type Your Project Name</h5>
+
+                                <form class="needs-validation" novalidate id="formClean">
 
                                     <div class="card-body">
 
@@ -217,16 +229,21 @@
                                     </div>
                                     <div class="card-footer text-muted">
                                         <div class="text-center mt-4">
-                                            <input class="btn btn-primary" type="button" value="Order for Free!" id="clean" />
+                                            <input class="btn btn-primary" type="submit" value="Order for Free!" id="clean" />
                                         </div>
                                     </div>
 
-                                </div>
+                                </form>
 
                             </div>
-                            <div class="tab-pane fade" id="nav-eventsourcing" role="tabpanel" aria-labelledby="nav-eventsourcing-tab">
-                                <div class="card">
-                                    <h5 class="card-header" id="EventSourcing_Name">Type Your Project Name</h5>
+
+                        </div>
+                        <div class="tab-pane fade" id="nav-eventsourcing" role="tabpanel" aria-labelledby="nav-eventsourcing-tab">
+                            <div class="card">
+                                <h5 class="card-header" id="EventSourcing_Name">Type Your Project Name</h5>
+
+                                <form class="needs-validation" novalidate id="formEventSourcing">
+
                                     <div class="card card-body">
 
 
@@ -280,22 +297,22 @@
                                     </div>
                                     <div class="card-footer text-muted">
                                         <div class="text-center mt-4">
-                                            <input class="btn btn-primary" type="button" value="Order for Free!" id="eventsourcing" />
+                                            <input class="btn btn-primary" type="submit" value="Order for Free!" id="eventsourcing" />
                                         </div>
                                     </div>
-                                </div>
+
+                                </form>
                             </div>
-
-
                         </div>
 
 
                     </div>
+
+
                 </div>
             </div>
-        </section>
-
-    </form>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section class="bg-white text-dark mb-0" id="running" style="display: none">
@@ -466,11 +483,10 @@
         })();
     </script>
 
-    <script src="js/caju.js"></script>
+    <script src="js/caju.js?v=2"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 </body>
 </html>

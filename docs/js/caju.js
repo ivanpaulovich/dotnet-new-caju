@@ -1,26 +1,27 @@
 $(document).ready(function () {
-
-    $("#mainForm").validator();
-
-    $('#hexagonal').on('click', function () {
-        if (!e.isDefaultPrevented()) {
+   
+    $('#formHexagonal').on('submit', function (e) {
+        if (!$('#mainForm').valid()) {
             orderHexagonal();
-            return false;
         }
+
+        return false;
     });
 
-    $('#clean').on('click', function () {
-        if (!e.isDefaultPrevented()) {
+    $('#formClean').on('submit', function (e) {
+        if ($('#mainForm').valid()) {
             orderClean();
-            return false;
         }
+
+        return false;
     });
 
-    $('#eventsourcing').on('click', function () {
-        if (!e.isDefaultPrevented()) {
+    $('#formEventSourcing').on('submit', function (e) {
+        if ($('#mainForm').valid()) {
             orderEventSourcing();
-            return false;
         }
+
+        return false;
     });
 
 
@@ -44,12 +45,12 @@ $(document).ready(function () {
             data: JSON.stringify(order),
             success: function (data) {
                 setInterval(function () { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
-                $('#mainForm').hide();
+                $('#preferences').hide();
                 $('#running').show();
             },
             error: function (returnval) {
                 setInterval(function () { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
-                $('#mainForm').hide();
+                $('#preferences').hide();
                 $('#running').show();
             }
         });
@@ -77,12 +78,12 @@ $(document).ready(function () {
             data: JSON.stringify(order),
             success: function (data) {
                 setInterval(function () { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
-                $('#mainForm').hide();
+                $('#preferences').hide();
                 $('#running').show();
             },
             error: function (returnval) {
                 setInterval(function () { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
-                $('#mainForm').hide();
+                $('#preferences').hide();
                 $('#running').show();
             }
         });
@@ -109,12 +110,12 @@ $(document).ready(function () {
             data: JSON.stringify(order),
             success: function (data) {
                 setInterval(function () { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
-                $('#mainForm').hide();
+                $('#preferences').hide();
                 $('#running').show();
             },
             error: function (returnval) {
                 setInterval(function () { getTracking(JSON.parse(returnval.responseText).orderId); }, 1000);
-                $('#mainForm').hide();
+                $('#preferences').hide();
                 $('#running').show();
             }
         });
