@@ -2,17 +2,23 @@ $(document).ready(function () {
 
     $("#mainForm").validator();
 
-    $("#mainForm").on("submit", function (e) {
-
+    $('#hexagonal').on('click', function () {
         if (!e.isDefaultPrevented()) {
+            orderHexagonal();
+            return false;
+        }
+    });
 
-            if (document.activeElement.id === 'hexagonal')
-                orderHexagonal();
-            else if (document.activeElement.id === 'clean')
-                orderClean();
-            else if (document.activeElement.id === 'eventsourcing')
-                orderEventSourcing();
+    $('#clean').on('click', function () {
+        if (!e.isDefaultPrevented()) {
+            orderClean();
+            return false;
+        }
+    });
 
+    $('#eventsourcing').on('click', function () {
+        if (!e.isDefaultPrevented()) {
+            orderEventSourcing();
             return false;
         }
     });
