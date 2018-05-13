@@ -1,29 +1,37 @@
 $(document).ready(function () {
-   
-    $('#formHexagonal').on('submit', function (e) {
-        if ($('#mainForm').valid()) {
-            orderHexagonal();
+
+    $("form input[type=submit]").click(function () {
+        $("input[type=submit]", $(this).parents("form")).removeAttr("clicked");
+        $(this).attr("clicked", "true");
+    });
+
+    $('#mainForm').on('submit', function (e) {
+        $(this).addClass('was-validated');
+
+        var re = /^[a-zA-Z0-9]{1,32}$/;
+        var is_good_name = re.test($('#project-name').val());
+
+        if (is_good_name) {
+            var buttonId = $("input[type=submit][clicked=true]")[0].id;
+
+            if (buttonId == 'hexagonal') {
+                orderHexagonal();
+            }
+
+            if (buttonId == 'clean') {
+                orderClean();
+            }
+
+            if (buttonId == 'eventsourcing') {
+                orderEventSourcing();
+            }
         }
+
+        e.preventDefault();
+        e.stopPropagation();
 
         return false;
     });
-
-    $('#formClean').on('submit', function (e) {
-        if ($('#mainForm').valid()) {
-            orderClean();
-        }
-
-        return false;
-    });
-
-    $('#formEventSourcing').on('submit', function (e) {
-        if ($('#mainForm').valid()) {
-            orderEventSourcing();
-        }
-
-        return false;
-    });
-
 
     function orderHexagonal() {
 
@@ -120,30 +128,6 @@ $(document).ready(function () {
             }
         });
     }
-
-    $('#project-name').on('input', function () {
-        var input = $(this);
-        var re = /^[a-zA-Z0-9]{1,32}$/;
-        var is_good_name = re.test(input.val());
-        if (is_good_name) {
-            input.removeClass("invalid").addClass("valid");
-        }
-        else {
-            input.removeClass("valid").addClass("invalid");
-        }
-    });
-
-    $('#project-name').keyup(function (event) {
-        var input = $(this);
-        var re = /^[a-zA-Z0-9]{1,32}$/;
-        var is_good_name = re.test(input.val());
-        if (is_good_name) {
-            input.removeClass("invalid").addClass("valid");
-        }
-        else {
-            input.removeClass("valid").addClass("invalid");
-        }
-    });
 
     $('#project-name').keyup(function () {
         $('#Hexagonal_Name').text($(this).val());

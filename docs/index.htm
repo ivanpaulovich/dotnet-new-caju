@@ -65,15 +65,17 @@
         </div>
     </header>
 
-    <section class="bg-white text-dark mb-0" id="preferences">
-        <div class="container">
-            <h2 class="text-center text-uppercase text-secondary">Set your preferences</h2>
-            <hr class="star-dark mb-5">
+    <form id="mainForm" class="needs-validation" novalidate>
 
-            <div class="row">
+        <section class="bg-white text-dark mb-0" id="preferences">
+            <div class="container">
+                <h2 class="text-center text-uppercase text-secondary">Set your preferences</h2>
+                <hr class="star-dark mb-5">
 
-                <div class="col-lg-8 mx-auto">
-                    <form id="mainForm">
+                <div class="row">
+
+                    <div class="col-lg-8 mx-auto">
+
 
                         <div class="form-group has-feedback">
                             <label>Project Name</label>
@@ -86,36 +88,34 @@
                             </div>
                         </div>
 
-                    </form>
+
+                    </div>
+
+
                 </div>
 
 
-            </div>
-
-
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    Choose the <span class="badge badge-pill badge-primary">Architecture Style</span> below and set your preferences:
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        Choose the <span class="badge badge-pill badge-primary">Architecture Style</span> below and set your preferences:
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
 
-                    <nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link" id="nav-hexagonal-tab" data-toggle="tab" href="#nav-hexagonal" role="tab" aria-controls="nav-hexagonal" aria-selected="true">Hexagonal</a>
-                            <a class="nav-item nav-link" id="nav-clean-tab" data-toggle="tab" href="#nav-clean" role="tab" aria-controls="nav-clean" aria-selected="false">Clean</a>
-                            <a class="nav-item nav-link" id="nav-eventsourcing-tab" data-toggle="tab" href="#nav-eventsourcing" role="tab" aria-controls="nav-eventsourcing" aria-selected="false">Event Sourcing</a>
-                        </div>
-                    </nav>
-                    <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show" id="nav-hexagonal" role="tabpanel" aria-labelledby="nav-hexagonal-tab">
-                            <div class="card">
-                                <h5 class="card-header" id="Hexagonal_Name">Type Your Project Name</h5>
-
-                                <form class="needs-validation" novalidate id="formHexagonal">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link" id="nav-hexagonal-tab" data-toggle="tab" href="#nav-hexagonal" role="tab" aria-controls="nav-hexagonal" aria-selected="true">Hexagonal</a>
+                                <a class="nav-item nav-link" id="nav-clean-tab" data-toggle="tab" href="#nav-clean" role="tab" aria-controls="nav-clean" aria-selected="false">Clean</a>
+                                <a class="nav-item nav-link" id="nav-eventsourcing-tab" data-toggle="tab" href="#nav-eventsourcing" role="tab" aria-controls="nav-eventsourcing" aria-selected="false">Event Sourcing</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show" id="nav-hexagonal" role="tabpanel" aria-labelledby="nav-hexagonal-tab">
+                                <div class="card">
+                                    <h5 class="card-header" id="Hexagonal_Name">Type Your Project Name</h5>
 
                                     <div class="card-body">
 
@@ -169,18 +169,16 @@
                                         </div>
                                     </div>
 
-                                </form>
+                                </div>
+
+
                             </div>
+                            <div class="tab-pane fade" id="nav-clean" role="tabpanel" aria-labelledby="nav-hexagonal-tab">
 
 
-                        </div>
-                        <div class="tab-pane fade" id="nav-clean" role="tabpanel" aria-labelledby="nav-hexagonal-tab">
+                                <div class="card">
+                                    <h5 class="card-header" id="Clean_Name">Type Your Project Name</h5>
 
-
-                            <div class="card">
-                                <h5 class="card-header" id="Clean_Name">Type Your Project Name</h5>
-
-                                <form class="needs-validation" novalidate id="formClean">
 
                                     <div class="card-body">
 
@@ -233,16 +231,13 @@
                                         </div>
                                     </div>
 
-                                </form>
+
+                                </div>
 
                             </div>
-
-                        </div>
-                        <div class="tab-pane fade" id="nav-eventsourcing" role="tabpanel" aria-labelledby="nav-eventsourcing-tab">
-                            <div class="card">
-                                <h5 class="card-header" id="EventSourcing_Name">Type Your Project Name</h5>
-
-                                <form class="needs-validation" novalidate id="formEventSourcing">
+                            <div class="tab-pane fade" id="nav-eventsourcing" role="tabpanel" aria-labelledby="nav-eventsourcing-tab">
+                                <div class="card">
+                                    <h5 class="card-header" id="EventSourcing_Name">Type Your Project Name</h5>
 
                                     <div class="card card-body">
 
@@ -301,18 +296,19 @@
                                         </div>
                                     </div>
 
-                                </form>
+                                </div>
                             </div>
+
+
                         </div>
 
 
                     </div>
-
-
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </form>
 
     <!-- About Section -->
     <section class="bg-white text-dark mb-0" id="running" style="display: none">
@@ -457,36 +453,11 @@
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
     <!-- Custom scripts for this template -->
     <script src="js/freelancer.min.js"></script>
-
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function () {
-            'use strict';
-            window.addEventListener('load', function () {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
-    </script>
-
     <script src="js/caju.js?v=3"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 </body>
 </html>
