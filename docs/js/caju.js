@@ -40,10 +40,10 @@ $(document).ready(function () {
         var order = new Object();
         order.name = $('#Hexagonal_Name').text();
         order.useCases = $('#Hexagonal_UseCases')[0].value;
-        order.userInterface = $('#Hexagonal_IncludeWebApi')[0].value == true ? 'webapi' : 'none';
+        order.userInterface = $('#Hexagonal_IncludeWebApi').is(":checked") ? 'webapi' : 'none';
         order.dataAccess = $('#Hexagonal_DataAccess')[0].value;
-        order.tips = $('#Hexagonal_IncludeDocumentation')[0].value == true;
-        order.skipRestore = $('#Hexagonal_SkipRestore')[0].value == true;
+        order.tips = $('#Hexagonal_IncludeDocumentation').is(":checked");
+        order.skipRestore = $('#Hexagonal_SkipRestore').is(":checked");
 
         $.ajax({
             url: actionurl,
@@ -73,10 +73,10 @@ $(document).ready(function () {
         var order = new Object();
         order.name = $('#Clean_Name').text();
         order.useCases = $('#Clean_UseCases')[0].value;
-        order.userInterface = $('#Clean_IncludeWebApi')[0].value == true ? 'webapi' : 'none';
+        order.userInterface = $('#Clean_IncludeWebApi').is(":checked") ? 'webapi' : 'none';
         order.dataAccess = $('#Clean_DataAccess')[0].value;
-        order.tips = $('#Clean_IncludeDocumentation')[0].value == true;
-        order.skipRestore = $('#Clean_SkipRestore')[0].value == true;
+        order.tips = $('#Clean_IncludeDocumentation').is(":checked");
+        order.skipRestore = $('#Clean_SkipRestore').is(":checked");
 
         $.ajax({
             url: actionurl,
@@ -104,11 +104,11 @@ $(document).ready(function () {
         var order = new Object();
         order.name = $('#EventSourcing_Name').text();
         order.useCases = $('#EventSourcing_UseCases')[0].value;
-        order.userInterface = $('#EventSourcing_IncludeWebApi')[0].value == true ? 'webapi' : 'none';
+        order.userInterface = $('#EventSourcing_IncludeWebApi').is(":checked") ? 'webapi' : 'none';
         order.dataAccess = $('#EventSourcing_DataAccess')[0].value;
-        order.tips = $('#EventSourcing_IncludeDocumentation')[0].value == true;
-        order.skipRestore = $('#EventSourcing_SkipRestore')[0].value == true;
-        order.serviceBus = $('#EventSourcing_IncludeServiceBus')[0].value == true ? 'kafka' : 'none';
+        order.tips = $('#EventSourcing_IncludeDocumentation').is(":checked");
+        order.skipRestore = $('#EventSourcing_SkipRestore').is(":checked");
+        order.serviceBus = $('#EventSourcing_IncludeServiceBus').is(":checked") ? 'kafka' : 'none';
 
         $.ajax({
             url: actionurl,
