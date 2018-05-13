@@ -1,6 +1,6 @@
 {
 	"origin": "https://github.com/ivanpaulovich/manga-clean-architecture",
-	"architecture-style": "architecture-style",		
+	"architecture-style": "clean",		
 	"use-cases": "use-cases",
 	"user-interface": "user-interface",
 	"data-access": "data-access",

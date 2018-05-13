@@ -299,7 +299,7 @@
   "postActions": [
     {
       "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
-      "condition": "(UI-None)",
+      "condition": "(user-interface == \"none\")",
       "args": {
         "primaryOutputIndexes": "0;1;2"
       },
