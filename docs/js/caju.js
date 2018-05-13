@@ -43,7 +43,7 @@ $(document).ready(function () {
         order.userInterface = $('#Hexagonal_IncludeWebApi').is(":checked") ? 'webapi' : 'none';
         order.dataAccess = $('#Hexagonal_DataAccess')[0].value;
         order.tips = $('#Hexagonal_IncludeDocumentation').is(":checked");
-        order.skipRestore = $('#Hexagonal_SkipRestore').is(":checked");
+        order.skipRestore = !$('#Hexagonal_SkipRestore').is(":checked");
 
         $.ajax({
             url: actionurl,
@@ -76,7 +76,7 @@ $(document).ready(function () {
         order.userInterface = $('#Clean_IncludeWebApi').is(":checked") ? 'webapi' : 'none';
         order.dataAccess = $('#Clean_DataAccess')[0].value;
         order.tips = $('#Clean_IncludeDocumentation').is(":checked");
-        order.skipRestore = $('#Clean_SkipRestore').is(":checked");
+        order.skipRestore = !$('#Clean_SkipRestore').is(":checked");
 
         $.ajax({
             url: actionurl,
@@ -108,7 +108,7 @@ $(document).ready(function () {
         order.dataAccess = $('#EventSourcing_DataAccess')[0].value;
         order.tips = $('#EventSourcing_IncludeDocumentation').is(":checked");
         order.skipRestore = $('#EventSourcing_SkipRestore').is(":checked");
-        order.serviceBus = $('#EventSourcing_IncludeServiceBus').is(":checked") ? 'kafka' : 'none';
+        order.serviceBus = !$('#EventSourcing_IncludeServiceBus').is(":checked") ? 'kafka' : 'none';
 
         $.ajax({
             url: actionurl,
