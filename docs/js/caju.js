@@ -107,8 +107,8 @@ $(document).ready(function () {
         order.userInterface = $('#EventSourcing_IncludeWebApi').is(":checked") ? 'webapi' : 'none';
         order.dataAccess = $('#EventSourcing_DataAccess')[0].value;
         order.tips = $('#EventSourcing_IncludeDocumentation').is(":checked");
-        order.skipRestore = $('#EventSourcing_SkipRestore').is(":checked");
-        order.serviceBus = !$('#EventSourcing_IncludeServiceBus').is(":checked") ? 'kafka' : 'none';
+        order.skipRestore = !$('#EventSourcing_SkipRestore').is(":checked");
+        order.serviceBus = $('#EventSourcing_IncludeServiceBus').is(":checked") ? 'kafka' : 'none';
 
         $.ajax({
             url: actionurl,
