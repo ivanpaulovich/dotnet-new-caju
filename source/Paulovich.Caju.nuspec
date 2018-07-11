@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Paulovich.Caju</id>
-    <version>0.5.0</version>
+    <version>0.6.0</version>
     <authors>Ivan Paulovich</authors>
     <owners>Ivan Paulovich</owners>
     <projectUrl>https://caju.paulovich.net/</projectUrl>
@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <title>dotnet new clean; dotnet new hexagonal; dotnet new eventsourcing; # awesome architectures!</title>
     <description>
-$ dotnet new -i Paulovich.Caju::0.5.0
+$ dotnet new -i Paulovich.Caju::0.6.0
 $ dotnet new clean
 
 It generates a .NET Solution with a layered backend (Domain - Application - Infrastructure - UI) based on the Clean Architecture Style.
