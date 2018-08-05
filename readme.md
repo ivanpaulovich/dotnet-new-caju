@@ -77,6 +77,7 @@ Use the switch `--help` for the complete list of options.
   * Entity Framework Core :white_check_mark:
   * Azure Cosmos DB
   * NHibernate Core
+  * InMemory :white_check_mark:
   * None :white_check_mark:
 * Allow to choose the **UI** frameworks
   * Both
