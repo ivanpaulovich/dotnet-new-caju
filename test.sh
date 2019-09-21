@@ -1,4 +1,5 @@
 #!/bin/bash
+rm -rf samples
 mkdir samples
 pushd samples
 dotnet new manga --use-cases full -n MyFull
