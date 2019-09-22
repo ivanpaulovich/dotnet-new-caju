@@ -8,7 +8,6 @@ namespace MyBasic.WebApi.Extensions
         {
             services.AddScoped<MyBasic.Application.Boundaries.GetCustomerDetails.IUseCase, MyBasic.Application.UseCases.GetCustomerDetails>();
             services.AddScoped<MyBasic.Application.Boundaries.Register.IUseCase, MyBasic.Application.UseCases.Register>();
-
             return services;
         }
     }

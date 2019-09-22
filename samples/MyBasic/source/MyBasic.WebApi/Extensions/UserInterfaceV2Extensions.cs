@@ -6,6 +6,7 @@ namespace MyBasic.WebApi.Extensions
     {
         public static IServiceCollection AddPresentersV2(this IServiceCollection services)
         {
+
             return services;
         }
     }

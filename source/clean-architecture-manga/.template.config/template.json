@@ -120,23 +120,23 @@
             "source/Manga.Application/UseCases/Transfer.cs",
             "source/Manga.Application/UseCases/Withdraw.cs",
 
-            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/CloseAccountPresenter.cs",
-            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/DepositPresenter.cs",
-            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/RegisterPresenter.cs",
-            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/TransferPresenter.cs",
-            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/WithdrawPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/CloseAccountPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/DepositPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/RegisterPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/TransferPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/WithdrawPresenter.cs",
 
-            "tests/Manga.UnitTests/UseCaseTests/CloseAccountPresenter.cs",
-            "tests/Manga.UnitTests/UseCaseTests/DepositPresenter.cs",
-            "tests/Manga.UnitTests/UseCaseTests/RegisterPresenter.cs",
-            "tests/Manga.UnitTests/UseCaseTests/TransferPresenter.cs",
-            "tests/Manga.UnitTests/UseCaseTests/WithdrawPresenter.cs",
+            "tests/Manga.UnitTests/UseCaseTests/CloseAccount/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Deposit/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Register/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Transfer/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Withdraw/**/*.cs",
 
-            "tests/Manga.UnitTests/InputValidation/CloseAccountInputValidationTests.cs",
-            "tests/Manga.UnitTests/InputValidation/DepositInputValidationTests.cs",
-            "tests/Manga.UnitTests/InputValidation/RegisterInputValidationTests.cs",
-            "tests/Manga.UnitTests/InputValidation/TransferInputValidationTests.cs",
-            "tests/Manga.UnitTests/InputValidation/WithdrawInputValidationTests.cs"
+            "tests/Manga.UnitTests/InputValidationTests/CloseAccountInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/DepositInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/RegisterInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/TransferInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/WithdrawInputValidationTests.cs"
           ]
         },
         {
@@ -161,23 +161,23 @@
             "source/Manga.Application/UseCases/Transfer.cs",
             "source/Manga.Application/UseCases/Withdraw.cs",
 
-            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/CloseAccountPresenter.cs",
-            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/DepositPresenter.cs",
-            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/GetAccountDetailsPresenter.cs",
-            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/TransferPresenter.cs",
-            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/WithdrawPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/CloseAccountPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/DepositPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/GetAccountDetailsPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/TransferPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/WithdrawPresenter.cs",
 
-            "tests/Manga.UnitTests/UseCaseTests/CloseAccountPresenter.cs",
-            "tests/Manga.UnitTests/UseCaseTests/DepositPresenter.cs",
-            "tests/Manga.UnitTests/UseCaseTests/GetAccountDetailsPresenter.cs",
-            "tests/Manga.UnitTests/UseCaseTests/TransferPresenter.cs",
-            "tests/Manga.UnitTests/UseCaseTests/WithdrawPresenter.cs",
+            "tests/Manga.UnitTests/UseCaseTests/CloseAccount/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Deposit/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/GetAccountDetails/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Transfer/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Withdraw/**/*.cs",
 
-            "tests/Manga.UnitTests/InputValidation/CloseAccountInputValidationTests.cs",
-            "tests/Manga.UnitTests/InputValidation/DepositInputValidationTests.cs",
-            "tests/Manga.UnitTests/InputValidation/GetAccountDetailsInputValidationTests.cs",
-            "tests/Manga.UnitTests/InputValidation/TransferInputValidationTests.cs",
-            "tests/Manga.UnitTests/InputValidation/WithdrawInputValidationTests.cs"
+            "tests/Manga.UnitTests/InputValidationTests/CloseAccountInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/DepositInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/GetAccountDetailsInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/TransferInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/WithdrawInputValidationTests.cs"
           ]
         },
         {

@@ -13,7 +13,6 @@ namespace MyFull.WebApi.Extensions
             services.AddScoped<MyFull.Application.Boundaries.Register.IUseCase, MyFull.Application.UseCases.Register>();
             services.AddScoped<MyFull.Application.Boundaries.Withdraw.IUseCase, MyFull.Application.UseCases.Withdraw>();
             services.AddScoped<MyFull.Application.Boundaries.Transfer.IUseCase, MyFull.Application.UseCases.Transfer>();
-
             return services;
         }
     }

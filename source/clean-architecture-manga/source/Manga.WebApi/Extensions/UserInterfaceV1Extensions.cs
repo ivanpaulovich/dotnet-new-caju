@@ -22,11 +22,11 @@ namespace Manga.WebApi.Extensions
             services.AddScoped<Manga.WebApi.UseCases.V1.GetCustomerDetails.GetCustomerDetailsPresenter, Manga.WebApi.UseCases.V1.GetCustomerDetails.GetCustomerDetailsPresenter>();
             services.AddScoped<Manga.Application.Boundaries.GetCustomerDetails.IOutputPort>(x => x.GetRequiredService<Manga.WebApi.UseCases.V1.GetCustomerDetails.GetCustomerDetailsPresenter>());
 #endif
-#if (GetCustomerDetails)
+#if (Register)
             services.AddScoped<Manga.WebApi.UseCases.V1.Register.RegisterPresenter, Manga.WebApi.UseCases.V1.Register.RegisterPresenter>();
             services.AddScoped<Manga.Application.Boundaries.Register.IOutputPort>(x => x.GetRequiredService<Manga.WebApi.UseCases.V1.Register.RegisterPresenter>());
 #endif
-#if (GetCustomerDetails)
+#if (Withdraw)
             services.AddScoped<Manga.WebApi.UseCases.V1.Withdraw.WithdrawPresenter, Manga.WebApi.UseCases.V1.Withdraw.WithdrawPresenter>();
             services.AddScoped<Manga.Application.Boundaries.Withdraw.IOutputPort>(x => x.GetRequiredService<Manga.WebApi.UseCases.V1.Withdraw.WithdrawPresenter>());
 #endif
