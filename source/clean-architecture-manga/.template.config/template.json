@@ -1,0 +1,230 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Ivan Paulovich",
+  "classifications": [
+    "Common",
+    "Library",
+    "Web API"
+  ],
+  "name": "Manga: Clean Architecture for .NET!",
+  "identity": "Paulovich.Manga",
+  "groupIdentity": "Paulovich.Manga",
+  "shortName": "manga",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Manga",
+  "preferNameDirectory": true,
+  "symbols": {    
+    "use-cases": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "full",
+      "choices": [
+        {
+          "choice": "full",
+          "description": "Full Wallet Account Balance Management (Read/Write)"
+        },
+        {
+          "choice": "basic",
+          "description": "Allow Customer to Register and to Get Customer Details (Read/Write)"
+        },
+        {
+          "choice": "readonly",
+          "description": "Read Customer and Account Details (Read Only)"
+        }
+      ],
+      "replaces": "use-cases",
+      "onlyIf": [
+        {
+          "after": "\"use-cases\": \""
+        }
+      ]
+    },
+    "skip-restore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Run dotnet restore after code generation.",
+      "defaultValue": "false",
+      "replaces": "skip-restore",
+      "onlyIf": [
+        {
+          "after": "\"skip-restore\": \""
+        }
+      ]
+    },
+    "Basic": {
+      "type": "computed",
+      "value": "(use-cases == \"basic\")"
+    },
+    "ReadOnly": {
+      "type": "computed",
+      "value": "(use-cases == \"readonly\")"
+    },
+    "Full": {
+      "type": "computed",
+      "value": "(use-cases == \"full\")"
+    },
+    "CloseAccount": {
+      "type": "computed",
+      "value": "(Full)"
+    },
+    "Deposit": {
+      "type": "computed",
+      "value": "(Full)"
+    },
+    "GetAccountDetails": {
+      "type": "computed",
+      "value": "(Full || ReadOnly)"
+    },
+    "GetCustomerDetails": {
+      "type": "computed",
+      "value": "(Full || ReadOnly || Basic)"
+    },
+    "Register": {
+      "type": "computed",
+      "value": "(Full || Basic)"
+    },
+    "Withdraw": {
+      "type": "computed",
+      "value": "(Full)"
+    },
+    "Transfer": {
+      "type": "computed",
+      "value": "(Full)"
+    }
+  },
+  "sources": [
+    {
+      "source": "./",
+      "modifiers": [
+        {
+          "condition": "(ReadOnly)",
+          "exclude": [
+            "source/Manga.WebApi/UseCases/V1/CloseAccount/**/*.cs",
+            "source/Manga.WebApi/UseCases/V1/Deposit/**/*.cs",
+            "source/Manga.WebApi/UseCases/V1/Register/**/*.cs",
+            "source/Manga.WebApi/UseCases/V1/Transfer/**/*.cs",
+            "source/Manga.WebApi/UseCases/V1/Withdraw/**/*.cs",
+
+            "source/Manga.Application/Boundaries/CloseAccount/**/*.cs",
+            "source/Manga.Application/Boundaries/Deposit/**/*.cs",
+            "source/Manga.Application/Boundaries/Register/**/*.cs",
+            "source/Manga.Application/Boundaries/Transfer/**/*.cs",
+            "source/Manga.Application/Boundaries/Withdraw/**/*.cs",
+
+            "source/Manga.Application/UseCases/CloseAccount.cs",
+            "source/Manga.Application/UseCases/Deposit.cs",
+            "source/Manga.Application/UseCases/Register.cs",
+            "source/Manga.Application/UseCases/Transfer.cs",
+            "source/Manga.Application/UseCases/Withdraw.cs",
+
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/CloseAccountPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/DepositPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/RegisterPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/TransferPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/WithdrawPresenter.cs",
+
+            "tests/Manga.UnitTests/UseCaseTests/CloseAccount/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Deposit/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Register/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Transfer/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Withdraw/**/*.cs",
+
+            "tests/Manga.UnitTests/InputValidationTests/CloseAccountInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/DepositInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/RegisterInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/TransferInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/WithdrawInputValidationTests.cs"
+          ]
+        },
+        {
+          "condition": "(Basic)",
+          "exclude": [
+            "source/Manga.WebApi/UseCases/V1/CloseAccount/**/*.cs",
+            "source/Manga.WebApi/UseCases/V1/Deposit/**/*.cs",
+            "source/Manga.WebApi/UseCases/V1/GetAccountDetails/**/*.cs",
+            "source/Manga.WebApi/UseCases/V1/Transfer/**/*.cs",
+            "source/Manga.WebApi/UseCases/V1/Withdraw/**/*.cs",
+            "source/Manga.WebApi/UseCases/V2/GetAccountDetails/**/*.cs",
+
+            "source/Manga.Application/Boundaries/CloseAccount/**/*.cs",
+            "source/Manga.Application/Boundaries/Deposit/**/*.cs",
+            "source/Manga.Application/Boundaries/GetAccountDetails/**/*.cs",
+            "source/Manga.Application/Boundaries/Transfer/**/*.cs",
+            "source/Manga.Application/Boundaries/Withdraw/**/*.cs",
+
+            "source/Manga.Application/UseCases/CloseAccount.cs",
+            "source/Manga.Application/UseCases/Deposit.cs",
+            "source/Manga.Application/UseCases/GetAccountDetails.cs",
+            "source/Manga.Application/UseCases/Transfer.cs",
+            "source/Manga.Application/UseCases/Withdraw.cs",
+
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/CloseAccountPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/DepositPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/GetAccountDetailsPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/TransferPresenter.cs",
+            "source/Manga.Infrastructure/InMemoryDataAccess/Presenters/WithdrawPresenter.cs",
+
+            "tests/Manga.UnitTests/UseCaseTests/CloseAccount/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Deposit/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/GetAccountDetails/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Transfer/**/*.cs",
+            "tests/Manga.UnitTests/UseCaseTests/Withdraw/**/*.cs",
+
+            "tests/Manga.UnitTests/InputValidationTests/CloseAccountInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/DepositInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/GetAccountDetailsInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/TransferInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidationTests/WithdrawInputValidationTests.cs"
+          ]
+        },
+        {
+          "condition": "(Full)",
+          "exclude": [
+          ]
+        }
+      ]
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "path": "source/Manga.Application/Manga.Application.csproj"
+    },
+    {
+      "path": "source/Manga.Domain/Manga.Domain.csproj"
+    },
+    {
+      "path": "source/Manga.Infrastructure/Manga.Infrastructure.csproj"
+    },
+    {
+      "path": "source/Manga.WebApi/Manga.WebApi.csproj"
+    }
+  ],
+  "postActions": [
+    {
+      "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
+      "args": {
+        "primaryOutputIndexes": "0;1;2;3"
+      },
+      "continueOnError": true,
+      "manualInstructions": [
+        {
+          "text": "Add projects to solution."
+        }
+      ]
+    },
+    {
+      "condition": "(!skip-restore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        {
+          "text": "Run 'dotnet restore'"
+        }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
+}
