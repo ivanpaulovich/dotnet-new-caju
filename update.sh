@@ -1,15 +1,15 @@
 #!/bin/bash
 rm -rf build
 mkdir build
-git clone https://github.com/ivanpaulovich/clean-architecture-manga.git build/clean-architecture-manga
+curl -SL https://github.com/ivanpaulovich/clean-architecture-manga/archive/master.zip | tar -xf - -C build
 cp -R source/* build
 
-rm -rf build/clean-architecture-manga/.DS_Store
-rm -rf build/clean-architecture-manga/.all-contributorsrc
-rm -rf build/clean-architecture-manga/.git
-rm -rf build/clean-architecture-manga/.gitignore
-rm -rf build/clean-architecture-manga/appveyor.yml
-rm -rf build/clean-architecture-manga/docker-compose.yml
-rm -rf build/clean-architecture-manga/.vscode
-rm -rf build/clean-architecture-manga/docs
-rm -rf build/clean-architecture-manga/LICENSE
+rm -rf build/clean-architecture-manga-master/.DS_Store
+rm -rf build/clean-architecture-manga-master/.all-contributorsrc
+rm -rf build/clean-architecture-manga-master/.git
+rm -rf build/clean-architecture-manga-master/.gitignore
+rm -rf build/clean-architecture-manga-master/appveyor.yml
+rm -rf build/clean-architecture-manga-master/docker-compose.yml
+rm -rf build/clean-architecture-manga-master/.vscode
+rm -rf build/clean-architecture-manga-master/docs
+rm -rf build/clean-architecture-manga-master/LICENSE

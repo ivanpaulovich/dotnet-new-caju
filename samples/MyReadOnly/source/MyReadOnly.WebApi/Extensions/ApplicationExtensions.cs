@@ -8,7 +8,6 @@ namespace MyReadOnly.WebApi.Extensions
         {
             services.AddScoped<MyReadOnly.Application.Boundaries.GetAccountDetails.IUseCase, MyReadOnly.Application.UseCases.GetAccountDetails>();
             services.AddScoped<MyReadOnly.Application.Boundaries.GetCustomerDetails.IUseCase, MyReadOnly.Application.UseCases.GetCustomerDetails>();
-            services.AddScoped<MyReadOnly.Application.Boundaries.Register.IUseCase, MyReadOnly.Application.UseCases.Register>();
             return services;
         }
     }

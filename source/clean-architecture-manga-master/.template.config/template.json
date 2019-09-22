@@ -42,18 +42,6 @@
         }
       ]
     },
-    "skip-restore": {
-      "type": "parameter",
-      "datatype": "bool",
-      "description": "Run dotnet restore after code generation.",
-      "defaultValue": "false",
-      "replaces": "skip-restore",
-      "onlyIf": [
-        {
-          "after": "\"skip-restore\": \""
-        }
-      ]
-    },
     "Basic": {
       "type": "computed",
       "value": "(use-cases == \"basic\")"
@@ -200,31 +188,6 @@
     },
     {
       "path": "source/Manga.WebApi/Manga.WebApi.csproj"
-    }
-  ],
-  "postActions": [
-    {
-      "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
-      "args": {
-        "primaryOutputIndexes": "0;1;2;3"
-      },
-      "continueOnError": true,
-      "manualInstructions": [
-        {
-          "text": "Add projects to solution."
-        }
-      ]
-    },
-    {
-      "condition": "(!skip-restore)",
-      "description": "Restore NuGet packages required by this project.",
-      "manualInstructions": [
-        {
-          "text": "Run 'dotnet restore'"
-        }
-      ],
-      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
-      "continueOnError": true
     }
   ]
 }
