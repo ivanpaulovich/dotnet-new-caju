@@ -1,7 +1,8 @@
 #!/bin/bash
 rm -rf build
 mkdir build
-curl -SL https://github.com/ivanpaulovich/clean-architecture-manga/archive/master.zip | tar -xz - -C build
+curl -L https://github.com/ivanpaulovich/clean-architecture-manga/archive/master.zip -o build/clean-architecture-manga-master.zip
+unzip build/clean-architecture-manga-master.zip -d build 
 cp -R source/* build
 
 rm -rf build/clean-architecture-manga-master/.DS_Store
