@@ -2,38 +2,33 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Paulovich.Caju</id>
-    <version>0.6.0</version>
+    <version>0.7.0</version>
     <authors>Ivan Paulovich</authors>
     <owners>Ivan Paulovich</owners>
     <projectUrl>https://caju.paulovich.net/</projectUrl>
     <licenseUrl>https://github.com/ivanpaulovich/caju/blob/master/license</licenseUrl>
 	<iconUrl>https://raw.githubusercontent.com/ivanpaulovich/caju/master/images/caju-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <title>dotnet new clean; dotnet new hexagonal; dotnet new eventsourcing; # awesome architectures!</title>
+    <title>dotnet new manga</title>
     <description>
-$ dotnet new -i Paulovich.Caju::0.6.0
-$ dotnet new clean
+$ dotnet new -i Paulovich.Caju::0.7.0
+$ dotnet new manga
 
-It generates a .NET Solution with a layered backend (Domain - Application - Infrastructure - UI) based on the Clean Architecture Style.
+It generates a .NET Solution following the Clean Architecture Style, DDD and Separation of Concerns in Domain, Application, Infrastructure and UI.
     </description>
     <summary>
-$ dotnet new clean --use-cases basic
-$ dotnet new hexagonal --use-cases readonly
-$ dotnet new eventsourcing --use-cases full
+$ dotnet new manga --use-cases full
+$ dotnet new manga --use-cases basic
+$ dotnet new manga --use-cases readonly
     </summary>
     <releaseNotes>
-- Architecture style documentation
-- Clean, Hexagonal or Event-Sourcing architecture styles
-- Entity Framework Core; Dapper; MongoDB Data Access frameworks
-- Different sets of use-cases.
-- Kafka as service-bus for Event-Sourcing
-- WebAPI templates
-- Docker images optimized for startup
-- Layerd application with Domain, Application, Infrastructure and UI
-- Domain-Driven Design (Aggregates, Entities, Value Objects, Commands, Domain Events)
+- Clean Architecture Principles Documentation
+- .NET Core 3 RC1
+- Swashbuckle 5 RC2 
+- Entity Framework Core 3 Preview;
     </releaseNotes>
     <tags>
-	  onion
+	    onion
       boilerplate
       solid
       ddd
@@ -46,37 +41,21 @@ $ dotnet new eventsourcing --use-cases full
       docker
       webapi
       domain-driven-design
-      mongodb
-      kafka
-      cqrs
-      event-sourcing
       dotnet-new
       generator
       tdd
-      event-driven
       templating
       microservice
       dotnet-core
       ddd-architecture
       solid-principles
       aggregate
-      bearer-authentication
-      cqrs-es
-      service-bus
-      optimistic-updates
-      angular
-      typescript
-      rest-client
-      material-design
-      bootstrap
       dotnetcore
       dotnet
       layered
       architecture
-	  dotnet-cli
-	  dotnet-template
-	  wcf
-	  console
+      dotnet-cli
+      dotnet-template
     </tags>
     <language>en-US</language>
     <packageTypes>
