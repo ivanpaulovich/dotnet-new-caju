@@ -8,7 +8,7 @@ Service Template to help you build evolvable and maintainable applications. It f
 To generate your own awesome .NET Back-end simple run:
 
 ```sh
-dotnet new -i Paulovich.Caju::0.7.0
+dotnet new -i Paulovich.Caju::0.7.1
 dotnet new manga
 ```
 

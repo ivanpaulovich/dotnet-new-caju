@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Paulovich.Caju</id>
-    <version>0.7.0</version>
+    <version>0.7.1</version>
     <authors>Ivan Paulovich</authors>
     <owners>Ivan Paulovich</owners>
     <projectUrl>https://github.com/ivanpaulovich/clean-architecture-manga</projectUrl>
@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <title>dotnet new manga</title>
     <description>
-$ dotnet new -i Paulovich.Caju::0.7.0
+$ dotnet new -i Paulovich.Caju::0.7.1
 $ dotnet new manga
 
 It generates a .NET Solution following the Clean Architecture Style, DDD and Separation of Concerns in Domain, Application, Infrastructure and UI.
