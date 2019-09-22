@@ -18,7 +18,7 @@ namespace Manga.WebApi.Extensions
 #if (GetCustomerDetails)
             services.AddScoped<Manga.Application.Boundaries.GetCustomerDetails.IUseCase, Manga.Application.UseCases.GetCustomerDetails>();
 #endif
-#if (GetCustomerDetails)
+#if (Register)
             services.AddScoped<Manga.Application.Boundaries.Register.IUseCase, Manga.Application.UseCases.Register>();
 #endif
 #if (Withdraw)
