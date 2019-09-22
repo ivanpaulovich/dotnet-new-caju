@@ -8,6 +8,7 @@ namespace MyBasic.UnitTests.UseCasesTests.Register
     using MyBasic.Domain.ValueObjects;
     using MyBasic.UnitTests.TestFixtures;
     using Xunit;
+    using MyBasic.Infrastructure.InMemoryDataAccess;
 
     public sealed class RegisterTests : IClassFixture<StandardFixture>
     {
@@ -28,12 +29,13 @@ namespace MyBasic.UnitTests.UseCasesTests.Register
         [ClassData(typeof(PositiveDataSetup))]
         public async Task Register_WritesOutput_InputIsValid(decimal amount)
         {
+            var presenter = new RegisterPresenter();
             var ssn = new SSN("8608178888");
             var name = new Name("Ivan Paulovich");
 
             var sut = new Register(
                 _fixture.EntityFactory,
-                _fixture.Presenter,
+                presenter,
                 _fixture.CustomerRepository,
                 _fixture.AccountRepository,
                 _fixture.UnitOfWork
@@ -44,7 +46,7 @@ namespace MyBasic.UnitTests.UseCasesTests.Register
                 name,
                 new PositiveMoney(amount)));
 
-            var actual = _fixture.Presenter.Registers.Last();
+            var actual = presenter.Registers.Last();
             Assert.NotNull(actual);
             Assert.Equal(ssn.ToString(), actual.Customer.SSN);
             Assert.Equal(name.ToString(), actual.Customer.Name);

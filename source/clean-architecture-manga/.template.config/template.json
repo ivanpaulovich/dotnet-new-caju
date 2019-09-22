@@ -65,6 +65,34 @@
     "Full": {
       "type": "computed",
       "value": "(use-cases == \"full\")"
+    },
+    "CloseAccount": {
+      "type": "computed",
+      "value": "(Full)"
+    },
+    "Deposit": {
+      "type": "computed",
+      "value": "(Full)"
+    },
+    "GetAccountDetails": {
+      "type": "computed",
+      "value": "(Full || ReadOnly)"
+    },
+    "GetCustomerDetails": {
+      "type": "computed",
+      "value": "(Full || ReadOnly || Basic)"
+    },
+    "Register": {
+      "type": "computed",
+      "value": "(Full || Basic)"
+    },
+    "Withdraw": {
+      "type": "computed",
+      "value": "(Full)"
+    },
+    "Transfer": {
+      "type": "computed",
+      "value": "(Full)"
     }
   },
   "sources": [
@@ -90,7 +118,25 @@
             "source/Manga.Application/UseCases/Deposit.cs",
             "source/Manga.Application/UseCases/Register.cs",
             "source/Manga.Application/UseCases/Transfer.cs",
-            "source/Manga.Application/UseCases/Withdraw.cs"
+            "source/Manga.Application/UseCases/Withdraw.cs",
+
+            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/CloseAccountPresenter.cs",
+            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/DepositPresenter.cs",
+            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/RegisterPresenter.cs",
+            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/TransferPresenter.cs",
+            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/WithdrawPresenter.cs",
+
+            "tests/Manga.UnitTests/UseCaseTests/CloseAccountPresenter.cs",
+            "tests/Manga.UnitTests/UseCaseTests/DepositPresenter.cs",
+            "tests/Manga.UnitTests/UseCaseTests/RegisterPresenter.cs",
+            "tests/Manga.UnitTests/UseCaseTests/TransferPresenter.cs",
+            "tests/Manga.UnitTests/UseCaseTests/WithdrawPresenter.cs",
+
+            "tests/Manga.UnitTests/InputValidation/CloseAccountInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidation/DepositInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidation/RegisterInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidation/TransferInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidation/WithdrawInputValidationTests.cs"
           ]
         },
         {
@@ -113,7 +159,25 @@
             "source/Manga.Application/UseCases/Deposit.cs",
             "source/Manga.Application/UseCases/GetAccountDetails.cs",
             "source/Manga.Application/UseCases/Transfer.cs",
-            "source/Manga.Application/UseCases/Withdraw.cs"
+            "source/Manga.Application/UseCases/Withdraw.cs",
+
+            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/CloseAccountPresenter.cs",
+            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/DepositPresenter.cs",
+            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/GetAccountDetailsPresenter.cs",
+            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/TransferPresenter.cs",
+            "tests/Manga.UnitTests/InMemoryDataAccess/Presenters/WithdrawPresenter.cs",
+
+            "tests/Manga.UnitTests/UseCaseTests/CloseAccountPresenter.cs",
+            "tests/Manga.UnitTests/UseCaseTests/DepositPresenter.cs",
+            "tests/Manga.UnitTests/UseCaseTests/GetAccountDetailsPresenter.cs",
+            "tests/Manga.UnitTests/UseCaseTests/TransferPresenter.cs",
+            "tests/Manga.UnitTests/UseCaseTests/WithdrawPresenter.cs",
+
+            "tests/Manga.UnitTests/InputValidation/CloseAccountInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidation/DepositInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidation/GetAccountDetailsInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidation/TransferInputValidationTests.cs",
+            "tests/Manga.UnitTests/InputValidation/WithdrawInputValidationTests.cs"
           ]
         },
         {

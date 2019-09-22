@@ -6,7 +6,6 @@ namespace MyFull.UnitTests.TestFixtures
     public sealed class StandardFixture
     {
         public EntityFactory EntityFactory { get; }
-        public Presenter Presenter { get; }
         public MyFullContext Context { get; }
         public AccountRepository AccountRepository { get; }
         public CustomerRepository CustomerRepository { get; }
@@ -14,7 +13,6 @@ namespace MyFull.UnitTests.TestFixtures
 
         public StandardFixture()
         {
-            Presenter = new Presenter();
             Context = new MyFullContext();
             AccountRepository = new AccountRepository(Context);
             CustomerRepository = new CustomerRepository(Context);

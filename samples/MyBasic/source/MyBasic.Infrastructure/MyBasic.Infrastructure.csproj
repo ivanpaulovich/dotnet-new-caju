@@ -20,4 +20,10 @@
     <ProjectReference Include="..\MyBasic.Application\MyBasic.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="InMemoryDataAccess\Presenters\DepositPresenter.cs" />
+    <Compile Remove="InMemoryDataAccess\Presenters\CloseAccountPresenter.cs" />
+    <Compile Remove="InMemoryDataAccess\Presenters\TransferPresenter.cs" />
+    <Compile Remove="InMemoryDataAccess\Presenters\WithdrawPresenter.cs" />
+  </ItemGroup>
 </Project>

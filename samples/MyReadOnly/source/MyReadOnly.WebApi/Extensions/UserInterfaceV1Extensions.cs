@@ -10,7 +10,7 @@ namespace MyReadOnly.WebApi.Extensions
             services.AddScoped<MyReadOnly.Application.Boundaries.CloseAccount.IOutputPort>(x => x.GetRequiredService<MyReadOnly.WebApi.UseCases.V1.CloseAccount.CloseAccountPresenter>());
 
             services.AddScoped<MyReadOnly.WebApi.UseCases.V1.Deposit.DepositPresenter, MyReadOnly.WebApi.UseCases.V1.Deposit.DepositPresenter>();
-            services.AddScoped<MyReadOnly.Application.Boundaries.Deposit.IOutputHandler>(x => x.GetRequiredService<MyReadOnly.WebApi.UseCases.V1.Deposit.DepositPresenter>());
+            services.AddScoped<MyReadOnly.Application.Boundaries.Deposit.IOutputPort>(x => x.GetRequiredService<MyReadOnly.WebApi.UseCases.V1.Deposit.DepositPresenter>());
 
             services.AddScoped<MyReadOnly.WebApi.UseCases.V1.GetAccountDetails.GetAccountDetailsPresenter, MyReadOnly.WebApi.UseCases.V1.GetAccountDetails.GetAccountDetailsPresenter>();
             services.AddScoped<MyReadOnly.Application.Boundaries.GetAccountDetails.IOutputPort>(x => x.GetRequiredService<MyReadOnly.WebApi.UseCases.V1.GetAccountDetails.GetAccountDetailsPresenter>());

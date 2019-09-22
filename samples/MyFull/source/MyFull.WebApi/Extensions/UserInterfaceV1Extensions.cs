@@ -10,7 +10,7 @@ namespace MyFull.WebApi.Extensions
             services.AddScoped<MyFull.Application.Boundaries.CloseAccount.IOutputPort>(x => x.GetRequiredService<MyFull.WebApi.UseCases.V1.CloseAccount.CloseAccountPresenter>());
 
             services.AddScoped<MyFull.WebApi.UseCases.V1.Deposit.DepositPresenter, MyFull.WebApi.UseCases.V1.Deposit.DepositPresenter>();
-            services.AddScoped<MyFull.Application.Boundaries.Deposit.IOutputHandler>(x => x.GetRequiredService<MyFull.WebApi.UseCases.V1.Deposit.DepositPresenter>());
+            services.AddScoped<MyFull.Application.Boundaries.Deposit.IOutputPort>(x => x.GetRequiredService<MyFull.WebApi.UseCases.V1.Deposit.DepositPresenter>());
 
             services.AddScoped<MyFull.WebApi.UseCases.V1.GetAccountDetails.GetAccountDetailsPresenter, MyFull.WebApi.UseCases.V1.GetAccountDetails.GetAccountDetailsPresenter>();
             services.AddScoped<MyFull.Application.Boundaries.GetAccountDetails.IOutputPort>(x => x.GetRequiredService<MyFull.WebApi.UseCases.V1.GetAccountDetails.GetAccountDetailsPresenter>());

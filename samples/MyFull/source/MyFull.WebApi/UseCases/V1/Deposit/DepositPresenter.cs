@@ -3,7 +3,7 @@ namespace MyFull.WebApi.UseCases.V1.Deposit
     using MyFull.Application.Boundaries.Deposit;
     using Microsoft.AspNetCore.Mvc;
 
-    public sealed class DepositPresenter : IOutputHandler
+    public sealed class DepositPresenter : IOutputPort
     {
         public IActionResult ViewModel { get; private set; }
 

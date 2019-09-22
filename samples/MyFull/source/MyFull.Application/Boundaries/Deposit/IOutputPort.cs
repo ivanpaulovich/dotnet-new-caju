@@ -1,6 +1,6 @@
 namespace MyFull.Application.Boundaries.Deposit
 {
-    public interface IOutputHandler : IErrorHandler
+    public interface IOutputPort : IErrorHandler
     {
         void Default(DepositOutput depositOutput);
     }
