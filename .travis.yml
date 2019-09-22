@@ -4,7 +4,6 @@ install:
 script:
   - mkdir build
   - bash update.sh
-  - bash install.sh
   - mono nuget.exe pack ./build/Paulovich.Caju.nuspec
   - mono nuget.exe setApiKey $NUGET_API_KEY -Source $NUGET_SOURCE
   - mono nuget.exe push Paulovich.Caju.*.nupkg -Source $NUGET_SOURCE
